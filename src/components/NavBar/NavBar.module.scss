@@ -1,0 +1,31 @@
+@import '../../scss/colors';
+@import '../../scss/mixins';
+
+.header {
+    width: 100%;
+    height: 80px;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #f1f5f940;
+    z-index: 1000;
+    transition: .25s;
+    backdrop-filter: blur(2px);
+
+    &:hover {
+        background: #f1f5f9;
+        transition: .25s;
+    }
+}
+
+nav{
+    background-color: black;
+}
+
+.iconMenu{
+    width: 18px;
+    z-index: 1;
+    cursor: pointer;
+    background-color: aqua;
+}
