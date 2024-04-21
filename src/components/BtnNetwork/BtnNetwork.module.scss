@@ -1,0 +1,39 @@
+@import '@/scss/colors';
+@import '@/scss/mixins';
+
+.network{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    position: fixed;
+    bottom: 1%;
+    left: 1%;
+    z-index: 1;
+
+    &:hover {
+        z-index: 3;
+    }
+
+    a{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background-color: $w;
+        box-shadow:  inset 0px 0px 10px 4px $lightBlue;
+
+        &:hover img{
+            width: 28px;
+            height: 28px;
+            transition: .25s .15s;
+        }
+    }
+
+    img{
+        height: 25px;
+        width: 25px;
+        transition: .25s;
+    }
+}

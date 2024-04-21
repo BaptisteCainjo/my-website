@@ -34,9 +34,11 @@
 
 body {
     width: 100%;
-    background-color: $grayBackground;
+    background-color: $globalBkgColor;
     @include Poppins();
     font-weight: 400;
+    background-color: $lightBlue;
+
 }
 
 ::-webkit-scrollbar {
@@ -63,7 +65,9 @@ body {
 }
 
 a {
-    color: $blackText;
+    color: $globalBlackColor;
+    font-size: 16px;
+    font-weight: 500;
 }
 
 button,
@@ -71,4 +75,9 @@ input,
 textarea {
     outline: none;
     border: none;
+}
+
+main section{
+    min-height: 100vh;
+    margin-top: 80px;
 }
