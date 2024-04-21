@@ -1,10 +1,8 @@
-//? Difference between target and targetIndex
 "use client";
 
 import Link from "next/link.js";
 import Image from "next/image.js";
 import React, { useState } from "react";
-// import uuidv4 from 
 
 import Linkedin from "@/assets/svg/icons/linkedin.svg";
 import Github from "@/assets/svg/icons/github.svg";

@@ -26,8 +26,8 @@ export default function Home() {
       <NavBar content={navigation} />
       <NavBtn content={navigation} />
       <section className={HomeStyle.about}>
-        <SquareInfo />
-        {/* <img src={BkgAbout} alt="" /> */}
+        <SquareInfo emoji="👋" strongText="Cainjo Baptiste" basicText="Bonjour, je suis" priority={1}/>
+        <SquareInfo emoji="💼" strongText="Concepteur web" basicText="en alternance chez MMA depuis septembre 2022" priority={2}/>
           <Image
             src={BkgAbout}
             alt="Image d'illustration"

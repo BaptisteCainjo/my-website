@@ -7,7 +7,7 @@ import BtnUpIcon from "@/assets/svg/icons/arrow-up.svg"
 
 export default function BtnUp() {
   return (
-    <Link href="#" className={BtnUpStyle.btnUp}>
+    <Link href="#" className={BtnUpStyle["btn-up"]}>
         <Image src={BtnUpIcon} alt='Logo fleche vers le haut'/>
     </Link>
   )
