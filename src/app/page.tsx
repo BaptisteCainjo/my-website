@@ -61,6 +61,9 @@ export default function Home() {
           height={1024}
         />
       </section>
+      <section className={HomeStyle.portfolio}>
+
+      </section>
       <BtnUp />
       <BtnNetwork />
     </>
