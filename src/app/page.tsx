@@ -62,7 +62,7 @@ export default function Home() {
         />
       </section>
       <section className={HomeStyle.portfolio}>
-
+    
       </section>
       <BtnUp />
       <BtnNetwork />
