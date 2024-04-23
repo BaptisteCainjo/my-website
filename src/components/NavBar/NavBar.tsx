@@ -7,8 +7,13 @@ import NavBarStyle from "./NavBar.module.scss";
 import Logo from "@/assets/svg/logos/logo.svg";
 import Menu from "@/assets/svg/logos/menu.svg";
 
+interface NavBarItem {
+  id: number;
+  title: string;
+}
+
 type NavBarProps = {
-  content: Array<{ id: number; title: string }>;
+  content: NavBarItem[];
 };
 
 export default function NavBar({ content }: NavBarProps) {
