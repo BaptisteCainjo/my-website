@@ -17,7 +17,6 @@ export default function NavBtn({ content }: NavBtnProps) {
     setContentBtn([{ id: 0, title: "" }, ...content]);
   }, [content]);
 
-
   useEffect(() => {
     setIsDesktopView(isDesktop);
   }, []);

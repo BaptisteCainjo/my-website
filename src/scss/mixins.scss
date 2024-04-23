@@ -122,6 +122,17 @@ $mixin-breakpoints: (
   font-family: "Poppins",sans-serif;
 }
 
+@mixin Outfit() {
+  font-family: "Outfut",sans-serif;
+}
+
 @mixin Playfair(){
   font-family: "Playfair Display", sans-serif;
+}
+
+@mixin h1Style(){
+  font-size: 26px;
+  font-weight: 700;
+  text-transform: uppercase;
+  width: max-content;
 }
