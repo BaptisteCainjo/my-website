@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import Image from "next/image.js";
 
 import HomeStyle from "@/scss/pages/Home.module.scss";
 import BtnUp from "@/components/BtnUp/BtnUp";
@@ -9,39 +8,67 @@ import BtnNetwork from "@/components/BtnNetwork/BtnNetwork";
 import NavBtn from "@/components/NavBtn/NavBtn";
 import NavBar from "@/components/NavBar/NavBar";
 import SquareInfo from "@/components/SquareInfo/SquareInfo";
-import BkgAbout from "@/assets/images/background.webp";
-import data from '@/utils/data.json'
+import data from "@/utils/data.json";
+import H2 from "@/components/h2/H2";
+import BtnFilter from "@/components/BtnFilter/BtnFilter";
+import ProjectCard from "@/components/ProjectCard/ProjectCard";
+import FormMail from "@/components/FormMail/FormMail";
+import RectMail from "@/components/RectMail/RectMail";
+import Footer from "@/components/Footer/Footer";
 
-interface NavigationItems {
-  id: number;
+interface PortfolioItems {
   title: string;
+  description: string;
+  skill: string;
+  date: number | string;
+  type: string;
+  language: string[];
+  link: {
+    github?: string;
+    watch?: string;
+    video?: string;
+  };
+  endDate?: number;
 }
 
 interface ProfessionalContent {
+  priority: number;
   emoji: string;
   strongText: string;
-  basicText: string;
 }
 
 export default function Home() {
-  const [navigation, setNavigation] = useState<NavigationItems[]>(data.navigation);
+  const [portfolio, setPortfolio] = useState<PortfolioItems[]>(data.portfolio);
 
-  const [currentSquare, setCurrentSquare] = useState<number>(0);
+  const [currentSquare, setCurrentSquare] = useState(0);
   const aboutProfessional: ProfessionalContent[] = data.professionalInfo;
-  const square = aboutProfessional[currentSquare]
+  const square = aboutProfessional[currentSquare];
+
+  const handleFilterClick = (filter: string) => {
+    if (filter === "Tous") {
+      setPortfolio(data.portfolio);
+    } else {
+      const filteredPortfolio = data.portfolio.filter(
+        (item) => item.type === filter
+      );
+      setPortfolio(filteredPortfolio);
+    }
+  };
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentSquare((index) => (index === aboutProfessional.length - 1 ? 0 : index + 1));
+      setCurrentSquare((currentSquare) =>
+        currentSquare === aboutProfessional.length - 1 ? 0 : currentSquare + 1
+      );
     }, 5000);
     return () => clearInterval(interval);
   }, []);
 
   return (
     <>
-      <NavBar content={navigation} />
-      <NavBtn content={navigation} />
-      <section className={HomeStyle.about}>
+      <NavBar content={data.navigation} />
+      <NavBtn content={data.navigation} />
+      <section id="part1" className={HomeStyle.about}>
         <SquareInfo
           emoji="👋"
           strongText="Cainjo Baptiste"
@@ -51,21 +78,33 @@ export default function Home() {
         <SquareInfo
           emoji={square.emoji}
           strongText={square.strongText}
-          basicText={square.basicText}
+          basicText="en alternance chez MMA depuis septembre 2022."
           priority={2}
         />
-        <Image
-          src={BkgAbout}
-          alt="Image d'illustration"
-          width={1024}
-          height={1024}
-        />
       </section>
-      <section className={HomeStyle.portfolio}>
-    
+      <section id="part2">
+        <H2 titleContent="Mon portfolio créatif" importantWord="portfolio" />
+        <div className={HomeStyle.portfolio}>
+          <BtnFilter
+            names={["Tous", "Personnel", "Scolaire", "Professionnel"]}
+            onFilterClick={handleFilterClick}
+          ></BtnFilter>
+          <ProjectCard portfolio={portfolio} />
+        </div>
       </section>
+      <section id="part3">
+        <H2 titleContent="Les logiciels maitrisés" importantWord="logiciels" />
+      </section>
+      <section id="part4">
+        <H2 titleContent="Et mon contact !" importantWord="contact" />
+        <div className={HomeStyle.contact}>
+          <RectMail />
+          <FormMail />
+        </div>
+      </section>
+      <Footer />
       <BtnUp />
-      <BtnNetwork />
+      <BtnNetwork content={data.networks} />
     </>
   );
 }

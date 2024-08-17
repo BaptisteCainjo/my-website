@@ -5,7 +5,7 @@
     width: 40px;
     height: 40px;
     background: $globalPrimaryColorLighten;
-    transition: .25s;
+    @include transition(.25s ease-in-out);
     border-radius: 5px;
     display: flex;
     align-items: center;
@@ -18,7 +18,7 @@
 
     &:hover {
         background: $globalPrimaryColor;
-        transition: .25s;
+        @include transition(.25s ease-in-out);
         z-index: 3;
     }
 }

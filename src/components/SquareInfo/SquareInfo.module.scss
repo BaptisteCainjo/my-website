@@ -98,7 +98,17 @@ $marginSquareInfoXS: 2%;
 
   .important{
     @include h1Style();
+    // animation: levitation 500ms ease-in-out infinite;
   }
+
+  // @keyframes levitation {
+  //   0% {
+  //     opacity: 0;
+  //   }
+  //   100% {
+  //     opacity: 1;
+  //   }
+  // }
 
 
 

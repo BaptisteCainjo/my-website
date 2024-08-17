@@ -11,12 +11,12 @@ $bkgColorHover: #f1f5f9;
     top: 0;
     background-color: $bkgColor;
     z-index: 1000;
-    transition: .25s;
+    @include transition(.25s ease-in-out);
     backdrop-filter: blur(2px);
 
     &:hover {
         background: $bkgColorHover;
-        transition: .25s;
+        @include transition(.25s ease-in-out);
     }
 
     nav {
@@ -52,7 +52,7 @@ $bkgColorHover: #f1f5f9;
             border-radius: 4px;
             transform-origin: right;
             transform: scaleX(0);
-            transition: transform .3s ease-in-out;
+            @include transition(transform .3s ease-in-out);
         }
 
         &:hover::after {

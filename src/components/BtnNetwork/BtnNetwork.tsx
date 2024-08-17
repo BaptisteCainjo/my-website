@@ -2,25 +2,39 @@
 
 import Link from "next/link.js";
 import Image from "next/image.js";
-import React, { useState } from "react";
+import React from "react";
 
 import Linkedin from "@/assets/svg/icons/linkedin.svg";
 import Github from "@/assets/svg/icons/github.svg";
 import Mail from "@/assets/svg/icons/mail.svg";
-import BtnNetworkStyle from "./BtnNetwork.module.scss"
+import BtnNetworkStyle from "./BtnNetwork.module.scss";
 
-export default function BtnNetwork() {
-  const [socialNetworks] = useState([
-    { name: "Linkedin", url: "https://www.linkedin.com/in/baptiste-cainjo/", icon: Linkedin },
-    { name: "Github", url: "https://github.com/BaptisteCainjo", icon: Github },
-    { name: "Mail", url: "#part5", icon: Mail },
-  ]);
+interface NetworksItems {
+  name: string;
+  url: string;
+}
 
+type NetworksProps = {
+  content: NetworksItems[];
+};
+
+const imageSources: { [key: string]: string } = {
+  Linkedin: Linkedin,
+  Github: Github,
+  Mail: Mail,
+};
+
+export default function BtnNetwork({ content }: NetworksProps) {
   return (
     <div className={BtnNetworkStyle.network}>
-      {socialNetworks.map(({ name, url, icon }) => (
-        <Link key={name} href={url} target="_blank">
-          <Image src={icon} alt={`Icône de l'application ${name}`} />
+      {content.map(({ name, url }) => (
+        <Link key={name} href={url} target={name !== "Mail" ? "_blank" : undefined}>
+          <Image
+            src={imageSources[name] || ""}
+            alt={`Icône de l'application ${name}`}
+            width={25}
+            height={25}
+          />{" "}
         </Link>
       ))}
     </div>
