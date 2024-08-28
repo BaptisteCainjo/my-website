@@ -78,7 +78,7 @@ export default function Home() {
         <SquareInfo
           emoji={square.emoji}
           strongText={square.strongText}
-          basicText="en alternance chez MMA depuis septembre 2022."
+          basicText="chez MMA depuis septembre 2022."
           priority={2}
         />
       </section>

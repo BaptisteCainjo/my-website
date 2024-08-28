@@ -37,9 +37,8 @@
       "type": "Scolaire",
       "language": ["NodeJs", "Express", "MongoDB", "ReactJS", "Sass"],
       "link": {
-        "github": "github.com",
-        "watch": "site.html",
-        "video": "video.mp4"
+        "github": "https://gitlab.com/holl/Holl",
+        "watch": "https://la-diwa-02.univ-lemans.fr"
       }
     },
     {
