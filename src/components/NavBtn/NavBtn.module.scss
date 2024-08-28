@@ -10,21 +10,21 @@
     right: 3%;
 
     a {
-        height: 12px;
-        width: 12px;
+        height: 14px;
+        width: 14px;
         border-radius: 50%;
-        border: 2px solid #B9B9B9;
+        border: 1px solid #B9B9B9;
         cursor: pointer;
-        transition: .5s;
+        @include transition(.5s ease-in-out);
 
         &:hover {
-            border: 2px solid $globalPrimaryColor;
-            transition: .5s;
+            border: 1px solid $globalPrimaryColor;
+            @include transition(.5s ease-in-out);
         }
 
         &.active {
             background-color: $globalPrimaryColorLighten;
-            border: .5px solid $globalPrimaryColor;
+            border: 1px solid $globalPrimaryColor;
 
             &:hover {
                 background-color: $globalPrimaryColor;

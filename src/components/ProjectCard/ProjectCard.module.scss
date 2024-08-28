@@ -1,0 +1,100 @@
+@import "@/scss/colors";
+@import "@/scss/mixins";
+
+$curve: 40px;
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin: 4rem 5vw;
+  padding: 0;
+  list-style-type: none;
+
+  li{
+    height: 235px;
+    position: relative;
+    display: block;
+    border-radius: $curve;
+    overflow: hidden;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+    @include transition(.25s ease-in-out);
+
+    &:hover {
+      transform: scale(1.05);
+
+      .card-overlay {
+        transform: translateY(0);
+      }
+
+      .card-header {
+        transform: translateY(0);
+      }
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+  }
+
+
+}
+
+.card-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  border-radius: $curve;
+  background-color: $w;
+  transform: translateY(100%);
+  @include transition(.2s ease-in-out);
+
+  p{
+    padding: 0 1.5em 1.5em;
+    font-size: 0.90rem;
+    color: $globalPrimaryColor;
+  }
+}
+
+.card-header {
+  padding: 1.5em;
+  border-radius: $curve 0 0 0;
+  background-color: $w;
+  transform: translateY(-100%);
+  @include transition(.2s ease-in-out);
+
+  svg {
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    bottom: 100%;
+    right: 0;
+  
+    & path {
+      fill: $w;
+      d: path("M 40 80 c 22 0 40 -22 40 -40 v 40 Z");
+    }
+  }
+}
+
+
+
+.card__headerText {
+  display: flex;
+  flex-direction: column;
+
+  h3{
+    font-size: 1.2em;
+    margin: 0 0 0.3em;
+    color: $globalPrimaryColor;
+  }
+
+  span{
+    font-size: 0.8em;
+    color: $globalPrimaryColorLighten;
+  }
+}

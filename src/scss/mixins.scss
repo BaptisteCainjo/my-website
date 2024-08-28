@@ -136,3 +136,13 @@ $mixin-breakpoints: (
   text-transform: uppercase;
   width: max-content;
 }
+
+@mixin hoverBorder(){
+  border: 1px solid transparent;
+  @include transition(.25s ease-in-out);
+
+  &:hover{
+      border: 1px solid $globalPrimaryColor;
+      @include transition(.25s ease-in-out);
+  }
+}

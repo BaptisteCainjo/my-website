@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import SquareInfoStyle from "./SquareInfo.module.scss";
 
 type SquareInfoProps = {
@@ -14,6 +14,16 @@ export default function SquareInfo({
   basicText,
   priority,
 }: SquareInfoProps) {
+//  const [transitionClass, setTransionClass] = useState(true)
+
+//  useEffect(() => {
+//    const intervalId = setInterval(() => {
+//      setTransionClass((prev) => !prev);
+//    }, 3000);
+//
+//  return () => clearInterval(intervalId);
+//  }, []);
+
   return (
     <div className={SquareInfoStyle["square-info"]}>
       <p className={SquareInfoStyle.emoji}>{emoji}</p>
@@ -23,15 +33,8 @@ export default function SquareInfo({
           <h1>{strongText}</h1>
         </div>
       ) : (
-        <p><span className={SquareInfoStyle.important}>{strongText}</span> {basicText}</p>
+        <p><span className={`${SquareInfoStyle.important}`}>{strongText}</span> {basicText}</p>
       )}
     </div>
   );
-}
-
-{
-  /* <p>{priority === 1 ? basicText : strongText}</p> */
-}
-{
-  /* <p>{priority === 1 ? strongText : basicText}</p> */
 }

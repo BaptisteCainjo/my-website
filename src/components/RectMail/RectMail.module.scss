@@ -1,0 +1,25 @@
+@import "@/scss/colors";
+@import "@/scss/mixins";
+
+.rect {
+  padding: 16px 64px 16px 32px;
+  background: $globalPrimaryColor;
+  border-radius: 9px;
+  width: 278px;
+  @include transition(.25s);
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+
+  p {
+    color: white;
+    font-size: 16px;
+    font-weight: 400;
+    height: min-content;
+    margin: 10px 0 0 0;
+  }
+
+  span{
+    font-size: 32px;
+  }
+}

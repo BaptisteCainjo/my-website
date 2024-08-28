@@ -5,17 +5,173 @@
     { "id": 3, "title": "Compétences" },
     { "id": 4, "title": "Contact" }
   ],
-
+  "networks" : [
+    { "name": "Linkedin", "url": "https://www.linkedin.com/in/baptiste-cainjo/" },
+    { "name": "Github", "url": "https://github.com/BaptisteCainjo"},
+    { "name": "Mail", "url": "#part4" }
+  ],
   "professionalInfo": [
     {
-      "emoji": "💼",
-      "strongText": "Concepteur web",
-      "basicText": "en alternance chez MMA depuis septembre 2022"
+      "priority": 1,
+      "emoji": "🧑‍💻",
+      "strongText": "Développeur web"
     },
     {
-      "emoji": "🎓",
-      "strongText": "Etudiant",
-      "basicText": "en 3e année de BUT Métiers du Multimédia et de l'Internet"
+      "priority": 2,
+      "emoji": "🖥️",
+      "strongText": "Concepteur web"
+    },
+    {
+      "priority": 2,
+      "emoji": "🎨",
+      "strongText": "Webdesigner"
+    }
+  ],
+
+  "portfolio": [
+    {
+      "title": "Holl",
+      "description": "Création complète d'une application web (MERN) d'e-commerce mettant en relation artisants et touristes.",
+      "skill": "Full-stack",
+      "date": 2024,
+      "type": "Scolaire",
+      "language": ["NodeJs", "Express", "MongoDB", "ReactJS", "Sass"],
+      "link": {
+        "github": "https://gitlab.com/holl/Holl",
+        "watch": "https://la-diwa-02.univ-lemans.fr"
+      }
+    },
+    {
+      "title": "Flow",
+      "description": "Réseau social autour de la musique.",
+      "skill": "Full-stack",
+      "date": "En cours",
+      "type": "Personnel",
+      "language": ["NodeJs", "Express", "MongoDB", "ReactJS", "Sass"],
+      "link": {
+        "github": "github.com"
+      }
+    },
+    {
+      "title": "Gestion administrative",
+      "description": "Réalisation d'une API REST pour la gestion d'un site e-commerce.",
+      "skill": "Full-stack",
+      "date": 2023,
+      "type": "Scolaire",
+      "language": ["React", "Symfony", "Sass"],
+      "link": {
+        "github": "github.com"
+      }
+    },
+    {
+      "title": "Dataviz",
+      "description": "Site dédié au divers projets effectués sur la visualisation de données lié à la pollution atmosphérique.",
+      "skill": "Front-end",
+      "date": 2023,
+      "type": "Scolaire",
+      "language": ["D3.js", "JavaScript", "HTML", "CSS"],
+      "link": {
+        "link": {
+          "github": "github.com",
+          "watch": "site.html",
+          "video": "video.mp4"
+        }
+      }
+    },
+    {
+      "title": "Application météo",
+      "description": "Application web de météo avec de nombreuses fonctionnalités détaillées.",
+      "skill": "Front-end",
+      "date": 2023,
+      "type": "Personnel",
+      "language": ["React", "Sass"],
+      "link": {
+        "github": "github.com",
+        "watch": "site.html"
+      }
+    },
+    {
+      "title": "Portfolio",
+      "description": "Portfolio conçu spécifiquement pour présenter mes projets, les technologies maitrisées, etc.",
+      "skill": "Front-end",
+      "date": 2023,
+      "type": "Personnel",
+      "language": ["NextJS", "React", "TypeScript", "Sass"],
+      "link": {
+        "github": "github.com",
+        "watch": "site.html"
+      }
+    },
+    {
+      "title": "History.ai",
+      "description": "Création d'une application mobile permettant de communiquer avec des personnages historique grâce à l'IA.",
+      "skill": "Mobile",
+      "date": 2024,
+      "type": "Scolaire",
+      "language": ["Flutter"],
+      "link": {
+        "github": "github.com",
+        "video": "video.mp4"
+      }
+    },
+    {
+      "title": "Site E-Commerce",
+      "description": "Adaptation d'un site de commerce en ligne dédié aux produit d'un artiste musical.",
+      "skill": "Back-end",
+      "date": 2022,
+      "type": "Scolaire",
+      "language": ["Symfony"],
+      "link": {
+        "github": "github.com"
+      }
+    },
+    {
+      "title": "Forum",
+      "description": "Forum afin de rendre le sujet de la sobriété numérique ouvert à tous.",
+      "skill": "Back-end",
+      "date": 2022,
+      "type": "Scolaire",
+      "language": ["PHP", "MySql"],
+      "link": {
+        "github": "github.com",
+        "watch": "site.html"
+      }
+    },
+    {
+      "title": "Produit 3D",
+      "description": "Visualition web d'un produit en 3D lié à un artiste musical.",
+      "skill": "Front-end",
+      "date": 2023,
+      "type": "Scolaire",
+      "language": ["Playcanvas", "JavaScript"],
+      "link": {
+        "github": "github.com",
+        "watch": "site.html"
+      }
+    },
+    {
+      "title": "FestView",
+      "description": "Modérateur d'une encyclopédie musicale collaborative.",
+      "skill": "Autre",
+      "date": 2021,
+      "endDate": 2023,
+      "type": "Personnel",
+      "language": [],
+      "link": {
+        "watch": "site.html"
+      }
+    },
+    {
+      "title": "QuizRap",
+      "description": "Community Manager d'une application de quiz musicale.",
+      "skill": "Autre",
+      "date": 2021,
+      "endDate": 2023,
+      "type": "Personnel",
+      "language": [],
+      "link": {
+        "watch": "site.html"
+      }
     }
   ]
 }
