@@ -13,7 +13,9 @@ import Produit3d from "@/assets/images/produit3d.png";
 import SiteECommerce from "@/assets/images/site_e_commerce.png";
 import Quizrap from "@/assets/images/quizrap.png";
 import Festview from "@/assets/images/festview.png";
-import GestionAdministrative from "@/assets/images/gestion_administrative.png"
+import GestionAdministrative from "@/assets/images/gestion_administrative.png";
+import Github from "@/assets/svg/icons/github.svg";
+import Watch from "@/assets/svg/icons/watch.svg";
 
 interface PortfolioItems {
   title: string;
@@ -25,7 +27,6 @@ interface PortfolioItems {
   link: {
     github?: string;
     watch?: string;
-    video?: string;
   };
   endDate?: number;
 }
@@ -46,7 +47,7 @@ const imageSources: { [key: string]: StaticImageData } = {
   "Site E-Commerce": SiteECommerce,
   QuizRap: Quizrap,
   FestView: Festview,
-  "Gestion administrative": GestionAdministrative, 
+  "Gestion administrative": GestionAdministrative,
 };
 
 export default function ProjectCard({ portfolio }: PortfolioProps) {
@@ -54,21 +55,48 @@ export default function ProjectCard({ portfolio }: PortfolioProps) {
     <ul className={ProjectCardStyle.cards}>
       {portfolio.map((element, index) => (
         <li key={index} className={ProjectCardStyle.card}>
-            <Image
-              src={imageSources[element.title]}
-              alt={`Illustration du projet ${element.title}`}
-              className={ProjectCardStyle.card__image}
-            />
-            <div className={ProjectCardStyle["card-overlay"]}>
-              <div className={ProjectCardStyle["card-header"]}>
-                <svg className={ProjectCardStyle["card-arc"]} xmlns="http://www.w3.org/2000/svg"><path /></svg>
-                <div className={ProjectCardStyle.card__headerText}>
-                  <h3>{element.title}</h3>
-                  <span>{`${element.date} ${element.endDate ? `- ${element.endDate}` : ''} • ${element.type} • ${element.skill}`}</span>
-                </div>
+          <Image
+            src={imageSources[element.title]}
+            alt={`Illustration du projet ${element.title}`}
+            className={ProjectCardStyle.card__image}
+          />
+          <div className={ProjectCardStyle["card-overlay"]}>
+            <div className={ProjectCardStyle["card-header"]}>
+              <svg
+                className={ProjectCardStyle["card-arc"]}
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path />
+              </svg>
+              <div className={ProjectCardStyle.card__headerText}>
+                <h3>{element.title}</h3>
+                <span>{`${element.date} ${
+                  element.endDate ? `- ${element.endDate}` : ""
+                } • ${element.type} • ${element.skill}`}</span>
               </div>
-              <p className={ProjectCardStyle.card__description}>{element.description} <a href={element.link.github}></a></p>
             </div>
+            <p className={ProjectCardStyle.card__description}>
+              {element.description}{" "}
+            </p>
+            <div>
+              <a href={element.link.github}>
+                <Image
+                  src={Github}
+                  alt="Icône du site GitHub"
+                  width={25}
+                  height={25}
+                />
+              </a>
+              <a href={element.link.watch}>
+                <Image
+                  src={Watch}
+                  alt="Icône pour visualiser le site"
+                  width={25}
+                  height={25}
+                />
+              </a>
+            </div>
+          </div>
         </li>
       ))}
     </ul>

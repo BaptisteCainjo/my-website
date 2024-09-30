@@ -13,17 +13,14 @@
   "professionalInfo": [
     {
       "priority": 1,
-      "emoji": "🧑‍💻",
-      "strongText": "Développeur web"
+      "strongText": "Développeur Web"
     },
     {
       "priority": 2,
-      "emoji": "🖥️",
-      "strongText": "Concepteur web"
+      "strongText": "Concepteur Web"
     },
     {
       "priority": 2,
-      "emoji": "🎨",
       "strongText": "Webdesigner"
     }
   ],
@@ -49,7 +46,8 @@
       "type": "Personnel",
       "language": ["NodeJs", "Express", "MongoDB", "ReactJS", "Sass"],
       "link": {
-        "github": "github.com"
+        "github": "https://github.com/BaptisteCainjo/FLOW",
+        "watch": "https://sharemusic.baptistecainjo.fr/"
       }
     },
     {
@@ -60,7 +58,7 @@
       "type": "Scolaire",
       "language": ["React", "Symfony", "Sass"],
       "link": {
-        "github": "github.com"
+        "github": "https://github.com/BaptisteCainjo/Projet-2e-ann-e-MMI.git"
       }
     },
     {
@@ -72,9 +70,9 @@
       "language": ["D3.js", "JavaScript", "HTML", "CSS"],
       "link": {
         "link": {
-          "github": "github.com",
-          "watch": "site.html",
-          "video": "video.mp4"
+          "github": "https://github.com/BaptisteCainjo/DATAVIZ-Interactive",
+          "github": "https://github.com/BaptisteCainjo/DATAVIZ-3D",
+          "watch": "https://dataviz3d.baptistecainjo.fr/"
         }
       }
     },
@@ -86,8 +84,8 @@
       "type": "Personnel",
       "language": ["React", "Sass"],
       "link": {
-        "github": "github.com",
-        "watch": "site.html"
+        "github": "https://github.com/BaptisteCainjo/meteo-react-function",
+        "watch": "https://meteo.baptistecainjo.fr/"
       }
     },
     {
@@ -98,8 +96,8 @@
       "type": "Personnel",
       "language": ["NextJS", "React", "TypeScript", "Sass"],
       "link": {
-        "github": "github.com",
-        "watch": "site.html"
+        "github": "https://github.com/BaptisteCainjo/SITE-PERSO",
+        "watch": "https://www.baptistecainjo.fr/"
       }
     },
     {
@@ -110,8 +108,7 @@
       "type": "Scolaire",
       "language": ["Flutter"],
       "link": {
-        "github": "github.com",
-        "video": "video.mp4"
+        "github": "https://github.com/BaptisteCainjo/historyai"
       }
     },
     {
@@ -122,7 +119,7 @@
       "type": "Scolaire",
       "language": ["Symfony"],
       "link": {
-        "github": "github.com"
+        "github": "https://github.com/BaptisteCainjo/ecommerce.git"
       }
     },
     {
@@ -133,8 +130,8 @@
       "type": "Scolaire",
       "language": ["PHP", "MySql"],
       "link": {
-        "github": "github.com",
-        "watch": "site.html"
+        "github": "https://github.com/BaptisteCainjo/Projet-1er-ann-e-MMI",
+        "watch": "https://forum.baptistecainjo.fr/"
       }
     },
     {
@@ -145,8 +142,8 @@
       "type": "Scolaire",
       "language": ["Playcanvas", "JavaScript"],
       "link": {
-        "github": "github.com",
-        "watch": "site.html"
+        "github": "https://github.com/BaptisteCainjo/CONFIGURATOR",
+        "watch": "https://configurator.baptistecainjo.fr/"
       }
     },
     {
@@ -158,7 +155,7 @@
       "type": "Personnel",
       "language": [],
       "link": {
-        "watch": "site.html"
+        "watch": "https://www.instagram.com/festview/?hl=fr"
       }
     },
     {
@@ -170,7 +167,7 @@
       "type": "Personnel",
       "language": [],
       "link": {
-        "watch": "site.html"
+        "watch": "https://www.instagram.com/quizrap_/"
       }
     }
   ]

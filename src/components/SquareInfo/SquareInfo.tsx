@@ -1,15 +1,16 @@
 import React, { useState, useEffect } from "react";
 import SquareInfoStyle from "./SquareInfo.module.scss";
+import Image from "next/image";
 
 type SquareInfoProps = {
-  emoji: string;
+  icon: string;
   strongText: string;
   basicText: string;
   priority: number;
 };
 
 export default function SquareInfo({
-  emoji,
+  icon,
   strongText,
   basicText,
   priority,
@@ -26,7 +27,7 @@ export default function SquareInfo({
 
   return (
     <div className={SquareInfoStyle["square-info"]}>
-      <p className={SquareInfoStyle.emoji}>{emoji}</p>
+      <Image src={icon} alt="icon" width={50} height={50} />
       {priority === 1 ? (
         <div>
           <p>{basicText}</p>
