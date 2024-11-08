@@ -7,11 +7,11 @@ export default function RectMail() {
 
   return (
     <a
-      href="mailto:contact@baptistecainjo.fr"
+      href="mailto:cainjo.baptiste@orange.fr"
       className={RectMailStyle.rect}
     >
       <span>✉️ </span>
-      <p>contact@baptistecainjo.fr </p>
+      <p>cainjo.baptiste@orange.fr </p>
       <Tooltip name={tooltipText} />
     </a>
   );

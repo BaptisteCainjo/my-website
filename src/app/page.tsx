@@ -133,7 +133,7 @@ export default function Home() {
         <H2 titleContent="Et mon contact !" importantWord="contact" />
         <div className={HomeStyle.contact}>
           <RectMail />
-          {/* <FormMail /> */}
+          <FormMail />
         </div>
       </section>
       <Footer />

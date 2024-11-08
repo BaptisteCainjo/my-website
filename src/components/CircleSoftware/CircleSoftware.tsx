@@ -106,7 +106,6 @@ export default function CircleSoftware() {
     setIsMobileView(isMobileOnly);
   }, []);
 
-  console.log(isMobileView);
   return (
     <div className={CircleSoftwareStyle.container}>
       {Object.keys(langImage).map((category) => (

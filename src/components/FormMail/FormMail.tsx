@@ -1,5 +1,7 @@
+'use client'
+
 import React, { useState } from "react";
-import FormMailStyle from "./FormMail.module.scss";
+import styles from "./FormMail.module.scss";
 
 export default function FormMail() {
   const [name, setName] = useState("");
@@ -11,7 +13,7 @@ export default function FormMail() {
     e.preventDefault();
 
     try {
-      const response = await fetch("/server.php", {
+      const response = await fetch("/api/send-email", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -19,24 +21,28 @@ export default function FormMail() {
         body: JSON.stringify({ name, email, message }),
       });
 
+      const data = await response.json();
+
       if (response.ok) {
-        setResponseMessage("Votre message a été envoyé avec succès.");
+        setResponseMessage(data.message);
         setName("");
         setEmail("");
         setMessage("");
       } else {
-        setResponseMessage(`Erreur: ${response.text()}`);
+        setResponseMessage(`Erreur: ${data.error}`);
       }
     } catch (error: any) {
-      console.log(`Erreur de connexion: ${error.message}`);
+      console.error(`Erreur de connexion: ${error.message}`);
+      setResponseMessage("Une erreur s'est produite lors de l'envoi du message.");
     }
   };
 
   return (
-    <form onSubmit={handleSubmit} className={FormMailStyle.form}>
-      <label htmlFor="">
+    <form onSubmit={handleSubmit} className={styles.form}>
+      <label htmlFor="name">
         Nom
         <input
+          id="name"
           type="text"
           value={name}
           onChange={(e) => setName(e.target.value)}
@@ -45,9 +51,10 @@ export default function FormMail() {
         />
       </label>
 
-      <label htmlFor="">
+      <label htmlFor="email">
         Email
         <input
+          id="email"
           type="email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
@@ -55,9 +62,10 @@ export default function FormMail() {
           required
         />
       </label>
-      <label htmlFor="">
+      <label htmlFor="message">
         Message
         <textarea
+          id="message"
           value={message}
           onChange={(e) => setMessage(e.target.value)}
           placeholder="Message"

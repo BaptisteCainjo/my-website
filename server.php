@@ -4,7 +4,7 @@ $data = json_decode(file_get_contents('php://input'), true);
 
 if (isset($data['email'])) {
     // Destinataire de l'email
-    $to = "contact@baptistecainjo.fr";
+    $to = "cainjo.baptiste@orange.fr";
     // Sujet de l'email
     $subject = "Nouveau message du formulaire de contact";
 

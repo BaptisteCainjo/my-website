@@ -17,8 +17,8 @@ export default function page() {
           </p>
           <p>
             <strong>E-mail : </strong>
-            <a href="mailto:contact@baptistecainjo.fr">
-              contact@baptistecainjo.fr
+            <a href="mailto:cainjo.baptiste@orange.fr">
+              cainjo.baptiste@orange.fr
             </a>
           </p>
         </div>
