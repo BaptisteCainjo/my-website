@@ -41,7 +41,6 @@ body {
 }
 
 section {
-  max-width: 1200px;
   margin: auto;
 }
 
@@ -92,7 +91,6 @@ textarea {
   background: $w;
   border-radius: 8px;
   padding: 16px;
-  width: 100%;
   @include hoverBorder();
 }
 
@@ -107,4 +105,9 @@ button[type="submit"] {
 textarea {
   resize: none;
   height: 150px;
+}
+
+h3 {
+  font-size: 1.2em;
+  color: $globalPrimaryColor;
 }

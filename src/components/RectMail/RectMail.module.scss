@@ -2,14 +2,20 @@
 @import "@/scss/mixins";
 
 .rect {
-  padding: 16px 64px 16px 32px;
+  padding: 16px 32px;
   background: $globalPrimaryColor;
   border-radius: 9px;
-  width: 278px;
   @include transition(.25s);
   display: flex;
   flex-direction: row;
   gap: 16px;
+  position: relative;
+  @include hoverTooltip();
+
+  @include mixinBreakpoints(md) {
+    width: 278px;
+    padding: 16px 64px 16px 32px;
+  }
 
   p {
     color: white;
@@ -19,7 +25,11 @@
     margin: 10px 0 0 0;
   }
 
-  span{
+  span:first-child{
     font-size: 32px;
+  }
+
+  span:last-child{
+    transform: translateX(50%);
   }
 }

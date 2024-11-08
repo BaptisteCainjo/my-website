@@ -8,6 +8,7 @@ import Linkedin from "@/assets/svg/icons/linkedin.svg";
 import Github from "@/assets/svg/icons/github.svg";
 import Mail from "@/assets/svg/icons/mail.svg";
 import BtnNetworkStyle from "./BtnNetwork.module.scss";
+import Tooltip from "../Tooltip/Tooltip";
 
 interface NetworksItems {
   name: string;
@@ -24,6 +25,12 @@ const imageSources: { [key: string]: string } = {
   Mail: Mail,
 };
 
+const tooltipText: { [key: string]: string } = {
+  Linkedin: "Visitez mon profil Linkedin",
+  Github: "Visitez mon profil Github",
+  Mail: "Envoyez-moi un mail",
+};
+
 export default function BtnNetwork({ content }: NetworksProps) {
   return (
     <div className={BtnNetworkStyle.network}>
@@ -35,6 +42,7 @@ export default function BtnNetwork({ content }: NetworksProps) {
             width={25}
             height={25}
           />{" "}
+          <Tooltip name={tooltipText[name]} position="vertical" />
         </Link>
       ))}
     </div>

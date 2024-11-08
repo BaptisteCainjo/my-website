@@ -1,0 +1,45 @@
+@import "@/scss/colors";
+@import "@/scss/mixins";
+
+$marginSquareInfo: 15%;
+$marginSquareInfoXS: 2%;
+$boxShadowColor: rgba(0, 0, 0, 0.062745098);
+$animationDuration: 0.33s;
+$animationDelay: 0.75s;
+
+.square-small {
+  background: $w;
+  box-shadow: 0 0 10px $boxShadowColor;
+  border-radius: 5px;
+  padding: 9px 13px;
+  max-width: min-content;
+  border: 1px solid transparent;
+  transition: opacity 0.25s ease-in-out, transform 0.25s ease-in-out;
+  transform: translate(200px, 0);
+  opacity: 0;
+  @include hoverBorder();
+
+  &:first-of-type,
+  &:last-of-type {
+    animation: fadeIn $animationDuration ease-in-out $animationDelay forwards, 
+               fadeFromRight $animationDuration ease-in-out ($animationDelay + 0.05s) forwards;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeFromRight {
+  0% {
+    transform: translate(200px, 0);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}

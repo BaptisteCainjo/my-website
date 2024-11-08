@@ -5,9 +5,12 @@
     { "id": 3, "title": "Compétences" },
     { "id": 4, "title": "Contact" }
   ],
-  "networks" : [
-    { "name": "Linkedin", "url": "https://www.linkedin.com/in/baptiste-cainjo/" },
-    { "name": "Github", "url": "https://github.com/BaptisteCainjo"},
+  "networks": [
+    {
+      "name": "Linkedin",
+      "url": "https://www.linkedin.com/in/baptiste-cainjo/"
+    },
+    { "name": "Github", "url": "https://github.com/BaptisteCainjo" },
     { "name": "Mail", "url": "#part4" }
   ],
   "professionalInfo": [
@@ -32,10 +35,10 @@
       "skill": "Full-stack",
       "date": 2024,
       "type": "Scolaire",
-      "language": ["NodeJs", "Express", "MongoDB", "ReactJS", "Sass"],
+      "language": ["Node.js", "Express.js", "MongoDB", "React", "Sass"],
       "link": {
-        "github": "https://gitlab.com/holl/Holl",
-        "watch": "https://la-diwa-02.univ-lemans.fr"
+        "github": "https://github.com/BaptisteCainjo/Holl.git",
+        "watch": "https://decouvrir-mmi.univ-lemans.fr/index.php/2024/02/13/holl/"
       }
     },
     {
@@ -44,7 +47,7 @@
       "skill": "Full-stack",
       "date": "En cours",
       "type": "Personnel",
-      "language": ["NodeJs", "Express", "MongoDB", "ReactJS", "Sass"],
+      "language": ["Node.js", "Express.js", "MongoDB", "React", "Sass"],
       "link": {
         "github": "https://github.com/BaptisteCainjo/FLOW",
         "watch": "https://sharemusic.baptistecainjo.fr/"
@@ -62,19 +65,33 @@
       }
     },
     {
-      "title": "Dataviz",
-      "description": "Site dédié au divers projets effectués sur la visualisation de données lié à la pollution atmosphérique.",
+      "title": "Intranet de la Documentation",
+      "description": "Création d’une interface web centralisant l’ensemble des outils que j’ai développés spécifiquement pour optimiser le travail de mon équipe.",
       "skill": "Front-end",
-      "date": 2023,
+      "date": 2024,
+      "type": "Professionnel",
+      "language": ["Next.js", "TypeScript", "Sass"],
+      "link": {}
+    },
+    {
+      "title": "History.ai",
+      "description": "Création d'une application mobile permettant de communiquer avec des personnages historique grâce à l'IA.",
+      "skill": "Mobile",
+      "date": 2024,
       "type": "Scolaire",
-      "language": ["D3.js", "JavaScript", "HTML", "CSS"],
+      "language": ["Flutter"],
       "link": {
-        "link": {
-          "github": "https://github.com/BaptisteCainjo/DATAVIZ-Interactive",
-          "github": "https://github.com/BaptisteCainjo/DATAVIZ-3D",
-          "watch": "https://dataviz3d.baptistecainjo.fr/"
-        }
+        "github": "https://github.com/BaptisteCainjo/historyai"
       }
+    },
+    {
+      "title": "Formatage automatique du code",
+      "description": "Développement d’un script pour formater automatiquement toutes les pages HTML de la documentation en HTML sémantique.",
+      "skill": "Back-end",
+      "date": 2024,
+      "type": "Professionnel",
+      "language": ["Node.js", "TypeScript"],
+      "link": {}
     },
     {
       "title": "Application météo",
@@ -89,26 +106,49 @@
       }
     },
     {
+      "title": "Assistance Métier",
+      "description": "Page permettant aux utilisateurs de signaler les incidents rencontrés sur les pages de la Documentation.",
+      "skill": "Front-end",
+      "date": 2023,
+      "type": "Professionnel",
+      "language": ["SMTP.js", "JavaScript", "Sass", "HTML"],
+      "link": {}
+    },
+    {
+      "title": "Dataviz",
+      "description": "Site dédié au divers projets effectués sur la visualisation de données lié à la pollution atmosphérique.",
+      "skill": "Front-end",
+      "date": 2023,
+      "type": "Scolaire",
+      "language": ["D3.js", "JavaScript", "HTML", "CSS"],
+      "link": {
+        "github": "https://github.com/BaptisteCainjo/DATAVIZ-Interactive",
+        "github2": "https://github.com/BaptisteCainjo/DATAVIZ-3D",
+        "watch": "https://dataviz3d.baptistecainjo.fr/"
+      }
+    },
+    {
+      "title": "Produit 3D",
+      "description": "Visualition web d'un produit en 3D lié à un artiste musical.",
+      "skill": "Front-end",
+      "date": 2023,
+      "type": "Scolaire",
+      "language": ["Playcanvas", "JavaScript"],
+      "link": {
+        "github": "https://github.com/BaptisteCainjo/CONFIGURATOR",
+        "watch": "https://configurator.baptistecainjo.fr/"
+      }
+    },
+    {
       "title": "Portfolio",
       "description": "Portfolio conçu spécifiquement pour présenter mes projets, les technologies maitrisées, etc.",
       "skill": "Front-end",
       "date": 2023,
       "type": "Personnel",
-      "language": ["NextJS", "React", "TypeScript", "Sass"],
+      "language": ["Next.js", "TypeScript", "Sass"],
       "link": {
         "github": "https://github.com/BaptisteCainjo/SITE-PERSO",
         "watch": "https://www.baptistecainjo.fr/"
-      }
-    },
-    {
-      "title": "History.ai",
-      "description": "Création d'une application mobile permettant de communiquer avec des personnages historique grâce à l'IA.",
-      "skill": "Mobile",
-      "date": 2024,
-      "type": "Scolaire",
-      "language": ["Flutter"],
-      "link": {
-        "github": "https://github.com/BaptisteCainjo/historyai"
       }
     },
     {
@@ -135,16 +175,13 @@
       }
     },
     {
-      "title": "Produit 3D",
-      "description": "Visualition web d'un produit en 3D lié à un artiste musical.",
+      "title": "Environnements graphiques",
+      "description": "Conception et déploiement de chartes graphiques personnalisées.",
       "skill": "Front-end",
       "date": 2023,
-      "type": "Scolaire",
-      "language": ["Playcanvas", "JavaScript"],
-      "link": {
-        "github": "https://github.com/BaptisteCainjo/CONFIGURATOR",
-        "watch": "https://configurator.baptistecainjo.fr/"
-      }
+      "type": "Professionnel",
+      "language": ["HTML", "Sass", "JavaScript"],
+      "link": {}
     },
     {
       "title": "FestView",

@@ -4,7 +4,7 @@ import { isDesktop } from "react-device-detect";
 
 import NavBtnStyle from "./NavBtn.module.scss";
 
-type NavBtnProps = {
+interface NavBtnProps {
   content: Array<{ id: number; title: string }>;
 };
 

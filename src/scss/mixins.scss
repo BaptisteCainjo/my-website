@@ -39,7 +39,7 @@ $mixin-breakpoints: (
 @mixin mixinBreakpoints($breakpoint) {
   @if map-has-key($mixin-breakpoints, $breakpoint) {
     $value: map-get($mixin-breakpoints, $breakpoint);
-    @media (max-width: $value) {
+    @media (min-width: $value) {
       @content
     }
   } @else {
@@ -144,5 +144,30 @@ $mixin-breakpoints: (
   &:hover{
       border: 1px solid $globalPrimaryColor;
       @include transition(.25s ease-in-out);
+  }
+}
+
+@mixin hoverTooltip{
+  &:hover .tooltip {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+@mixin underlineLink{
+  &::after {
+    content: "";
+    height: 1.5px;
+    display: block;
+    background: $globalBlackColor;
+    border-radius: 4px;
+    transform-origin: right;
+    transform: scaleX(0);
+    @include transition(transform 0.3s ease-in-out);
+  }
+
+  &:hover::after {
+    transform-origin: left;
+    transform: scaleX(1);
   }
 }

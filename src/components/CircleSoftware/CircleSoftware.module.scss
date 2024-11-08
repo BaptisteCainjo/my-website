@@ -1,0 +1,60 @@
+@import "@/scss/colors";
+@import "@/scss/mixins";
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 25px;
+
+  div {
+    width: fit-content;
+    margin: 0 auto;
+    div {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 15px;
+      width: fit-content;
+      justify-items: center;
+      margin: 0 auto;
+
+      @include mixinBreakpoints(md) {
+        grid-template-columns: repeat(4, 1fr);
+      }
+
+      div {
+        border-radius: 25%;
+        height: 50px;
+        width: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: 0.25s ease-in-out;
+        position: relative;
+
+          @include hoverTooltip();
+
+        img {
+          width: auto;
+          border-radius: 2px;
+        }
+      }
+    }
+  }
+
+  h3{
+    text-align: center;
+    margin: 0 0 1rem;
+  }
+}
+
+.frontend div {
+  background-color: #fff09026;
+}
+
+.backend div {
+  background-color: #9999ff26;
+}
+
+.outils div {
+  background-color: #ffbebe26;
+}

@@ -1,0 +1,41 @@
+@import "../../scss/mixins";
+@import "../../scss/colors";
+
+.tooltip {
+  position: absolute;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
+  padding: 8px 12px;
+  border-radius: 8px;
+  background-color: rgba(0, 0, 0, 0.75);
+  color: #ffffff;
+  font-size: 14px;
+  white-space: nowrap;
+  pointer-events: none;
+  top: -60%;
+
+  &.vertical {
+    left: 125%;
+    top: initial;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 6px;
+    border-style: solid;
+    border-color: rgba(0, 0, 0, 0.75) transparent transparent transparent;
+
+  }
+
+  &.vertical::after {
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%) translateX(-100%); 
+    border-color: transparent rgba(0, 0, 0, 0.75) transparent transparent;
+  }
+}

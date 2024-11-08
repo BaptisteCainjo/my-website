@@ -1,23 +1,96 @@
 @import "../colors";
 @import "../mixins";
 
+//SECTION
+
 .about {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
   background-image: url("../../assets/images/background.png");
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
   height: 100vh;
+  justify-items: center;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr 1fr;
+  height: 100vh;
+  grid-gap: 10% 0;
+}
+
+//ABOUT CARD
+.square-small {
+  animation: none;
+  grid-column: 1 / 2;
+  grid-row: 2;
+  gap: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  height: fit-content;
+
+  .square-info div {
+    opacity: 0;
+    animation: fadeInUp 0.5s .25s ease-in-out forwards;
+  }
+
+  @include mixinBreakpoints(sm) {
+    animation: levitationX 6s linear infinite;
+    grid-column: 2 / 2;
+
+    .square-info {
+      animation: none;
+    }
+  }
+
+  nav {
+    display: flex;
+    gap: 1rem;
+    width: fit-content;
+  }
+}
+
+.square-info {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background: #ffffff;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.062745098);
+  border-radius: 5px;
+  padding: 1rem;
+  gap: 0.75rem;
+  width: fit-content;
+  height: fit-content;
+  animation: none;
+  grid-row: 1;
+  grid-column: 0 / span 2;
+  align-self: flex-end;
+
+  @include mixinBreakpoints(xs) {
+    animation: levitationY 6s linear infinite;
+  }
+
+  @include mixinBreakpoints(lg) {
+  }
+
+  div {
+    opacity: 0;
+    animation: fadeInUp 0.5s ease-in-out forwards;
+  }
+
+  p {
+    font-weight: 300;
+    font-size: clamp(0.8rem, 1vw, 0.9rem);
+  }
+
+  strong {
+    @include h1Style();
+  }
 }
 
 .portfolio {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 75px;
-  min-height: 65vh;
+  gap: 30px;
 }
 
 .contact {
@@ -25,4 +98,39 @@
   flex-direction: column;
   align-items: center;
   gap: 40px;
+}
+
+@keyframes levitationY {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes levitationX {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-10px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

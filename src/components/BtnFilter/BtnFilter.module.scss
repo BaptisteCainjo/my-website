@@ -3,11 +3,15 @@
 
 .btn-filter {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: repeat(2, 1fr);
   gap: 25px;
   justify-items: stretch;
   align-items: center;
   text-align: center;
+
+  @include mixinBreakpoints(md) {
+    grid-template-columns: repeat(4, 1fr);
+  }
 
   li {
     cursor: pointer;

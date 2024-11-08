@@ -1,14 +1,18 @@
-import Link from "next/link.js";
 import RectMailStyle from "./RectMail.module.scss";
+import Tooltip from "../Tooltip/Tooltip";
 
 export default function RectMail() {
+
+  const tooltipText = "Envoyez-moi un mail";
+
   return (
-    <Link
+    <a
       href="mailto:contact@baptistecainjo.fr"
       className={RectMailStyle.rect}
     >
       <span>✉️ </span>
       <p>contact@baptistecainjo.fr </p>
-    </Link>
+      <Tooltip name={tooltipText} />
+    </a>
   );
 }
