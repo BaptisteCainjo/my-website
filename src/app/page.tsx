@@ -101,9 +101,7 @@ export default function Home() {
               height={50}
             />
             <div>
-                <strong>
-                  {square.strongText}
-                </strong>
+              <strong>{square.strongText}</strong>
               <p>chez MMA depuis septembre 2022.</p>
             </div>
           </div>
@@ -113,7 +111,7 @@ export default function Home() {
           </nav>
         </div>
 
-        <Bubble/>
+        <Bubble />
       </section>
       <section id="part2">
         <H2 titleContent="Mon portfolio créatif" importantWord="portfolio" />

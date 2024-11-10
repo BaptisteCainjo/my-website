@@ -31,7 +31,7 @@ export default function NavBar({ content }: NavBarProps) {
           <Image src={Logo} alt="Logo personnel" width="78" height="78" />
         </Link>
 
-        {(isMobileView && mainPage) && (
+        {isMobileView && mainPage && (
           <Image
             src={Menu}
             alt="Icône menu"
@@ -40,7 +40,7 @@ export default function NavBar({ content }: NavBarProps) {
           />
         )}
 
-        {(isDesktopView && mainPage) && (
+        {isDesktopView && mainPage && (
           <div className={NavBarStyle.navLink}>
             {content?.map(({ id, title }) => (
               <p key={id}>

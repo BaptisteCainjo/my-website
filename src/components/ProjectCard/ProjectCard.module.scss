@@ -103,6 +103,14 @@ $curve: 15px;
   display: flex;
   gap: 1rem;
   margin: 0 0 0.5rem 1.5rem;
+
+  a {
+    position: relative;
+    @include hoverTooltip();
+  }
+  span {
+    transform: translate(-59%, -100%);
+  }
 }
 
 .card__language {
@@ -116,7 +124,7 @@ $curve: 15px;
     font-size: 0.9rem;
     width: fit-content;
 
-    @include underlineLink()
+    @include underlineLink();
   }
 }
 

@@ -1,6 +1,7 @@
 import React, { useState, useRef } from "react";
 import Image, { StaticImageData } from "next/image.js";
 import ProjectCardStyle from "./ProjectCard.module.scss";
+import Tooltip from "../Tooltip/Tooltip";
 
 import ApplicationMeteo from "@/assets/images/application_meteo.png";
 import Dataviz from "@/assets/images/dataviz.png";
@@ -132,34 +133,43 @@ export default function ProjectCard({ portfolio }: PortfolioProps) {
                   {(element.link.github || element.link.watch) && (
                     <div className={ProjectCardStyle.card__socials}>
                       {element.link.github && (
-                        <a href={element.link.github} target="_blank">
-                          <Image
-                            src={Github}
-                            alt="Icône du site GitHub"
-                            width={25}
-                            height={25}
-                          />
-                        </a>
+                        <>
+                          <a href={element.link.github} target="_blank">
+                            <Image
+                              src={Github}
+                              alt="Icône du site GitHub"
+                              width={25}
+                              height={25}
+                            />
+                            <Tooltip name="Le Github" />
+                          </a>
+                        </>
                       )}
                       {element.link.github2 && (
-                        <a href={element.link.github2} target="_blank">
-                          <Image
-                            src={Github}
-                            alt="Icône du site GitHub"
-                            width={25}
-                            height={25}
-                          />
-                        </a>
+                        <>
+                          <a href={element.link.github2} target="_blank">
+                            <Image
+                              src={Github}
+                              alt="Icône du site GitHub"
+                              width={25}
+                              height={25}
+                            />
+                            <Tooltip name="Le Github" />
+                          </a>
+                        </>
                       )}
                       {element.link.watch && (
-                        <a href={element.link.watch} target="_blank">
-                          <Image
-                            src={Watch}
-                            alt="Icône pour visualiser le site"
-                            width={25}
-                            height={25}
-                          />
-                        </a>
+                        <>
+                          <a href={element.link.watch} target="_blank">
+                            <Image
+                              src={Watch}
+                              alt="Icône pour visualiser le site"
+                              width={25}
+                              height={25}
+                            />
+                            <Tooltip name="Le projet" />
+                          </a>
+                        </>
                       )}
                     </div>
                   )}
