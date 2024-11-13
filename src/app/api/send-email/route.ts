@@ -8,7 +8,7 @@ export async function POST(request: Request) {
   console.log(name, email, message);
 
   try {
-    const data = resend.emails.send({
+    const data = await resend.emails.send({
       from: "onboarding@resend.dev",
       to: "cainjo.baptiste@orange.fr",
       subject: "Hello World",
