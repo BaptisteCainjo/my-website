@@ -9,20 +9,25 @@ type BtnFilterProps = {
 export default function BtnFilter({ names, onFilterClick }: BtnFilterProps) {
   const [activeIndex, setActiveIndex] = useState(0);
 
-  const handleClickClass = (index: number) => {
+  const handleClickClass = (
+    e: React.MouseEvent<HTMLAnchorElement>,
+    index: number
+  ) => {
+    e.preventDefault();
     setActiveIndex(index);
     onFilterClick(names[index]);
   };
   return (
     <ul className={BtnFilterStyle["btn-filter"]}>
       {names.map((name, index) => (
-        <li
+        <a
+          href=""
+          onClick={(e) => handleClickClass(e, index)}
           key={index}
-          onClick={() => handleClickClass(index)}
           className={activeIndex === index ? BtnFilterStyle.active : ""}
         >
-          <a>{name}</a>
-        </li>
+          <li>{name}</li>
+        </a>
       ))}
     </ul>
   );

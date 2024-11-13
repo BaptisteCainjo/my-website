@@ -111,3 +111,8 @@ h3 {
   font-size: 1.2em;
   color: $globalPrimaryColor;
 }
+
+a:focus-visible span {
+  opacity: 1;
+  visibility: visible;
+}

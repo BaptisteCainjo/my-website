@@ -3,17 +3,24 @@
 
 .container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   gap: 25px;
   margin: 0 auto;
   width: 90vw;
+  grid-template-columns: repeat(auto-fit, minmax(125px, 1fr));
+
+  @include mixinBreakpoints(md) {
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  }
 
   div {
-    width: -webkit-fill-available;
     margin: 0 auto;
+
+    @include mixinBreakpoints(md) {
+      width: -webkit-fill-available;
+    }
     div {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(2, 1fr);
       grid-gap: 15px;
       justify-items: center;
 

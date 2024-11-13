@@ -5,16 +5,17 @@
   padding: 16px 32px;
   background: $globalPrimaryColor;
   border-radius: 9px;
-  @include transition(.25s);
+  @include transition(0.25s);
   display: flex;
   flex-direction: row;
   gap: 16px;
   position: relative;
+  align-items: center;
   @include hoverTooltip();
 
   @include mixinBreakpoints(md) {
     width: 278px;
-    padding: 16px 64px 16px 32px;
+    padding: 20px 64px 20px 32px;
   }
 
   p {
@@ -23,13 +24,20 @@
     font-weight: 400;
     height: min-content;
     margin: 10px 0 0 0;
+    display: contents;
+
+    &::before {
+      content: "";
+      display: inline-block;
+      margin-right: 8px;
+      width: 32px;
+      height: 32px;
+      background: $w;
+      mask: url("../../assets/svg/icons/mail.svg") no-repeat center / contain;
+    }
   }
 
-  span:first-child{
-    font-size: 32px;
-  }
-
-  span:last-child{
+  span:last-child {
     transform: translateX(50%);
   }
 }

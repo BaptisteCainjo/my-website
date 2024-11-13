@@ -1,37 +1,37 @@
 /* Basé sur les points taille max provenant de bootstrap et d'expérience personnel */
 
 $mixin-start: (
-        xss: 478.98px,
-        xs: 575px,
-        sm: 667px,
-        md: 768px,
-        lg: 992px,
-        lgx: 1024px,
-        xl: 1200px,
-        xxl: 1400px,
-        xxUltraXl: 1540px,
-        xxxl: 1600px,
-        xxBigScreen: 1800px,
-        xxLargeScreen: 2000px,
-        xxLargestScreen: 2200px,
-        xxGalacticScreen: 2300px
+  xss: 478.98px,
+  xs: 575px,
+  sm: 667px,
+  md: 768px,
+  lg: 992px,
+  lgx: 1024px,
+  xl: 1200px,
+  xxl: 1400px,
+  xxUltraXl: 1540px,
+  xxxl: 1600px,
+  xxBigScreen: 1800px,
+  xxLargeScreen: 2000px,
+  xxLargestScreen: 2200px,
+  xxGalacticScreen: 2300px,
 );
 $mixin-breakpoints: (
-        xSpeS: 425px,
-        xss: 478.98px,
-        xc: 505px,
-        xs: 575px,
-        sm: 666.98px,
-        md: 767.98px,
-        lg: 991.98px,
-        lgx: 1023.98px,
-        xl: 1199.98px,
-        xxl: 1439.98px,
-        xxxl: 1599.98px,
-        xxBigScreen: 1799.98px,
-        xxLargeScreen: 1999.98px,
-        xxLargestScreen: 2199.98px,
-        xxGalacticScreen: 2299.98px
+  xSpeS: 425px,
+  xss: 478.98px,
+  xc: 505px,
+  xs: 575px,
+  sm: 666.98px,
+  md: 767.98px,
+  lg: 991.98px,
+  lgx: 1023.98px,
+  xl: 1199.98px,
+  xxl: 1439.98px,
+  xxxl: 1599.98px,
+  xxBigScreen: 1799.98px,
+  xxLargeScreen: 1999.98px,
+  xxLargestScreen: 2199.98px,
+  xxGalacticScreen: 2299.98px,
 );
 
 /* Permet d'écrire une seule fois la fonction et ne plus se prendre la tête ensuite sur le format*/
@@ -40,7 +40,7 @@ $mixin-breakpoints: (
   @if map-has-key($mixin-breakpoints, $breakpoint) {
     $value: map-get($mixin-breakpoints, $breakpoint);
     @media (min-width: $value) {
-      @content
+      @content;
     }
   } @else {
     @warn "Unknown `#{$breakpoint}` in $breakpoints";
@@ -52,7 +52,7 @@ $mixin-breakpoints: (
     $value: map-get($mixin-breakpoints, $breakpoint);
     $value2: map-get($mixin-breakpoints, $breakpoint2);
     @media (min-width: $value2) and (max-width: $value) {
-      @content
+      @content;
     }
   } @else {
     @warn "Unknown `#{$breakpoint}` in $breakpoints";
@@ -63,7 +63,7 @@ $mixin-breakpoints: (
   @if map_has_key($mixin-start, $start) {
     $value: map_get($mixin-start, $start);
     @media (min-width: $value) {
-      @content
+      @content;
     }
   }
 }
@@ -107,7 +107,7 @@ $mixin-breakpoints: (
 }
 
 @mixin keyframes($name) {
-  @keyframes #{$name}{
+  @keyframes #{$name} {
     @content;
   }
   @-webkit-keyframes #{$name} {
@@ -119,42 +119,42 @@ $mixin-breakpoints: (
 }
 
 @mixin Poppins() {
-  font-family: "Poppins",sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 @mixin Outfit() {
-  font-family: "Outfut",sans-serif;
+  font-family: "Outfut", sans-serif;
 }
 
-@mixin Playfair(){
+@mixin Playfair() {
   font-family: "Playfair Display", sans-serif;
 }
 
-@mixin h1Style(){
+@mixin h1Style() {
   font-size: 26px;
   font-weight: 700;
   text-transform: uppercase;
   width: max-content;
 }
 
-@mixin hoverBorder(){
+@mixin hoverBorder() {
   border: 1px solid transparent;
-  @include transition(.25s ease-in-out);
+  @include transition(0.25s ease-in-out);
 
-  &:hover{
-      border: 1px solid $globalPrimaryColor;
-      @include transition(.25s ease-in-out);
+  &:hover {
+    border: 1px solid $globalPrimaryColor;
+    @include transition(0.25s ease-in-out);
   }
 }
 
-@mixin hoverTooltip{
+@mixin hoverTooltip {
   &:hover .tooltip {
     opacity: 1;
     visibility: visible;
   }
 }
 
-@mixin underlineLink{
+@mixin underlineLink {
   &::after {
     content: "";
     height: 1.5px;
@@ -169,5 +169,18 @@ $mixin-breakpoints: (
   &:hover::after {
     transform-origin: left;
     transform: scaleX(1);
+  }
+}
+
+@mixin animationFadeInUp {
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
 }

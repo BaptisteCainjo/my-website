@@ -11,7 +11,8 @@
   z-index: 1;
   align-items: center;
 
-  &:hover {
+  &:hover,
+  &:focus-within {
     z-index: 3;
   }
 

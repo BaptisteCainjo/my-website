@@ -1,18 +1,22 @@
-@import '@/scss/colors';
-@import '@/scss/mixins';
+@import "@/scss/colors";
+@import "@/scss/mixins";
 
 .form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 450px;
+  gap: 25px;
+  align-items: center;
+
+  label {
+    width: 75vw;
     display: flex;
     flex-direction: column;
-    width: 100%;
-    max-width: 450px;
-    gap: 25px;
-    align-items: center;
+    gap: 5px;
 
-    label{
-        width: 50vw;
-        display: flex;
-        flex-direction: column;
-        gap: 5px;
+    @include mixinBreakpoints(md) {
+      width: 50vw;
     }
+  }
 }

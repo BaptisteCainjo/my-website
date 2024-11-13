@@ -29,7 +29,7 @@
 
   .square-info div {
     opacity: 0;
-    animation: fadeInUp 0.5s .25s ease-in-out forwards;
+    animation: fadeInUp 0.5s 0.25s ease-in-out forwards;
   }
 
   @include mixinBreakpoints(sm) {
@@ -124,13 +124,4 @@
   }
 }
 
-@keyframes fadeInUp {
-  0% {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
+@include animationFadeInUp();

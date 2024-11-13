@@ -11,8 +11,13 @@ export async function POST(request: Request) {
     const data = resend.emails.send({
       from: "onboarding@resend.dev",
       to: "cainjo.baptiste@orange.fr",
-      subject: "Hello World",
-      html: "<p>Congrats on sending your <strong>first email</strong>!</p>",
+      subject: "Nouveau message du formulaire de contact",
+      html: `<p>Vous avez reçu un nouveau message du formulaire de contact.</p>
+      <ul>
+        <li>strong>Nom:</strong>${name}</li>
+        <li><strong>Email:</strong>${email}</li>
+        <li><strong>Message:</strong>${message}</li>
+      </ul>`,
     });
 
     return NextResponse.json(

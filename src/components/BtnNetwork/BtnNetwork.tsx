@@ -35,7 +35,11 @@ export default function BtnNetwork({ content }: NetworksProps) {
   return (
     <div className={BtnNetworkStyle.network}>
       {content.map(({ name, url }) => (
-        <Link key={name} href={url} target={name !== "Mail" ? "_blank" : undefined}>
+        <Link
+          key={name}
+          href={url}
+          target={name !== "Mail" ? "_blank" : undefined}
+        >
           <Image
             src={imageSources[name] || ""}
             alt={`Icône de l'application ${name}`}

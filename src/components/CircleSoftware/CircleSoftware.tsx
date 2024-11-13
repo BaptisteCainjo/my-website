@@ -60,8 +60,8 @@ const langImage: LangImage = {
     "JavaScript (ES6+)": JavaScript,
     "Sass (SCSS)": Sass,
     Tailwind,
-    "HTML5": HTML,
-    "CSS3": CSS,
+    HTML5: HTML,
+    CSS3: CSS,
     "Dart - Flutter": Flutter,
     "D3.js": D3js,
     jQuery,
@@ -118,16 +118,14 @@ export default function CircleSoftware() {
               }
             >
               {Object.keys(langImage[category]).map((lang, index) => (
-                <div key={index}>
+                <div key={index} tabIndex={0}>
                   <Image
                     src={langImage[category][lang]}
                     alt={`Icône du langage ${lang}`}
                     width={20}
                     height={20}
                   />
-                {!isMobileView && (
-                  <Tooltip name={lang} />
-                )}
+                  {!isMobileView && <Tooltip name={lang} />}
                 </div>
               ))}
             </div>

@@ -1,13 +1,15 @@
-'use client'
+"use client";
 
-import React, { useState } from "react";
-import styles from "./FormMail.module.scss";
+import React, { useEffect, useState } from "react";
+import FormMailStyle from "./FormMail.module.scss";
+import Modal from "@/components/Modal/Modal";
 
 export default function FormMail() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const [responseMessage, setResponseMessage] = useState("");
+  const [isError, setIsError] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -25,20 +27,34 @@ export default function FormMail() {
 
       if (response.ok) {
         setResponseMessage(data.message);
+        setIsError(false);
         setName("");
         setEmail("");
         setMessage("");
       } else {
         setResponseMessage(`Erreur: ${data.error}`);
+        setIsError(true);
       }
     } catch (error: any) {
       console.error(`Erreur de connexion: ${error.message}`);
-      setResponseMessage("Une erreur s'est produite lors de l'envoi du message.");
+      setResponseMessage(
+        "Une erreur s'est produite lors de l'envoi du message."
+      );
+      setIsError(true);
     }
   };
 
+  useEffect(() => {
+    if (responseMessage) {
+      const timer = setTimeout(() => {
+        setResponseMessage("");
+      }, 7000);
+      return () => clearTimeout(timer);
+    }
+  }, [responseMessage]);
+
   return (
-    <form onSubmit={handleSubmit} className={styles.form}>
+    <form onSubmit={handleSubmit} className={FormMailStyle.form}>
       <label htmlFor="name">
         Nom
         <input
@@ -74,7 +90,8 @@ export default function FormMail() {
       </label>
 
       <button type="submit">Envoyer</button>
-      {responseMessage && <p>{responseMessage}</p>}
+
+      <Modal responseMessage={responseMessage} isError={isError} />
     </form>
   );
 }
