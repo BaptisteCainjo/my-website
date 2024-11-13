@@ -1,9 +1,9 @@
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
+import { isMobileOnly } from "react-device-detect";
 
 import CircleSoftwareStyle from "./CircleSoftware.module.scss";
-import Tooltip from "../Tooltip/Tooltip";
-import { isMobileOnly } from "react-device-detect";
+import Tooltip from "@/components/Tooltip/Tooltip";
 
 import Nodejs from "@/assets/svg/logos/nodejs.svg";
 import Expressjs from "@/assets/svg/logos/expressjs.svg";
@@ -109,28 +109,26 @@ export default function CircleSoftware() {
   return (
     <div className={CircleSoftwareStyle.container}>
       {Object.keys(langImage).map((category) => (
-        <React.Fragment key={category}>
-          <div>
-            <h3>{category}</h3>
-            <div
-              className={
-                CircleSoftwareStyle[category.toLowerCase().replace("-", "")]
-              }
-            >
-              {Object.keys(langImage[category]).map((lang, index) => (
-                <div key={index} tabIndex={0}>
-                  <Image
-                    src={langImage[category][lang]}
-                    alt={`Icône du langage ${lang}`}
-                    width={20}
-                    height={20}
-                  />
-                  {!isMobileView && <Tooltip name={lang} />}
-                </div>
-              ))}
-            </div>
+        <div key={category}>
+          <h3>{category}</h3>
+          <div
+            className={
+              CircleSoftwareStyle[category.toLowerCase().replace("-", "")]
+            }
+          >
+            {Object.keys(langImage[category]).map((lang, index) => (
+              <div key={index} tabIndex={0}>
+                <Image
+                  src={langImage[category][lang]}
+                  alt={`Icône du langage ${lang}`}
+                  width={20}
+                  height={20}
+                />
+                {!isMobileView && <Tooltip name={lang} />}
+              </div>
+            ))}
           </div>
-        </React.Fragment>
+        </div>
       ))}
     </div>
   );

@@ -6,7 +6,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  @include transition(.25s ease-in-out);
+  @include transition(0.25s ease-in-out);
   backdrop-filter: blur(2px);
   background: rgb(241, 245, 249, 0.25);
   z-index: 2;
@@ -14,7 +14,7 @@
 
   &:hover {
     background: rgb(241, 245, 249, 1);
-    @include transition(.25s ease-in-out);
+    @include transition(0.25s ease-in-out);
   }
 
   div {
@@ -24,13 +24,14 @@
     gap: 10px;
     margin-right: 5%;
 
-    p {
+    p,
+    a {
       font-weight: 400;
       flex: none;
       font-size: 12px;
     }
 
-    p:last-of-type {
+    a {
       font-weight: 600;
     }
 
@@ -47,10 +48,10 @@
     }
 
     a:hover:after {
-        width: 100%;
-        transform-origin: left;
-        transform: scaleX(1);
-      }
+      width: 100%;
+      transform-origin: left;
+      transform: scaleX(1);
+    }
   }
 }
 

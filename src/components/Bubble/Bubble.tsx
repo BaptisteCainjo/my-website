@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+
 import BubbleStyle from "./Bubble.module.scss";
 
 interface BubbleProps {
@@ -13,7 +14,7 @@ interface BubbleProps {
   midLeft: number;
 }
 
-const Bubble = () => {
+export default function Bubble() {
   const [bubbles, setBubbles] = useState<BubbleProps[]>([]);
 
   useEffect(() => {
@@ -24,9 +25,9 @@ const Bubble = () => {
         const left = Math.random() * 100;
         newBubbles.push({
           size: Math.random() * 50 + 5,
-          top: top, 
+          top: top,
           left: left,
-          duration: Math.random() * 100 + 100, 
+          duration: Math.random() * 100 + 100,
           deg: Math.random() * 360,
           endTop: Math.random() * 100,
           endLeft: Math.random() * 100,
@@ -89,5 +90,3 @@ const Bubble = () => {
     </div>
   );
 };
-
-export default Bubble;

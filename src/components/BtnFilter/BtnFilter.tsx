@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import BtnFilterStyle from "./BtnFilter.module.scss";
 
 type BtnFilterProps = {

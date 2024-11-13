@@ -2,27 +2,21 @@
 
 import Link from "next/link.js";
 import Image from "next/image.js";
-import React from "react";
 
 import Linkedin from "@/assets/svg/icons/linkedin.svg";
 import Github from "@/assets/svg/icons/github.svg";
 import Mail from "@/assets/svg/icons/mail.svg";
 import BtnNetworkStyle from "./BtnNetwork.module.scss";
-import Tooltip from "../Tooltip/Tooltip";
-
-interface NetworksItems {
-  name: string;
-  url: string;
-}
+import Tooltip from "@/components/Tooltip/Tooltip";
 
 type NetworksProps = {
-  content: NetworksItems[];
+  content: Array<{ name: string; url: string }>;
 };
 
 const imageSources: { [key: string]: string } = {
-  Linkedin: Linkedin,
-  Github: Github,
-  Mail: Mail,
+  Linkedin,
+  Github,
+  Mail,
 };
 
 const tooltipText: { [key: string]: string } = {
@@ -42,10 +36,12 @@ export default function BtnNetwork({ content }: NetworksProps) {
         >
           <Image
             src={imageSources[name] || ""}
-            alt={`Icône de l'application ${name}`}
+            alt={
+              name !== "Mail" ? `Icône de l'application ${name}` : "Icône mail"
+            }
             width={25}
             height={25}
-          />{" "}
+          />
           <Tooltip name={tooltipText[name]} position="vertical" />
         </Link>
       ))}
