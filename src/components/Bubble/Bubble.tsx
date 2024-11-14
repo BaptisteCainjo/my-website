@@ -42,7 +42,7 @@ export default function Bubble() {
   }, []);
 
   return (
-    <div className={BubbleStyle.bubbleContainer}>
+    <div className={BubbleStyle["bubble-container"]}>
       {bubbles.map((bubble, index) => (
         <div
           className={BubbleStyle.bubble}
@@ -89,4 +89,4 @@ export default function Bubble() {
       </style>
     </div>
   );
-};
+}

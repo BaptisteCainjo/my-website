@@ -1,10 +1,10 @@
 import Link from "next/link.js";
 import SquareSmallStyle from "./SquareSmall.module.scss";
 
-type SquareSmallProps = {
+interface SquareSmallProps {
   text: string;
   link: string;
-};
+}
 
 export default function SquareInfo({ text, link }: SquareSmallProps) {
   return (

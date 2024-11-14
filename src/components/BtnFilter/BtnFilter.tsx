@@ -1,10 +1,10 @@
 import { useState } from "react";
 import BtnFilterStyle from "./BtnFilter.module.scss";
 
-type BtnFilterProps = {
+interface BtnFilterProps {
   names: string[];
   onFilterClick: (name: string) => void;
-};
+}
 
 export default function BtnFilter({ names, onFilterClick }: BtnFilterProps) {
   const [activeIndex, setActiveIndex] = useState(0);

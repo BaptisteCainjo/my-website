@@ -9,9 +9,9 @@ import Mail from "@/assets/svg/icons/mail.svg";
 import BtnNetworkStyle from "./BtnNetwork.module.scss";
 import Tooltip from "@/components/Tooltip/Tooltip";
 
-type NetworksProps = {
+interface NetworksProps {
   content: Array<{ name: string; url: string }>;
-};
+}
 
 const imageSources: { [key: string]: string } = {
   Linkedin,

@@ -1,11 +1,11 @@
 import NavBar from "@/components/NavBar/NavBar";
-import legalesStyle from "./legales.module.scss";
+import LegalesStyle from "@/scss/pages/Legales.module.scss";
 
 export default function page() {
   return (
     <>
       <NavBar />
-      <section className={legalesStyle.container}>
+      <section className={LegalesStyle.container}>
         <h1>Mentions Légales</h1>
         <div>
           <h2>Éditeur du site</h2>
@@ -13,7 +13,8 @@ export default function page() {
             <strong>Nom et Prénom : </strong>Cainjo Baptiste
           </p>
           <p>
-            <strong>Adresse : </strong>25 Eugène Marziano, 1227 Les Acacias - Genève - Suisse
+            <strong>Adresse : </strong>25 Eugène Marziano, 1227 Les Acacias -
+            Genève - Suisse
           </p>
           <p>
             <strong>E-mail : </strong>
@@ -31,9 +32,12 @@ export default function page() {
 
         <div>
           <h2>Hébergement du site</h2>
-          <p><strong>Hébergeur : </strong>Infomaniak Network SA</p>
           <p>
-            <strong>Adresse : </strong>25 Eugène Marziano, 1227 Les Acacias - Genève - Suisse
+            <strong>Hébergeur : </strong>Infomaniak Network SA
+          </p>
+          <p>
+            <strong>Adresse : </strong>25 Eugène Marziano, 1227 Les Acacias -
+            Genève - Suisse
           </p>
         </div>
         <div>

@@ -121,7 +121,6 @@ export default function CircleSoftware() {
                 <Image
                   src={langImage[category][lang]}
                   alt={`Icône du langage ${lang}`}
-                  width={20}
                   height={20}
                 />
                 {!isMobileView && <Tooltip name={lang} />}

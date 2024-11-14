@@ -102,7 +102,7 @@ export default function ProjectCard({ portfolio }: PortfolioProps) {
                       : imageSources[element.title]
                   }
                   alt={`Illustration du projet ${element.title}`}
-                  className={ProjectCardStyle.card__image}
+                  className={ProjectCardStyle["card-image"]}
                 />
                 <div className={ProjectCardStyle["card-overlay"]}>
                   <div className={ProjectCardStyle["card-header"]}>

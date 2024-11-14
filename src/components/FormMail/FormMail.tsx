@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import FormMailStyle from "./FormMail.module.scss";
 import Modal from "@/components/Modal/Modal";
 
