@@ -11,7 +11,7 @@ import BtnNetwork from "@/components/BtnNetwork/BtnNetwork";
 import NavBtn from "@/components/NavBtn/NavBtn";
 import NavBar from "@/components/NavBar/NavBar";
 
-import H2 from "@/components/H2/H2";
+import H2 from "@/components/h2/H2";
 import BtnFilter from "@/components/BtnFilter/BtnFilter";
 import ProjectCard from "@/components/ProjectCard/ProjectCard";
 import FormMail from "@/components/FormMail/FormMail";
