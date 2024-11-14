@@ -1,3 +1,4 @@
+import EmailTemplate from "@/components/EmailTemplate/EmailTemplate";
 import { NextResponse } from "next/server";
 import { Resend } from "resend";
 
@@ -9,10 +10,10 @@ export async function POST(request: Request) {
 
   try {
     const data = await resend.emails.send({
-      from: "onboarding@resend.dev",
+      from: `${name} <onboarding@resend.dev>`,
       to: "cainjo.baptiste@orange.fr",
-      subject: "Hello World",
-      html: "<p>Congrats on sending your <strong>first email</strong>!</p>",
+      subject: "Nouveau message de contact",
+      react: EmailTemplate({ name, email, message }),
     });
 
     return NextResponse.json(
