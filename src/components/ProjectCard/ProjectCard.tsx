@@ -69,6 +69,8 @@ const langLink: { [key: string]: string } = {
   MySql: "https://www.mysql.com/fr/",
   Playcanvas: "https://playcanvas.com/",
   "SMTP.js": "https://smtpjs.com/",
+  Resend: "https://resend.com/home",
+  "React Email": "https://react.email/",
 };
 
 export default function ProjectCard({ portfolio }: PortfolioProps) {
@@ -122,7 +124,7 @@ export default function ProjectCard({ portfolio }: PortfolioProps) {
                   <p className={ProjectCardStyle.card__description}>
                     {element.description}{" "}
                   </p>
-                  <div className={ProjectCardStyle.card__language}>
+                  <div className={ProjectCardStyle["card-language"]}>
                     {element.language.map((lang, index) => (
                       <React.Fragment key={index}>
                         <a href={langLink[lang]}>{lang}</a>

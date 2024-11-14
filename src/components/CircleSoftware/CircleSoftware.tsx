@@ -44,6 +44,8 @@ import Jira from "@/assets/svg/logos/jira.svg";
 import Slack from "@/assets/svg/logos/slack.svg";
 import Vite from "@/assets/svg/logos/vite.svg";
 import Vercel from "@/assets/svg/logos/vercel.svg";
+import Resend from "@/assets/svg/logos/resend.svg";
+import ReactEmail from "@/assets/svg/logos/react_email.svg";
 
 interface LangImage {
   [key: string]: {
@@ -64,6 +66,7 @@ const langImage: LangImage = {
     CSS3: CSS,
     "Dart - Flutter": Flutter,
     "D3.js": D3js,
+    "React Email": ReactEmail,
     jQuery,
     Bootstrap,
     "SMTP.js": SMTPjs,
@@ -76,6 +79,7 @@ const langImage: LangImage = {
     "SQL (MySQL)": MySql,
     PHP,
     Java,
+    Resend,
   },
   Outils: {
     "Git (GitHub - GitLab)": Github,
