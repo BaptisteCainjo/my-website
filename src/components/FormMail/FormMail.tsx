@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import FormMailStyle from "./FormMail.module.scss";
-import Modal from "@/components/Modal/Modal";
+import Popup from "@/components/Popup/Popup";
 
 export default function FormMail() {
   const [name, setName] = useState("");
@@ -91,7 +91,7 @@ export default function FormMail() {
 
       <button type="submit">Envoyer</button>
 
-      <Modal responseMessage={responseMessage} isError={isError} />
+      <Popup responseMessage={responseMessage} isError={isError} />
     </form>
   );
 }

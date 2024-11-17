@@ -49,8 +49,7 @@
       "type": "Personnel",
       "language": ["Node.js", "Express.js", "MongoDB", "React", "Sass"],
       "link": {
-        "github": "https://github.com/BaptisteCainjo/FLOW",
-        "watch": "https://sharemusic.baptistecainjo.fr/"
+        "github": "https://github.com/BaptisteCainjo/FLOW"
       }
     },
     {
@@ -134,8 +133,7 @@
       "type": "Scolaire",
       "language": ["D3.js", "JavaScript", "HTML", "CSS"],
       "link": {
-        "github": "https://github.com/BaptisteCainjo/DATAVIZ-Interactive",
-        "github2": "https://github.com/BaptisteCainjo/DATAVIZ-3D",
+        "github": "https://github.com/BaptisteCainjo/DATAVIZ-3D",
         "watch": "https://dataviz3d.baptistecainjo.fr/"
       }
     },

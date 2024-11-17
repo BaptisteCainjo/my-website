@@ -1,0 +1,14 @@
+@import "@/scss/colors";
+@import "@/scss/mixins";
+
+.cursor {
+  position: fixed;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  filter: blur(150px);
+  background-color: rgba($color: $globalPrimaryColor, $alpha: 0.33);
+  z-index: -999;
+}

@@ -54,7 +54,6 @@ const iconMap: { [key: string]: any } = {
 
 export default function Home() {
   const [portfolio, setPortfolio] = useState<PortfolioItems[]>(data.portfolio);
-
   const [currentSquare, setCurrentSquare] = useState(0);
   const aboutProfessional: ProfessionalContent[] = data.professionalInfo;
   const square = aboutProfessional[currentSquare];

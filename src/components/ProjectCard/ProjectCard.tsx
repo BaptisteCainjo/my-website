@@ -29,7 +29,6 @@ interface PortfolioProps {
     language: string[];
     link: {
       github?: string;
-      github2?: string;
       watch?: string;
     };
     endDate?: number;
@@ -137,19 +136,6 @@ export default function ProjectCard({ portfolio }: PortfolioProps) {
                       {element.link.github && (
                         <>
                           <a href={element.link.github} target="_blank">
-                            <Image
-                              src={Github}
-                              alt="Icône du site GitHub"
-                              width={25}
-                              height={25}
-                            />
-                            <Tooltip name="Le Github" />
-                          </a>
-                        </>
-                      )}
-                      {element.link.github2 && (
-                        <>
-                          <a href={element.link.github2} target="_blank">
                             <Image
                               src={Github}
                               alt="Icône du site GitHub"
