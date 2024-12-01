@@ -31,7 +31,7 @@
   "portfolio": [
     {
       "title": "Holl",
-      "description": "Création complète d'une application web (MERN) d'e-commerce mettant en relation artisants et touristes.",
+      "description": "Création complète d'une application web (MERN) d'e-commerce mettant en relation artisans et touristes.",
       "skill": "Full-stack",
       "date": 2024,
       "type": "Scolaire",
@@ -45,7 +45,7 @@
       "title": "Flow",
       "description": "Réseau social autour de la musique.",
       "skill": "Full-stack",
-      "date": "En cours",
+      "date": "Stand-by",
       "type": "Personnel",
       "language": ["Node.js", "Express.js", "MongoDB", "React", "Sass"],
       "link": {
