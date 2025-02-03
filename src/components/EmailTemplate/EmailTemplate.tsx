@@ -23,6 +23,8 @@ export default function EmailTemplate({
   email,
   message,
 }: EmailTemplateProps) {
+  const currentYear = new Date().getFullYear();
+
   return (
     <Html lang="fr">
       <Head>
@@ -58,7 +60,7 @@ export default function EmailTemplate({
           <Hr />
           <Section style={footer}>
             <Text style={footerParagraph}>
-              © 2022 - 2024 | Baptiste Cainjo | 25 Eugène Marziano, 1227 Les
+              © 2022 - {currentYear} | Baptiste Cainjo | 25 Eugène Marziano, 1227 Les
               Acacias - Genève - Suisse
             </Text>
           </Section>
