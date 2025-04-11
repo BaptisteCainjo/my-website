@@ -42,14 +42,14 @@
       }
     },
     {
-      "title": "Match",
-      "description": "Application de suggestion musicale basée sur les préférences des utilisateurs.",
+      "title": "Flow",
+      "description": "Réseau social autour de la musique.",
       "skill": "Full-stack",
-      "date": "En cours",
+      "date": "Stand-by",
       "type": "Personnel",
-      "language": ["Node.js", "Express.js", "MongoDB", "React", "Sass", "Vite"],
+      "language": ["Node.js", "Express.js", "MongoDB", "React", "Sass"],
       "link": {
-        "github": "https://github.com/BaptisteCainjo/MATCHS.git"
+        "github": "https://github.com/BaptisteCainjo/FLOW"
       }
     },
     {
@@ -64,14 +64,14 @@
       }
     },
     {
-      "title": "Flow",
-      "description": "Réseau social autour de la musique.",
+      "title": "Match",
+      "description": "Application de suggestion musicale basée sur les préférences des utilisateurs.",
       "skill": "Full-stack",
-      "date": "Stand-by",
+      "date": "En cours",
       "type": "Personnel",
-      "language": ["Node.js", "Express.js", "MongoDB", "React", "Sass"],
+      "language": ["Node.js", "Express.js", "MongoDB", "React", "Sass", "Vite"],
       "link": {
-        "github": "https://github.com/BaptisteCainjo/FLOW"
+        "github": "https://github.com/BaptisteCainjo/MATCHS.git"
       }
     },
     {
