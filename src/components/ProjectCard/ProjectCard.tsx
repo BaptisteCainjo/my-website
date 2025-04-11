@@ -72,7 +72,7 @@ const langLink: { [key: string]: string } = {
   "SMTP.js": "https://smtpjs.com/",
   Resend: "https://resend.com/home",
   "React Email": "https://react.email/",
-  Vite: ""
+  Vite: "https://vite.dev/"
 };
 
 export default function ProjectCard({ portfolio }: PortfolioProps) {
