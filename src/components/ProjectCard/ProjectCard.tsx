@@ -3,6 +3,7 @@ import Image, { StaticImageData } from "next/image.js";
 import ProjectCardStyle from "./ProjectCard.module.scss";
 import Tooltip from "../Tooltip/Tooltip";
 
+import Match from "@/assets/images/match.svg";
 import ApplicationMeteo from "@/assets/images/application_meteo.png";
 import Dataviz from "@/assets/images/dataviz.png";
 import Flow from "@/assets/images/flow.png";
@@ -36,6 +37,7 @@ interface PortfolioProps {
 }
 
 const imageSources: { [key: string]: StaticImageData } = {
+  Match: Match,
   "Application météo": ApplicationMeteo,
   Dataviz: Dataviz,
   Flow: Flow,
@@ -70,6 +72,7 @@ const langLink: { [key: string]: string } = {
   "SMTP.js": "https://smtpjs.com/",
   Resend: "https://resend.com/home",
   "React Email": "https://react.email/",
+  Vite: ""
 };
 
 export default function ProjectCard({ portfolio }: PortfolioProps) {
