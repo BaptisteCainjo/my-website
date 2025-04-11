@@ -53,6 +53,17 @@
       }
     },
     {
+      "title": "Match",
+      "description": "Application de suggestion musicale basée sur les préférences des utilisateurs.",
+      "skill": "Full-stack",
+      "date": "En cours",
+      "type": "Personnel",
+      "language": ["Node.js", "Express.js", "MongoDB", "React", "Sass", "Vite"],
+      "link": {
+        "github": "https://github.com/BaptisteCainjo/MATCHS.git"
+      }
+    },
+    {
       "title": "Gestion administrative",
       "description": "Réalisation d'une API REST pour la gestion d'un site e-commerce.",
       "skill": "Full-stack",
