@@ -2,6 +2,7 @@ import React, { useState, useRef } from "react";
 import Image, { StaticImageData } from "next/image.js";
 import ProjectCardStyle from "./ProjectCard.module.scss";
 import Tooltip from "../Tooltip/Tooltip";
+import data from "@/utils/data.json";
 
 import Match from "@/assets/images/match.svg";
 import ApplicationMeteo from "@/assets/images/application_meteo.png";
@@ -16,6 +17,7 @@ import SiteECommerce from "@/assets/images/site_e_commerce.png";
 import Quizrap from "@/assets/images/quizrap.png";
 import Festview from "@/assets/images/festview.png";
 import GestionAdministrative from "@/assets/images/gestion_administrative.png";
+
 import Default from "@/assets/svg/backgrounds/default.svg";
 import Github from "@/assets/svg/icons/github.svg";
 import Watch from "@/assets/svg/icons/watch.svg";
@@ -36,6 +38,10 @@ interface PortfolioProps {
   }>;
 }
 
+interface LanguageLinks {
+  [key: string]: string;
+}
+
 const imageSources: { [key: string]: StaticImageData } = {
   Match: Match,
   "Application météo": ApplicationMeteo,
@@ -50,29 +56,6 @@ const imageSources: { [key: string]: StaticImageData } = {
   QuizRap: Quizrap,
   FestView: Festview,
   "Gestion administrative": GestionAdministrative,
-};
-
-const langLink: { [key: string]: string } = {
-  "Node.js": "https://nodejs.org/fr",
-  "Express.js": "https://expressjs.com/fr/",
-  MongoDB: "https://www.mongodb.com/fr-fr",
-  React: "https://fr.legacy.reactjs.org/",
-  Sass: "https://sass-lang.com/",
-  Symfony: "https://symfony.com/",
-  "D3.js": "https://d3js.org/",
-  JavaScript: "https://fr.wikipedia.org/wiki/JavaScript",
-  HTML: "https://fr.wikipedia.org/wiki/HTML",
-  CSS: "https://fr.wikipedia.org/wiki/Feuilles_de_style_en_cascade",
-  "Next.js": "https://nextjs.org/",
-  TypeScript: "https://www.typescriptlang.org/",
-  Flutter: "https://flutter.dev/",
-  PHP: "https://www.php.net/",
-  MySql: "https://www.mysql.com/fr/",
-  Playcanvas: "https://playcanvas.com/",
-  "SMTP.js": "https://smtpjs.com/",
-  Resend: "https://resend.com/home",
-  "React Email": "https://react.email/",
-  Vite: "https://vite.dev/"
 };
 
 export default function ProjectCard({ portfolio }: PortfolioProps) {
@@ -129,7 +112,9 @@ export default function ProjectCard({ portfolio }: PortfolioProps) {
                   <div className={ProjectCardStyle["card-language"]}>
                     {element.language.map((lang, index) => (
                       <React.Fragment key={index}>
-                        <a href={langLink[lang]}>{lang}</a>
+                        <a href={(data.languageLinks as LanguageLinks)[lang]}>
+                          {lang}
+                        </a>
                         {index < element.language.length - 1 ? " " : ""}
                       </React.Fragment>
                     ))}

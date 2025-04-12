@@ -27,7 +27,28 @@
       "strongText": "Webdesigner"
     }
   ],
-
+  "languageLinks": {
+    "Node.js": "https://nodejs.org/fr",
+    "Express.js": "https://expressjs.com/fr/",
+    "MongoDB": "https://www.mongodb.com/fr-fr",
+    "React": "https://fr.legacy.reactjs.org/",
+    "Sass": "https://sass-lang.com/",
+    "Symfony": "https://symfony.com/",
+    "D3.js": "https://d3js.org/",
+    "JavaScript": "https://fr.wikipedia.org/wiki/JavaScript",
+    "HTML": "https://fr.wikipedia.org/wiki/HTML",
+    "CSS": "https://fr.wikipedia.org/wiki/Feuilles_de_style_en_cascade",
+    "Next.js": "https://nextjs.org/",
+    "TypeScript": "https://www.typescriptlang.org/",
+    "Flutter": "https://flutter.dev/",
+    "PHP": "https://www.php.net/",
+    "MySql": "https://www.mysql.com/fr/",
+    "Playcanvas": "https://playcanvas.com/",
+    "SMTP.js": "https://smtpjs.com/",
+    "Resend": "https://resend.com/home",
+    "React Email": "https://react.email/",
+    "Vite": "https://vite.dev/"
+  },
   "portfolio": [
     {
       "title": "Holl",
@@ -76,7 +97,7 @@
     },
     {
       "title": "Intranet de la Documentation",
-      "description": "Création d’une interface web centralisant l’ensemble des outils que j’ai développés spécifiquement pour optimiser le travail de mon équipe.",
+      "description": "Création d'une interface web centralisant l'ensemble des outils que j'ai développés spécifiquement pour optimiser le travail de mon équipe.",
       "skill": "Front-end",
       "date": 2024,
       "type": "Professionnel",
@@ -108,7 +129,7 @@
     },
     {
       "title": "Formatage automatique du code",
-      "description": "Développement d’un script pour formater automatiquement toutes les pages HTML de la documentation en HTML sémantique.",
+      "description": "Développement d'un script pour formater automatiquement toutes les pages HTML de la documentation en HTML sémantique.",
       "skill": "Back-end",
       "date": 2024,
       "type": "Professionnel",
