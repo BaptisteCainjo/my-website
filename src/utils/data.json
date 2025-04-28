@@ -47,7 +47,9 @@
     "SMTP.js": "https://smtpjs.com/",
     "Resend": "https://resend.com/home",
     "React Email": "https://react.email/",
-    "Vite": "https://vite.dev/"
+    "Vite": "https://vite.dev/",
+    "Tailwind": "https://tailwindcss.com/",
+    "Redux": "https://redux.js.org/"
   },
   "portfolio": [
     {
@@ -56,7 +58,14 @@
       "skill": "Full-stack",
       "date": 2024,
       "type": "Scolaire",
-      "language": ["Node.js", "Express.js", "MongoDB", "React", "Sass"],
+      "language": [
+        "Node.js",
+        "Express.js",
+        "Redux",
+        "MongoDB",
+        "React",
+        "Sass"
+      ],
       "link": {
         "github": "https://github.com/BaptisteCainjo/Holl.git",
         "watch": "https://decouvrir-mmi.univ-lemans.fr/index.php/2024/02/13/holl/"
@@ -101,7 +110,7 @@
       "skill": "Front-end",
       "date": 2024,
       "type": "Professionnel",
-      "language": ["Next.js", "TypeScript", "Sass"],
+      "language": ["Next.js", "TypeScript", "Tailwind", "Sass"],
       "link": {}
     },
     {
