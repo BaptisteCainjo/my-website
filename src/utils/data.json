@@ -245,5 +245,75 @@
         "watch": "https://www.instagram.com/quizrap_/"
       }
     }
-  ]
+  ],
+  "blog": {
+    "meta": {
+      "title": "Le Coin de Baptiste",
+      "description": "Un blog personnel autour de mes passions : voyages, réflexions, sport et découvertes.",
+      "language": "fr-FR",
+      "created_at": "01-05-2025",
+      "updated_at": "01-05-2025"
+    },
+    "owner": {
+      "name": "Baptiste Cainjo",
+      "bio": "Développeur Full-stack curieux et rigoureux, j’accorde une grande importance à la clarté du code, à l’expérience utilisateur et à l’apprentissage continu. Ce blog est un espace où je prends le temps de poser mes idées, de documenter mes expérimentations et de réfléchir au sens de ce que je crée.",
+      "avatar_url": "baptiste.webp",
+      "email": "cainjobaptiste@orange.fr",
+      "socials": {
+        "linkedin": "baptiste-leroy",
+        "github": "BaptisteCainjo"
+      }
+    },
+    "categories": [
+      {
+        "id": 1,
+        "name": "Voyages",
+        "slug": "voyages",
+        "description": "Récits de mes voyages, conseils, et expériences autour du monde."
+      },
+      {
+        "id": 2,
+        "name": "Développement",
+        "slug": "dev",
+        "description": "Articles techniques, tutos, projets persos et réflexions de développeur."
+      },
+      {
+        "id": 3,
+        "name": "Réflexions",
+        "slug": "reflexions",
+        "description": "Pensées personnelles, société, productivité et croissance personnelle."
+      }
+    ],
+    "posts": [
+      {
+        "id": 1,
+        "title": "Comment concevoir une documentation web qui garantit le juste équilibre entre les impératifs du développement web  moderne et les exigences spécifiques d'une documentation en ligne ?",
+        "slug": "documentation-web-equilibre-dev-ux",
+        "content": "<p>Ce billet s’appuie sur mon mémoire de fin d’études consacré à la conception d’une documentation web équilibrée. L’objectif est de comprendre comment répondre aux exigences techniques du développement moderne (performance, réactivité, accessibilité) tout en créant une documentation claire, structurée et réellement utile pour les utilisateurs. À travers une réflexion appuyée sur des cas concrets comme la documentation de React, Next.js ou MMA, j’explore les principes fondamentaux d’un langage accessible, la hiérarchisation de l’information, la navigation intuitive, mais aussi les contraintes imposées par les normes d’accessibilité (WCAG, RGAA) et les technologies émergentes. Ce travail vise à proposer des pistes concrètes pour construire une documentation à la fois technique et humaine, pensée pour durer dans un environnement numérique en constante évolution.</p>",
+        "excerpt": "Réflexion autour des principes clés pour concevoir une documentation web alliant qualité de développement et accessibilité.",
+        "category_id": 3,
+        "tags": ["documentation", "développement web", "ux"],
+        "featured_image_url": "documentation.webp",
+        "created_at": "01-05-2025",
+        "updated_at": "01-05-2025"
+      }
+    ],
+    "tags": [
+      {
+        "id": 1,
+        "name": "documentation",
+        "slug": "documentation"
+      },
+      {
+        "id": 2,
+        "name": "développement web",
+        "slug": "developpement-web"
+      },
+      {
+        "id": 3,
+        "name": "ux",
+        "slug": "ux"
+      }
+    ]
+  }
 }
