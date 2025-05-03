@@ -108,7 +108,7 @@ export default function Home() {
             </div>
           </div>
           <nav>
-            {/* <SquareSmall text="Blog" link="/blog" /> */}
+            <SquareSmall text="Blog" link="/blog" />
             <SquareSmall text="Read.cv" link="https://read.cv/baptistecainjo" />
             <SquareSmall text="CV" link="./ress/cv_website.pdf" />
           </nav>

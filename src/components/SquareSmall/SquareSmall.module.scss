@@ -19,11 +19,9 @@ $animationDelay: 0.75s;
   opacity: 0;
   @include hoverBorder();
 
-  &:first-of-type,
-  &:last-of-type {
-    animation: fadeIn $animationDuration ease-in-out $animationDelay forwards, 
-               fadeFromRight $animationDuration ease-in-out ($animationDelay + 0.05s) forwards;
-  }
+  animation: fadeIn $animationDuration ease-in-out $animationDelay forwards,
+    fadeFromRight $animationDuration ease-in-out ($animationDelay + 0.05s)
+      forwards;
 }
 
 @keyframes fadeIn {
