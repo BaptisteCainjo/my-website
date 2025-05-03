@@ -2,7 +2,7 @@ import React, { useState, useRef } from "react";
 import Image, { StaticImageData } from "next/image.js";
 import ProjectCardStyle from "./ProjectCard.module.scss";
 import Tooltip from "../Tooltip/Tooltip";
-import data from "@/utils/data.json";
+import languageLinks from "@/utils/data/languageLinks.json";
 
 import Match from "@/assets/images/match.svg";
 import ApplicationMeteo from "@/assets/images/application_meteo.png";
@@ -112,7 +112,7 @@ export default function ProjectCard({ portfolio }: PortfolioProps) {
                   <div className={ProjectCardStyle["card-language"]}>
                     {element.language.map((lang, index) => (
                       <React.Fragment key={index}>
-                        <a href={(data.languageLinks as LanguageLinks)[lang]}>
+                        <a href={(languageLinks as LanguageLinks)[lang]}>
                           {lang}
                         </a>
                         {index < element.language.length - 1 ? " " : ""}

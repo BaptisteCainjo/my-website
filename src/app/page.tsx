@@ -3,7 +3,10 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 
-import data from "@/utils/data.json";
+import portfolioData from "@/utils/data/portfolio.json";
+import professionalInfo from "@/utils/data/professionalInfo.json";
+import navigation from "@/utils/data/navigation.json";
+import networks from "@/utils/data/networks.json";
 
 import HomeStyle from "@/scss/pages/Home.module.scss";
 import BtnUp from "@/components/BtnUp/BtnUp";
@@ -53,16 +56,16 @@ const iconMap: { [key: string]: any } = {
 };
 
 export default function Home() {
-  const [portfolio, setPortfolio] = useState<PortfolioItems[]>(data.portfolio);
+  const [portfolio, setPortfolio] = useState<PortfolioItems[]>(portfolioData);
   const [currentSquare, setCurrentSquare] = useState(0);
-  const aboutProfessional: ProfessionalContent[] = data.professionalInfo;
+  const aboutProfessional: ProfessionalContent[] = professionalInfo;
   const square = aboutProfessional[currentSquare];
 
   const handleFilterClick = (filter: string) => {
     if (filter === "Tous") {
-      setPortfolio(data.portfolio);
+      setPortfolio(portfolio);
     } else {
-      const filteredPortfolio = data.portfolio.filter(
+      const filteredPortfolio = portfolio.filter(
         (item) => item.type === filter
       );
       setPortfolio(filteredPortfolio);
@@ -80,8 +83,8 @@ export default function Home() {
 
   return (
     <>
-      <NavBar content={data.navigation} />
-      <NavBtn content={data.navigation} />
+      <NavBar content={navigation} />
+      <NavBtn content={navigation} />
       <section id="part1" className={HomeStyle.about}>
         <div className={HomeStyle["square-info"]}>
           <Image src={HandShake} alt="icon" width={50} height={50} />
@@ -136,7 +139,7 @@ export default function Home() {
       </section>
       <Footer />
       <BtnUp />
-      <BtnNetwork content={data.networks} />
+      <BtnNetwork content={networks} />
     </>
   );
 }

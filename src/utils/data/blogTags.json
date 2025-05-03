@@ -1,0 +1,17 @@
+[
+  {
+    "id": 1,
+    "name": "documentation",
+    "slug": "documentation"
+  },
+  {
+    "id": 2,
+    "name": "développement web",
+    "slug": "developpement-web"
+  },
+  {
+    "id": 3,
+    "name": "ux",
+    "slug": "ux"
+  }
+]

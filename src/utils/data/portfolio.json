@@ -1,0 +1,188 @@
+[
+  {
+    "title": "Holl",
+    "description": "Création complète d'une application web (MERN) d'e-commerce mettant en relation artisans et touristes.",
+    "skill": "Full-stack",
+    "date": 2024,
+    "type": "Scolaire",
+    "language": ["Node.js", "Express.js", "Redux", "MongoDB", "React", "Sass"],
+    "link": {
+      "github": "https://github.com/BaptisteCainjo/Holl.git",
+      "watch": "https://decouvrir-mmi.univ-lemans.fr/index.php/2024/02/13/holl/"
+    }
+  },
+  {
+    "title": "Flow",
+    "description": "Réseau social autour de la musique.",
+    "skill": "Full-stack",
+    "date": "Stand-by",
+    "type": "Personnel",
+    "language": ["Node.js", "Express.js", "MongoDB", "React", "Sass"],
+    "link": {
+      "github": "https://github.com/BaptisteCainjo/FLOW"
+    }
+  },
+  {
+    "title": "Gestion administrative",
+    "description": "Réalisation d'une API REST pour la gestion d'un site e-commerce.",
+    "skill": "Full-stack",
+    "date": 2023,
+    "type": "Scolaire",
+    "language": ["React", "Symfony", "Sass"],
+    "link": {
+      "github": "https://github.com/BaptisteCainjo/Projet-2e-ann-e-MMI.git"
+    }
+  },
+  {
+    "title": "Match",
+    "description": "Application de suggestion musicale basée sur les préférences des utilisateurs.",
+    "skill": "Full-stack",
+    "date": "En cours",
+    "type": "Personnel",
+    "language": ["Node.js", "Express.js", "MongoDB", "React", "Sass", "Vite"],
+    "link": {
+      "github": "https://github.com/BaptisteCainjo/MATCHS.git"
+    }
+  },
+  {
+    "title": "Intranet de la Documentation",
+    "description": "Création d'une interface web centralisant l'ensemble des outils que j'ai développés spécifiquement pour optimiser le travail de mon équipe.",
+    "skill": "Front-end",
+    "date": 2024,
+    "type": "Professionnel",
+    "language": ["Next.js", "TypeScript", "Tailwind", "Sass"],
+    "link": {}
+  },
+  {
+    "title": "Portfolio",
+    "description": "Portfolio conçu spécifiquement pour présenter mes projets, les technologies maitrisées, etc.",
+    "skill": "Front-end",
+    "date": 2023,
+    "type": "Personnel",
+    "language": ["Next.js", "TypeScript", "Sass", "Resend", "React Email"],
+    "link": {
+      "github": "https://github.com/BaptisteCainjo/SITE-PERSO",
+      "watch": "https://www.baptistecainjo.fr/"
+    }
+  },
+  {
+    "title": "History.ai",
+    "description": "Création d'une application mobile permettant de communiquer avec des personnages historique grâce à l'IA.",
+    "skill": "Mobile",
+    "date": 2024,
+    "type": "Scolaire",
+    "language": ["Flutter"],
+    "link": {
+      "github": "https://github.com/BaptisteCainjo/historyai"
+    }
+  },
+  {
+    "title": "Formatage automatique du code",
+    "description": "Développement d'un script pour formater automatiquement toutes les pages HTML de la documentation en HTML sémantique.",
+    "skill": "Back-end",
+    "date": 2024,
+    "type": "Professionnel",
+    "language": ["Node.js", "TypeScript"],
+    "link": {}
+  },
+  {
+    "title": "Application météo",
+    "description": "Application web de météo avec de nombreuses fonctionnalités détaillées.",
+    "skill": "Front-end",
+    "date": 2023,
+    "type": "Personnel",
+    "language": ["React", "Sass"],
+    "link": {
+      "github": "https://github.com/BaptisteCainjo/meteo-react-function",
+      "watch": "https://meteo.baptistecainjo.fr/"
+    }
+  },
+  {
+    "title": "Assistance Métier",
+    "description": "Page permettant aux utilisateurs de signaler les incidents rencontrés sur les pages de la Documentation.",
+    "skill": "Front-end",
+    "date": 2023,
+    "type": "Professionnel",
+    "language": ["SMTP.js", "JavaScript", "Sass", "HTML"],
+    "link": {}
+  },
+  {
+    "title": "Dataviz",
+    "description": "Site dédié au divers projets effectués sur la visualisation de données lié à la pollution atmosphérique.",
+    "skill": "Front-end",
+    "date": 2023,
+    "type": "Scolaire",
+    "language": ["D3.js", "JavaScript", "HTML", "CSS"],
+    "link": {
+      "github": "https://github.com/BaptisteCainjo/DATAVIZ-3D",
+      "watch": "https://dataviz3d.baptistecainjo.fr/"
+    }
+  },
+  {
+    "title": "Produit 3D",
+    "description": "Visualition web d'un produit en 3D lié à un artiste musical.",
+    "skill": "Front-end",
+    "date": 2023,
+    "type": "Scolaire",
+    "language": ["Playcanvas", "JavaScript"],
+    "link": {
+      "github": "https://github.com/BaptisteCainjo/CONFIGURATOR",
+      "watch": "https://configurator.baptistecainjo.fr/"
+    }
+  },
+  {
+    "title": "Site E-Commerce",
+    "description": "Adaptation d'un site de commerce en ligne dédié aux produit d'un artiste musical.",
+    "skill": "Back-end",
+    "date": 2022,
+    "type": "Scolaire",
+    "language": ["Symfony"],
+    "link": {
+      "github": "https://github.com/BaptisteCainjo/ecommerce.git"
+    }
+  },
+  {
+    "title": "Forum",
+    "description": "Forum afin de rendre le sujet de la sobriété numérique ouvert à tous.",
+    "skill": "Back-end",
+    "date": 2022,
+    "type": "Scolaire",
+    "language": ["PHP", "MySql"],
+    "link": {
+      "github": "https://github.com/BaptisteCainjo/Projet-1er-ann-e-MMI"
+    }
+  },
+  {
+    "title": "Environnements graphiques",
+    "description": "Conception et déploiement de chartes graphiques personnalisées.",
+    "skill": "Front-end",
+    "date": 2023,
+    "type": "Professionnel",
+    "language": ["HTML", "Sass", "JavaScript"],
+    "link": {}
+  },
+  {
+    "title": "FestView",
+    "description": "Modérateur d'une encyclopédie musicale collaborative.",
+    "skill": "Autre",
+    "date": 2021,
+    "endDate": 2023,
+    "type": "Personnel",
+    "language": [],
+    "link": {
+      "watch": "https://www.instagram.com/festview/?hl=fr"
+    }
+  },
+  {
+    "title": "QuizRap",
+    "description": "Community Manager d'une application de quiz musicale.",
+    "skill": "Autre",
+    "date": 2021,
+    "endDate": 2023,
+    "type": "Personnel",
+    "language": [],
+    "link": {
+      "watch": "https://www.instagram.com/quizrap_/"
+    }
+  }
+]

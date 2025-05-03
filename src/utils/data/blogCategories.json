@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "name": "Voyages",
+    "slug": "voyages",
+    "description": "Récits de mes voyages, conseils, et expériences autour du monde."
+  },
+  {
+    "id": 2,
+    "name": "Développement",
+    "slug": "dev",
+    "description": "Articles techniques, tutos, projets persos et réflexions de développeur."
+  },
+  {
+    "id": 3,
+    "name": "Réflexions",
+    "slug": "reflexions",
+    "description": "Pensées personnelles, société, productivité et croissance personnelle."
+  }
+]
