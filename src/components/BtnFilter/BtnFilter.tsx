@@ -7,7 +7,7 @@ interface BtnFilterProps {
 }
 
 export default function BtnFilter({ names, onFilterClick }: BtnFilterProps) {
-  const [activeIndex, setActiveIndex] = useState(0);
+  const [activeIndex, setActiveIndex] = useState(1);
 
   const handleClickClass = (
     e: React.MouseEvent<HTMLAnchorElement>,

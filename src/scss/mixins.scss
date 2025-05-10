@@ -118,16 +118,8 @@ $mixin-breakpoints: (
   }
 }
 
-@mixin Poppins() {
-  font-family: "Poppins", sans-serif;
-}
-
 @mixin Outfit() {
-  font-family: "Outfut", sans-serif;
-}
-
-@mixin Playfair() {
-  font-family: "Playfair Display", sans-serif;
+  font-family: "Outfit", sans-serif;
 }
 
 @mixin h1Style() {

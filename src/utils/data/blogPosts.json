@@ -6,7 +6,7 @@
     "excerpt": "Réflexion autour des principes clés pour concevoir une documentation web alliant qualité de développement et accessibilité.",
     "category_id": 3,
     "tags": ["documentation", "développement web", "ux"],
-    "featured_image_url": "documentation.webp",
+    "featured_image_url": "/images/documentation.webp",
     "created_at": "01-05-2025",
     "updated_at": "01-05-2025"
   }
