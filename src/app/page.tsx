@@ -56,16 +56,18 @@ const iconMap: { [key: string]: any } = {
 };
 
 export default function Home() {
-  const [portfolio, setPortfolio] = useState<PortfolioItems[]>(portfolioData);
+  const [portfolio, setPortfolio] = useState<PortfolioItems[]>(
+    portfolioData.filter((item) => item.type === "Personnel")
+  );
   const [currentSquare, setCurrentSquare] = useState(0);
   const aboutProfessional: ProfessionalContent[] = professionalInfo;
   const square = aboutProfessional[currentSquare];
 
   const handleFilterClick = (filter: string) => {
     if (filter === "Tous") {
-      setPortfolio(portfolio);
+      setPortfolio(portfolioData);
     } else {
-      const filteredPortfolio = portfolio.filter(
+      const filteredPortfolio = portfolioData.filter(
         (item) => item.type === filter
       );
       setPortfolio(filteredPortfolio);
@@ -120,7 +122,7 @@ export default function Home() {
         <H2 titleContent="Mon portfolio créatif" importantWord="portfolio" />
         <div className={HomeStyle.portfolio}>
           <BtnFilter
-            names={["Tous", "Personnel", "Scolaire", "Professionnel"]}
+            names={["Tous", "Personnel", "Étudiant", "Professionnel"]}
             onFilterClick={handleFilterClick}
           ></BtnFilter>
           <ProjectCard portfolio={portfolio} />
