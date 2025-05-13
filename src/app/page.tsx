@@ -50,7 +50,7 @@ interface ProfessionalContent {
 }
 
 const iconMap: { [key: string]: any } = {
-  "Développeur Full-Stack": Code,
+  "Développeur Full-stack": Code,
   "Concepteur Web": Palette,
   Webdesigner: Computer,
 };
