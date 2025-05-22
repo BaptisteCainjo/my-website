@@ -1,0 +1,11 @@
+@import "../../scss/colors";
+
+.sub-title {
+  font-size: 38px;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 75px 0 50px;
+  span {
+    color: $globalPrimaryColor;
+  }
+}

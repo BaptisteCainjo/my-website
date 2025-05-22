@@ -49,20 +49,6 @@ a {
   color: $globalBlackColor;
 }
 
-h1 {
-  @include h1Style();
-}
-
-h2 {
-  font-size: 38px;
-  text-transform: uppercase;
-  text-align: center;
-  margin: 75px 0 50px;
-  span {
-    color: $globalPrimaryColor;
-  }
-}
-
 button,
 input,
 textarea {
