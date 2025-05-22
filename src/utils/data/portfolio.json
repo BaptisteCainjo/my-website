@@ -54,18 +54,6 @@
     "link": {}
   },
   {
-    "title": "Portfolio",
-    "description": "Portfolio conçu spécifiquement pour présenter mes projets, les technologies maitrisées, etc.",
-    "skill": "Front-end",
-    "date": 2023,
-    "type": "Personnel",
-    "language": ["Next.js", "TypeScript", "Sass", "Resend", "React Email"],
-    "link": {
-      "github": "https://github.com/BaptisteCainjo/SITE-PERSO",
-      "watch": "https://www.baptistecainjo.fr/"
-    }
-  },
-  {
     "title": "History.ai",
     "description": "Création d'une application mobile permettant de communiquer avec des personnages historique grâce à l'IA.",
     "skill": "Mobile",
@@ -95,6 +83,18 @@
     "link": {
       "github": "https://github.com/BaptisteCainjo/meteo-react-function",
       "watch": "https://meteo.baptistecainjo.fr/"
+    }
+  },
+  {
+    "title": "Portfolio",
+    "description": "Portfolio conçu spécifiquement pour présenter mes projets, les technologies maitrisées, etc.",
+    "skill": "Front-end",
+    "date": 2023,
+    "type": "Personnel",
+    "language": ["Next.js", "TypeScript", "Sass", "Resend", "React Email"],
+    "link": {
+      "github": "https://github.com/BaptisteCainjo/SITE-PERSO",
+      "watch": "https://www.baptistecainjo.fr/"
     }
   },
   {
