@@ -92,7 +92,7 @@ export default function Home() {
           <Image src={HandShake} alt="icon" width={50} height={50} />
           <div>
             <p>Bonjour, je suis</p>
-            <h1>Baptiste Cainjo</h1>
+            <h1 className={HomeStyle["strong-title"]}>Baptiste Cainjo</h1>
           </div>
         </div>
 

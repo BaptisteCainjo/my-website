@@ -100,7 +100,9 @@ export default function ProjectCard({ portfolio }: PortfolioProps) {
                       <path />
                     </svg>
                     <div className={ProjectCardStyle.card__headerText}>
-                      <h3>{element.title}</h3>
+                      <h3 className={ProjectCardStyle.card__title}>
+                        {element.title}
+                      </h3>
                       <span>{`${element.date} ${
                         element.endDate ? `- ${element.endDate}` : ""
                       } • ${element.type} • ${element.skill}`}</span>

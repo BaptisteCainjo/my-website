@@ -13,9 +13,18 @@
 
 body {
   width: 100%;
-  background-color: $globalBkgColor;
   font-weight: 400;
   background-color: $lightBlue;
+}
+
+main {
+  margin-top: 80px;
+  padding: 1rem;
+  min-height: calc(100vh - 6rem - 80px);
+
+  @include mixinBreakpoints(sm) {
+    padding: 3rem;
+  }
 }
 
 section {
@@ -49,20 +58,6 @@ a {
   color: $globalBlackColor;
 }
 
-h1 {
-  @include h1Style();
-}
-
-h2 {
-  font-size: 38px;
-  text-transform: uppercase;
-  text-align: center;
-  margin: 75px 0 50px;
-  span {
-    color: $globalPrimaryColor;
-  }
-}
-
 button,
 input,
 textarea {
@@ -83,11 +78,6 @@ button[type="submit"] {
 textarea {
   resize: none;
   height: 150px;
-}
-
-h3 {
-  font-size: 1.2em;
-  color: $globalPrimaryColor;
 }
 
 a:focus-visible span {

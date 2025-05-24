@@ -9,6 +9,7 @@ $bkgColorHover: #f1f5f9;
   height: 80px;
   position: fixed;
   top: 0;
+  left: 0;
   background-color: $bkgColor;
   z-index: 10;
   @include transition(0.25s ease-in-out);

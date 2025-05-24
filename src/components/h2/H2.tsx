@@ -1,3 +1,5 @@
+import H2Style from "./H2.module.scss";
+
 interface H2Props {
   titleContent: string;
   importantWord: string;
@@ -5,7 +7,7 @@ interface H2Props {
 
 export default function H2({ titleContent, importantWord }: H2Props) {
   return (
-    <h2>
+    <h2 className={H2Style["sub-title"]}>
       {titleContent
         .split(" ")
         .map((word, index) =>

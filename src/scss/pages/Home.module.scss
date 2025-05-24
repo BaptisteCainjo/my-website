@@ -3,6 +3,10 @@
 
 //SECTION
 
+.strong-title {
+  @include strongTitle();
+}
+
 .about {
   background-image: url("../../assets/images/background.png");
   background-repeat: no-repeat;
@@ -12,7 +16,7 @@
   justify-items: center;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: 1fr 2fr;
   height: 100vh;
   grid-gap: 10% 0;
 }
@@ -82,7 +86,7 @@
   }
 
   strong {
-    @include h1Style();
+    @include strongTitle();
   }
 }
 
