@@ -3,6 +3,11 @@
 
 $curve: 15px;
 
+.card__title {
+  font-size: 1.2em;
+  color: $globalPrimaryColor;
+}
+
 .cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(275px, 1fr));
