@@ -3,11 +3,6 @@
 
 $curve: 15px;
 
-.card__title {
-  font-size: 1.2em;
-  color: $globalPrimaryColor;
-}
-
 .cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(275px, 1fr));
@@ -96,6 +91,7 @@ $curve: 15px;
 
   h3 {
     margin: 0 0 0.3rem;
+    @include h3Home();
   }
 
   span {

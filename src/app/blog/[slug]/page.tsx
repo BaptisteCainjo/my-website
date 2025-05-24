@@ -5,7 +5,7 @@ import BlogPostStyle from "@/scss/pages/BlogPost.module.scss";
 import fs from "fs";
 import path from "path";
 import ReactMarkdown from "react-markdown";
-import formattedTags from "@/utils/functions/formattedTags";
+import ArticleCard from "@/components/ArticleCard/ArticleCard";
 
 export default function BlogPostPage({ params }: { params: { slug: string } }) {
   const post = posts.find((p) => p.slug === params.slug);
@@ -38,7 +38,7 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
             <h1 className={BlogPostStyle.title}>{post.title}</h1>
             <div className={BlogPostStyle.meta}>
               <span>Published: {post.created_at}</span>
-              <span>Category: {formattedTags(post.tags)}</span>
+              <span>Category: {post.tags}</span>
               <span>Reading time: {post.reading_time} minutes</span>
             </div>
           </div>
@@ -54,6 +54,9 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
           <h2>Plus d&apos;articles que vous allez adorer</h2>
 
           {/* Nouveau composant */}
+          {posts.slice(0).map((post) => (
+            <ArticleCard key={post.id} {...post}></ArticleCard>
+          ))}
           {/* <div className={BlogPostStyle.relatedGrid}>
             {posts
               .filter((p) => p.slug !== post.slug)

@@ -9,7 +9,6 @@ import navigation from "@/utils/data/navigation.json";
 import networks from "@/utils/data/networks.json";
 
 import HomeStyle from "@/scss/pages/Home.module.scss";
-import BtnUp from "@/components/BtnUp/BtnUp";
 import BtnNetwork from "@/components/BtnNetwork/BtnNetwork";
 import NavBtn from "@/components/NavBtn/NavBtn";
 import NavBar from "@/components/NavBar/NavBar";
@@ -19,7 +18,6 @@ import BtnFilter from "@/components/BtnFilter/BtnFilter";
 import ProjectCard from "@/components/ProjectCard/ProjectCard";
 import FormMail from "@/components/FormMail/FormMail";
 import RectMail from "@/components/RectMail/RectMail";
-import Footer from "@/components/Footer/Footer";
 import Bubble from "@/components/Bubble/Bubble";
 import CircleSoftware from "@/components/CircleSoftware/CircleSoftware";
 import SquareSmall from "@/components/SquareSmall/SquareSmall";
@@ -85,6 +83,7 @@ export default function Home() {
 
   return (
     <>
+      <div className={HomeStyle.fullBackground}></div>
       <NavBar content={navigation} />
       <NavBtn content={navigation} />
       <section id="part1" className={HomeStyle.about}>
@@ -139,8 +138,7 @@ export default function Home() {
           <FormMail />
         </div>
       </section>
-      <Footer />
-      <BtnUp />
+
       <BtnNetwork content={networks} />
     </>
   );

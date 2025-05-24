@@ -122,6 +122,11 @@ $mixin-breakpoints: (
   font-family: "Outfit", sans-serif;
 }
 
+@mixin h3Home() {
+  font-size: 1.2em;
+  color: $globalPrimaryColor;
+}
+
 @mixin strongTitle() {
   font-size: 26px;
   font-weight: 700;
