@@ -5,7 +5,6 @@ import posts from "@/utils/data/blogPosts.json";
 import formattedDate from "@/utils/functions/formattedDate";
 import Link from "next/link.js";
 import ArticleCard from "@/components/ArticleCard/ArticleCard";
-import formattedTags from "@/utils/functions/formattedTags";
 
 export default function BlogPage() {
   return (
@@ -39,8 +38,7 @@ export default function BlogPage() {
             />
             <div className={BlogStyle.featuredContent}>
               <p className={BlogStyle.meta}>
-                {formattedDate(posts[0].created_at)} •{" "}
-                {formattedTags(posts[0].tags)}
+                {formattedDate(posts[0].created_at)} • {posts[0].tags}
               </p>
               <h3 className={BlogStyle.postTitle}>{posts[0].title}</h3>
               <p className={BlogStyle.excerpt}>{posts[0].excerpt}</p>
@@ -50,7 +48,7 @@ export default function BlogPage() {
       </article>
 
       <div className={BlogStyle.postGrid}>
-        {posts.slice(1).map((post) => (
+        {posts.slice(0).map((post) => (
           <ArticleCard key={post.id} {...post}></ArticleCard>
         ))}
       </div>

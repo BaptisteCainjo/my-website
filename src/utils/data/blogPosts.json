@@ -6,7 +6,7 @@
     "excerpt": "Réflexion autour des principes clés pour concevoir une documentation web alliant qualité de développement et accessibilité.",
     "reading_time": 110,
     "category_id": 3,
-    "tags": ["documentation", "développement web", "ux"],
+    "tags": "développement",
     "featured_image_url": "/images/documentation.webp",
     "created_at": "01-05-2025",
     "updated_at": "01-05-2025"
@@ -18,7 +18,7 @@
     "excerpt": "Analyse des défis et meilleures pratiques pour assurer la sécurité des applications web contemporaines.",
     "reading_time": 5,
     "category_id": 4,
-    "tags": ["sécurité", "applications web", "développement"],
+    "tags": "sécurité",
     "featured_image_url": "/images/documentation.webp",
     "created_at": "02-05-2025",
     "updated_at": "02-05-2025"

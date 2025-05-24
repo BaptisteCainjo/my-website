@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import "../scss/globals.scss";
 import Cursor from "@/components/Cursor/Cursor";
+import Footer from "@/components/Footer/Footer";
+import BtnUp from "@/components/BtnUp/BtnUp";
 
 export const metadata: Metadata = {
   title: "Baptiste Cainjo • Développeur Full-stack",
@@ -21,6 +23,9 @@ export default function RootLayout({
       <body>
         <Cursor />
         <main>{children}</main>
+
+        <BtnUp />
+        <Footer />
       </body>
     </html>
   );

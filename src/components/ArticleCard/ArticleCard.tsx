@@ -1,43 +1,56 @@
+"use client";
+
 import Image from "next/image";
-import ArticleCardStyle from "./ArticleCard.module.scss";
+import Link from "next/link";
+import styles from "./ArticleCard.module.scss";
+import formattedDate from "@/utils/functions/formattedDate";
+import ArrowBlog from "@/assets/svg/icons/arrow_blog.svg";
 
 interface ArticleCardProps {
   id: number;
   title: string;
   excerpt: string;
   featured_image_url: string;
-  tags: string[];
+  tags: string;
   created_at: string;
+  slug: string;
 }
 
 export default function ArticleCard({
-  id,
   title,
   excerpt,
   featured_image_url,
   tags,
   created_at,
+  slug,
 }: ArticleCardProps) {
   return (
-    <article className={ArticleCardStyle.postCard}>
-      <Image
-        src={featured_image_url}
-        alt={title}
-        className={ArticleCardStyle.postImage}
-        width={400}
-        height={300}
-        priority={false}
-      />
-      <div className={ArticleCardStyle.postContent}>
-        <div>
-          <p className={ArticleCardStyle.meta}>
-            {tags} • {created_at}
-          </p>
-          <h4 className={ArticleCardStyle.postTitle}>{title}</h4>
-          <p className={ArticleCardStyle.excerpt}>{excerpt}</p>
+    <Link href={`/blog/${slug}`} className={styles.card}>
+      <div className={styles.imageWrapper}>
+        <Image
+          src={featured_image_url}
+          alt={title}
+          className={styles.image}
+          priority={false}
+          fill
+        />
+        <div className={styles.iconWrapper}>
+          <Image
+            src={ArrowBlog}
+            className={styles.icon}
+            alt="Flèche renvoyant sur un article"
+            width={24}
+            height={24}
+          />
         </div>
-        <span className={ArticleCardStyle.arrow}>→</span>
       </div>
-    </article>
+      <div className={styles.content}>
+        <p className={styles.meta}>
+          {formattedDate(created_at)} • {tags}
+        </p>
+        <h3 className={styles.title}>{title}</h3>
+        <p className={styles.excerpt}>{excerpt}</p>
+      </div>
+    </Link>
   );
 }

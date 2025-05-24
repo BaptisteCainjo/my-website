@@ -20,7 +20,7 @@ body {
 main {
   margin-top: 80px;
   padding: 1rem;
-  min-height: calc(100vh - 6rem - 80px);
+  min-height: calc(100vh - 6rem - 80px - 50px);
 
   @include mixinBreakpoints(sm) {
     padding: 3rem;
