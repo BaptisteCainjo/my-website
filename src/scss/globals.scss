@@ -8,13 +8,13 @@
   text-decoration: none;
   list-style-type: none;
   scroll-behavior: smooth;
-  @include Outfit();
 }
 
 body {
   width: 100%;
   font-weight: 400;
   background-color: $lightBlue;
+  @include Outfit();
 }
 
 main {
