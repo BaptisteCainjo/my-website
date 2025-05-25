@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import { Outfit } from "next/font/google";
+
 import "../scss/globals.scss";
 import Cursor from "@/components/Cursor/Cursor";
 import Footer from "@/components/Footer/Footer";
@@ -13,10 +15,8 @@ export const metadata: Metadata = {
   },
 };
 
-import { Outfit } from "next/font/google";
-
 const outfit = Outfit({
-  weight: ["400", "500", "600", "700"],
+  weight: ["300", "400", "500", "600", "700"],
   subsets: ["latin"],
   display: "swap",
 });
