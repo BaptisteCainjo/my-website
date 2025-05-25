@@ -13,13 +13,21 @@ export const metadata: Metadata = {
   },
 };
 
+import { Outfit } from "next/font/google";
+
+const outfit = Outfit({
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+  subsets: ["latin"],
+  display: "swap",
+});
+
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="fr">
+    <html lang="fr" className={outfit.className}>
       <body>
         <Cursor />
         <main>{children}</main>
