@@ -8,6 +8,7 @@
   text-decoration: none;
   list-style-type: none;
   scroll-behavior: smooth;
+  @include Outfit();
 }
 
 body {
