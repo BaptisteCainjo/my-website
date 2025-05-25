@@ -7,6 +7,12 @@ import BlogPostStyle from "@/scss/pages/BlogPost.module.scss";
 // import ReactMarkdown from "react-markdown";
 import ArticleCard from "@/components/ArticleCard/ArticleCard";
 
+export function generateStaticParams() {
+  return posts.map((post) => ({
+    slug: post.slug,
+  }));
+}
+
 export default function BlogPostPage({ params }: { params: { slug: string } }) {
   const post = posts.find((p) => p.slug === params.slug);
 
