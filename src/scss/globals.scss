@@ -15,6 +15,7 @@ body {
   width: 100%;
   font-weight: 400;
   background-color: $lightBlue;
+  @include Outfit();
 }
 
 main {
