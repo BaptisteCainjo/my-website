@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 };
 
 const outfit = Outfit({
-  weight: ["300", "400", "500", "600", "700"],
+  weight: ["300", "400", "500", "600", "700", "800"],
   subsets: ["latin"],
   display: "swap",
 });
