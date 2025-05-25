@@ -2,22 +2,22 @@ import NavBar from "@/components/NavBar/NavBar";
 import posts from "@/utils/data/blogPosts.json";
 import Image from "next/image";
 import BlogPostStyle from "@/scss/pages/BlogPost.module.scss";
-import fs from "fs";
-import path from "path";
-import ReactMarkdown from "react-markdown";
+// import fs from "fs";
+// import path from "path";
+// import ReactMarkdown from "react-markdown";
 import ArticleCard from "@/components/ArticleCard/ArticleCard";
 
 export default function BlogPostPage({ params }: { params: { slug: string } }) {
   const post = posts.find((p) => p.slug === params.slug);
 
-  const filePath = path.join(
-    process.cwd(),
-    "src",
-    "content",
-    "documentation-web-equilibre-dev-ux.md"
-  );
-  filePath;
-  const fileContent = fs.readFileSync(filePath, "utf8");
+  // const filePath = path.join(
+  //   process.cwd(),
+  //   "src",
+  //   "content",
+  //   "documentation-web-equilibre-dev-ux.md"
+  // );
+  // filePath;
+  // const fileContent = fs.readFileSync(filePath, "utf8");
 
   if (!post) {
     return <p>Post not found</p>;
@@ -44,9 +44,9 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
           </div>
         </header>
 
-        <section className={BlogPostStyle.content}>
+        {/* <section className={BlogPostStyle.content}>
           <ReactMarkdown>{fileContent}</ReactMarkdown>
-        </section>
+        </section> */}
 
         <section className={BlogPostStyle.related}>
           <h2>Plus d&apos;articles que vous allez adorer</h2>
