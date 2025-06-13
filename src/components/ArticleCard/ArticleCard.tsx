@@ -48,7 +48,7 @@ export default function ArticleCard({
       <div className={styles.content}>
         <p className={styles.meta}>
           {formattedDate(created_at)}
-          {tags && ` • ${tags}`}
+          {tags !== "à venir" && ` • ${tags}`}
         </p>
         <h3 className={styles.title}>{title}</h3>
         <p className={styles.excerpt}>{excerpt}</p>
