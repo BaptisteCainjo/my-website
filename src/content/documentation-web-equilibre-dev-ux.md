@@ -1,6 +1,6 @@
 Bonjour à toutes et à tous,
 
-Je suis ravi·e de vous accueillir pour le tout premier article de ce blog ! Pour inaugurer ce nouvel espace d’échanges, je vous propose de découvrir le fruit de mon travail de fin d’études, fruit de plusieurs mois de travail et de recherche.
+Je suis ravi de vous accueillir pour le tout premier article de ce blog ! Pour inaugurer ce nouvel espace d’échanges, je vous propose de découvrir le fruit de mon travail de fin d’études, fruit de plusieurs mois de travail et de recherche.
 
 ## 1. Mon mémoire de fin d’études&#x20;
 
