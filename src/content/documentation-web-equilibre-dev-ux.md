@@ -6,6 +6,7 @@ Je suis ravi·e de vous accueillir pour le tout premier article de ce blog ! Po
 
 - **Titre :** _Comment concevoir une documentation web qui garantit le juste équilibre entre les impératifs du développement web moderne et les exigences spécifiques d'une documentation en ligne ?_
 - **Date de soutenance :** *24 juin 2024*
+- **Notation obtenue :** *Mémoire : 17.5/20; Soutenance : 17/20*
 
 Vous pouvez visualiser gratuitement mon mémoire en cliquant sur le lien ci-dessous :
 

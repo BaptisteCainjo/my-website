@@ -31,12 +31,16 @@
   bottom: 0;
   color: #ffffff;
   z-index: 1;
-  padding: 0 3rem 2rem 3rem;
+  padding: 0 1rem 2rem 1rem;
+
+  @include mixinBreakpoints(sm) {
+    padding: 0 3rem 2rem 3rem;
+  }
 }
 
 .backLink {
   color: #ffffff;
-  padding: 0.5rem 1rem 0.5rem 0.75rem;
+  padding: 0.5rem 0.75rem 0.5rem 0.75rem;
   background-color: rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(4px);
   transition: 0.3s ease;
@@ -49,19 +53,39 @@
     background-color: rgba(255, 255, 255, 0.3);
     transition: 0.3s ease;
   }
+
+  @include mixinBreakpoints(md) {
+    padding: 0.5rem 1rem 0.5rem 0.75rem;
+  }
+}
+.backText {
+  display: none;
+}
+@include mixinBreakpoints(md) {
+  .backText {
+    display: block;
+  }
 }
 
 .title {
   font-weight: 700;
-  font-size: 2.4rem;
+  font-size: 1.75rem;
   margin-bottom: 0.5rem;
+
+  @include mixinBreakpoints(sm) {
+    font-size: 2.4rem;
+  }
 }
 
 .meta {
   font-size: 0.875rem;
   display: flex;
-  gap: 1.5rem;
+  gap: 0.5rem;
   flex-wrap: wrap;
+
+  @include mixinBreakpoints(md) {
+    gap: 1.5rem;
+  }
 }
 
 .heroImage {
@@ -75,6 +99,10 @@
   line-height: 1.7;
   margin-bottom: 4rem;
   margin-top: 5rem;
+
+  @include mixinBreakpoints(md) {
+    margin-top: 6rem;
+  }
 
   p,
   li {

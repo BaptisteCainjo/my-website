@@ -1,4 +1,5 @@
 @import "../../scss/colors";
+@import "../../scss/mixins.scss";
 
 .card {
   display: flex;
@@ -21,8 +22,12 @@
 
 .imageWrapper {
   position: relative;
-  height: 300px;
+  height: auto;
   width: 50%;
+
+  @include mixinBreakpoints(xss) {
+    height: 300px;
+  }
 }
 
 .iconWrapper {
@@ -34,21 +39,34 @@
 }
 
 .content {
-  padding-left: 1rem;
+  padding-left: 0.75rem;
   width: 50%;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+
+  @include mixinBreakpoints(md) {
+    padding-left: 1rem;
+  }
 }
 
 .meta {
   font-size: 0.875rem;
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.5rem;
+
+  @include mixinBreakpoints(md) {
+    margin-bottom: 0.75rem;
+  }
 }
 
 .title {
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: 500;
-  margin: 0 0 1rem 0;
+  margin-bottom: 0.75rem;
   line-height: 1;
+
+  @include mixinBreakpoints(md) {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
 }
