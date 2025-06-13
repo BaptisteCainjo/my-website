@@ -1,5 +1,6 @@
 import NavBar from "@/components/NavBar/NavBar";
 import LegalesStyle from "@/scss/pages/Legales.module.scss";
+import { EMAIL } from "@/utils/constants";
 
 export default function page() {
   return (
@@ -18,9 +19,7 @@ export default function page() {
           </p>
           <p>
             <strong>E-mail : </strong>
-            <a href="mailto:cainjo.baptiste@orange.fr">
-              cainjo.baptiste@orange.fr
-            </a>
+            <a href={`mailto:${EMAIL}`}>{EMAIL}</a>
           </p>
         </div>
         <div>

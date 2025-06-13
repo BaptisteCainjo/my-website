@@ -1,5 +1,54 @@
+@import "../colors";
+@import "../mixins";
+
 .header {
-  margin-bottom: 2rem;
+  margin: -$padding-main;
+  margin-top: calc(-#{$padding-main} - $margin-nav-bar);
+  position: relative;
+
+  @include mixinBreakpoints(sm) {
+    margin: -$padding-main-sm;
+    margin-top: calc(-#{$padding-main-sm} - $margin-nav-bar);
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      to top,
+      rgba(28, 28, 28, 0.5) 37%,
+      rgba(28, 28, 28, 0.1) 53%
+    );
+    pointer-events: none;
+  }
+}
+
+@include mainImageBlog();
+
+.headerContent {
+  position: absolute;
+  bottom: 0;
+  color: #ffffff;
+  z-index: 1;
+  padding: 0 3rem 2rem 3rem;
+}
+
+.backLink {
+  color: #ffffff;
+  padding: 0.5rem 1rem 0.5rem 0.75rem;
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(4px);
+  transition: 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  border-radius: 0.375rem;
+  gap: 5px;
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    transition: 0.3s ease;
+  }
 }
 
 .title {
@@ -10,7 +59,6 @@
 
 .meta {
   font-size: 0.875rem;
-  color: #aaa;
   display: flex;
   gap: 1.5rem;
   flex-wrap: wrap;
@@ -26,9 +74,35 @@
   font-size: 1.125rem;
   line-height: 1.7;
   margin-bottom: 4rem;
+  margin-top: 5rem;
 
-  p {
-    margin-bottom: 1.8rem;
+  p,
+  li {
+    line-height: normal;
+    margin-bottom: 0.5rem;
+
+    li {
+      margin-bottom: 0.25rem;
+    }
+  }
+
+  h2 {
+    margin: 2rem 0 0.5rem;
+  }
+
+  ul,
+  ol {
+    margin-left: 2rem;
+  }
+
+  li {
+    list-style-type: auto;
+  }
+
+  a {
+    width: fit-content;
+    display: inline-block;
+    @include underlineLink();
   }
 }
 
@@ -92,4 +166,8 @@
 .relatedExcerpt {
   font-size: 0.9rem;
   color: #ccc;
+}
+
+.posts {
+  @include posts();
 }

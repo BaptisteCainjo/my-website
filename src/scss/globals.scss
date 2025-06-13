@@ -16,12 +16,13 @@ body {
 }
 
 main {
-  margin-top: 80px;
-  padding: 1rem;
-  min-height: calc(100vh - 6rem - 80px - 50px);
+  margin-top: $margin-nav-bar;
+  padding: $padding-main;
+  min-height: calc(100vh - ($padding-main * 2) - $margin-nav-bar - 50px);
 
   @include mixinBreakpoints(sm) {
-    padding: 3rem;
+    padding: $padding-main-sm;
+    min-height: calc(100vh - ($padding-main-sm * 2) - $margin-nav-bar - 50px);
   }
 }
 

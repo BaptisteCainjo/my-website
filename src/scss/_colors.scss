@@ -1,22 +1,25 @@
-$w: #FFFFFF;
+$w: #ffffff;
 $b: #000000;
 
-$globalBkgColor:#F8F8F8;
+$globalBkgColor: #f8f8f8;
 
-$globalPrimaryColor: #433B90;
-$globalPrimaryColorLighten: lighten($color: $globalPrimaryColor, $amount: 40);
-$globalBlackColor: #1D1D1D;
+$globalPrimaryColor: #433b90;
+$globalPrimaryColorLighten: lighten(
+  $color: $globalPrimaryColor,
+  $amount: 40,
+);
+$globalBlackColor: #1d1d1d;
 
 $lightBlue: #edf1f7;
 
 $error: #a80000;
 
+$margin-nav-bar: 80px;
 
-
-
+$padding-main: 1rem;
+$padding-main-sm: 3rem;
 
 // ---------------
-
 
 // $grayBackground:#F8F8F8;
 // $grayPanel: #FAFAFA;

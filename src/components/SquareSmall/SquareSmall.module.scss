@@ -7,10 +7,12 @@ $boxShadowColor: rgba(0, 0, 0, 0.062745098);
 $animationDuration: 0.33s;
 $animationDelay: 0.75s;
 
+$borderRadius: 5px;
+
 .square-small {
   background: $w;
   box-shadow: 0 0 10px $boxShadowColor;
-  border-radius: 5px;
+  border-radius: $borderRadius;
   padding: 9px 13px;
   max-width: min-content;
   border: 1px solid transparent;
@@ -22,6 +24,44 @@ $animationDelay: 0.75s;
   animation: fadeIn $animationDuration ease-in-out $animationDelay forwards,
     fadeFromRight $animationDuration ease-in-out ($animationDelay + 0.05s)
       forwards;
+}
+
+.blog {
+  box-shadow: 0px 0px 0px $globalPrimaryColor;
+  &::before {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    border-radius: $borderRadius;
+    padding: 2px;
+    background: linear-gradient(
+      45deg,
+      $globalPrimaryColor,
+      transparent,
+      $globalPrimaryColor
+    );
+    background-size: 300% 300%;
+    animation: borderAnimation 5s linear infinite;
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask-composite: exclude;
+    -webkit-mask-composite: destination-out;
+    pointer-events: none;
+  }
+}
+
+@keyframes borderAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 @keyframes fadeIn {

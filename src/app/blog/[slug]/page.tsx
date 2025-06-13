@@ -1,26 +1,28 @@
 import NavBar from "@/components/NavBar/NavBar";
-import posts from "@/utils/data/blogPosts.json";
+import postsJson from "@/utils/data/blogPosts.json";
 import Image from "next/image";
 import BlogPostStyle from "@/scss/pages/BlogPost.module.scss";
 import fs from "fs";
 import path from "path";
 import ReactMarkdown from "react-markdown";
 import ArticleCard from "@/components/ArticleCard/ArticleCard";
+import Link from "next/link.js";
+import { ROUTES } from "@/utils/constants/routes";
 
 export function generateStaticParams() {
-  return posts.map((post) => ({
+  return postsJson.map((post) => ({
     slug: post.slug,
   }));
 }
 
 export default function BlogPostPage({ params }: { params: { slug: string } }) {
-  const post = posts.find((p) => p.slug === params.slug);
+  const post = postsJson.find((p) => p.slug === params.slug);
 
   const filePath = path.join(
     process.cwd(),
     "src",
     "content",
-    "documentation-web-equilibre-dev-ux.md"
+    `${post?.slug}.md`
   );
   filePath;
   const fileContent = fs.readFileSync(filePath, "utf8");
@@ -35,17 +37,41 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
       <article className={BlogPostStyle.blogPost}>
         <header className={BlogPostStyle.header}>
           <Image
-            src={posts[0].featured_image_url}
-            alt={posts[0].title}
+            src={post.featured_image_url}
+            alt={post.title}
             width={800}
             height={600}
+            className={BlogPostStyle.featuredImage}
           />
-          <div>
+          <div className={BlogPostStyle.headerContent}>
+            <Link href={`${ROUTES.BLOG}`} className={BlogPostStyle.backLink}>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <path d="m12 19-7-7 7-7" />
+                <path d="M19 12H5" />
+              </svg>
+              Retour
+            </Link>
+
             <h1 className={BlogPostStyle.title}>{post.title}</h1>
             <div className={BlogPostStyle.meta}>
-              <span>Published: {post.created_at}</span>
-              <span>Category: {post.tags}</span>
-              <span>Reading time: {post.reading_time} minutes</span>
+              <span>
+                {" "}
+                Publié le {post.created_at}{" "}
+                {post.updated_at !== post.created_at &&
+                  `⎪ Modifié le ${post.updated_at}`}
+              </span>
+              <span> Catégories : {post.tags}</span>
+              <span> Lecture : {post.reading_time} min</span>
             </div>
           </div>
         </header>
@@ -54,13 +80,20 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
           <ReactMarkdown>{fileContent}</ReactMarkdown>
         </section>
 
-        <section className={BlogPostStyle.related}>
-          <h2>Plus d&apos;articles que vous allez adorer</h2>
-
-          {posts.slice(0).map((post) => (
-            <ArticleCard key={post.id} {...post}></ArticleCard>
-          ))}
-        </section>
+        {postsJson.filter((p) => p.slug !== params.slug).length > 0 && (
+          <section className={BlogPostStyle.related}>
+            <h2>Plus d&apos;articles que vous allez adorer</h2>
+            <div className={BlogPostStyle.posts}>
+              {postsJson
+                .filter((p) => p.slug !== params.slug)
+                .sort(() => Math.random() - 0.5)
+                .slice(0, 3)
+                .map((post) => (
+                  <ArticleCard key={post.id} {...post}></ArticleCard>
+                ))}
+            </div>
+          </section>
+        )}
       </article>
     </>
   );

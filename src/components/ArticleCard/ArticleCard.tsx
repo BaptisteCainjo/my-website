@@ -5,6 +5,7 @@ import Link from "next/link";
 import styles from "./ArticleCard.module.scss";
 import formattedDate from "@/utils/functions/formattedDate";
 import ArrowBlog from "@/assets/svg/icons/arrow_blog.svg";
+import { ROUTES } from "@/utils/constants";
 
 interface ArticleCardProps {
   id: number;
@@ -25,7 +26,7 @@ export default function ArticleCard({
   slug,
 }: ArticleCardProps) {
   return (
-    <Link href={`/blog/${slug}`} className={styles.card}>
+    <Link href={`${ROUTES.BLOG}/${slug}`} className={styles.card}>
       <div className={styles.imageWrapper}>
         <Image
           src={featured_image_url}
@@ -46,7 +47,8 @@ export default function ArticleCard({
       </div>
       <div className={styles.content}>
         <p className={styles.meta}>
-          {formattedDate(created_at)} • {tags}
+          {formattedDate(created_at)}
+          {tags && ` • ${tags}`}
         </p>
         <h3 className={styles.title}>{title}</h3>
         <p className={styles.excerpt}>{excerpt}</p>

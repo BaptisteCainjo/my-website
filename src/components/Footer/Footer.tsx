@@ -3,6 +3,7 @@ import Link from "next/link.js";
 
 import FooterStyle from "./Footer.module.scss";
 import Logo from "@/assets/svg/logos/logo.svg";
+import { ROUTES } from "@/utils/constants";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -14,7 +15,7 @@ export default function Footer() {
       </Link>
       <div>
         <p>© 2022 - {currentYear} Baptiste Cainjo</p>
-        <Link href="/legales">Mentions légales</Link>
+        <Link href={`${ROUTES.LEGALES}`}>Mentions légales</Link>
       </div>
     </footer>
   );

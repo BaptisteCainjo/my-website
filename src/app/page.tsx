@@ -1,10 +1,9 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Image from "next/image";
 
 import portfolioData from "@/utils/data/portfolio.json";
-import professionalInfo from "@/utils/data/professionalInfo.json";
 import navigation from "@/utils/data/navigation.json";
 import networks from "@/utils/data/networks.json";
 
@@ -24,8 +23,7 @@ import SquareSmall from "@/components/SquareSmall/SquareSmall";
 
 import HandShake from "@/assets/svg/icons/hand_shake.svg";
 import Code from "@/assets/svg/icons/code.svg";
-import Palette from "@/assets/svg/icons/palette.svg";
-import Computer from "@/assets/svg/icons/computer.svg";
+import { ROUTES } from "@/utils/constants/routes";
 
 interface PortfolioItems {
   title: string;
@@ -42,24 +40,10 @@ interface PortfolioItems {
   endDate?: number;
 }
 
-interface ProfessionalContent {
-  priority: number;
-  strongText: string;
-}
-
-const iconMap: { [key: string]: any } = {
-  "Développeur Full-stack": Code,
-  "Concepteur Web": Palette,
-  Webdesigner: Computer,
-};
-
 export default function Home() {
   const [portfolio, setPortfolio] = useState<PortfolioItems[]>(
     portfolioData.filter((item) => item.type === "Personnel")
   );
-  const [currentSquare, setCurrentSquare] = useState(0);
-  const aboutProfessional: ProfessionalContent[] = professionalInfo;
-  const square = aboutProfessional[currentSquare];
 
   const handleFilterClick = (filter: string) => {
     if (filter === "Tous") {
@@ -71,15 +55,6 @@ export default function Home() {
       setPortfolio(filteredPortfolio);
     }
   };
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentSquare((currentSquare) =>
-        currentSquare === aboutProfessional.length - 1 ? 0 : currentSquare + 1
-      );
-    }, 5000);
-    return () => clearInterval(interval);
-  }, [aboutProfessional.length]);
 
   return (
     <>
@@ -97,19 +72,14 @@ export default function Home() {
 
         <div className={HomeStyle["square-small"]}>
           <div className={HomeStyle["square-info"]}>
-            <Image
-              src={iconMap[square.strongText]}
-              alt="icon"
-              width={50}
-              height={50}
-            />
+            <Image src={Code} alt="icon" width={50} height={50} />
             <div>
-              <strong>{square.strongText}</strong>
+              <strong>Développeur Full-stack </strong>
               <p>chez MMA depuis septembre 2022.</p>
             </div>
           </div>
           <nav>
-            {/* <SquareSmall text="Blog" link="/blog" /> */}
+            <SquareSmall text="Blog" link={ROUTES.BLOG} />
             <SquareSmall text="Read.cv" link="https://read.cv/baptistecainjo" />
             <SquareSmall text="CV" link="./ress/cv_website.pdf" />
           </nav>

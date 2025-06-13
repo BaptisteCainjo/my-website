@@ -7,14 +7,23 @@ interface SquareSmallProps {
 }
 
 export default function SquareInfo({ text, link }: SquareSmallProps) {
+  const squareClass = `${SquareSmallStyle["square-small"]} ${
+    text === "Blog" ? SquareSmallStyle["blog"] : ""
+  }`;
+
   return (
     <>
       {link.includes("http") ? (
-        <a href={link} className={SquareSmallStyle["square-small"]}>
+        <a
+          href={link}
+          className={squareClass}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           {text}
         </a>
       ) : (
-        <Link className={SquareSmallStyle["square-small"]} href={link}>
+        <Link className={squareClass} href={link}>
           {text}
         </Link>
       )}
