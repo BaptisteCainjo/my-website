@@ -1,15 +1,34 @@
-import NavBar from "@/components/NavBar/NavBar";
-import Image from "next/image";
-import BlogStyle from "@/scss/pages/Blog.module.scss";
-import postsJson from "@/utils/data/blogPosts.json";
-import formattedDate from "@/utils/functions/formattedDate";
-import Link from "next/link.js";
+"use client";
+
 import ArticleCard from "@/components/ArticleCard/ArticleCard";
+import FeaturedPost from "@/components/FeaturedPost/FeaturedPost";
+import FilterBar from "@/components/FilterBar/FilterBar";
+import NavBar from "@/components/NavBar/NavBar";
+import BlogStyle from "@/scss/pages/Blog.module.scss";
 import { comingSoonPosts } from "@/utils/constants";
-import { ROUTES } from "@/utils/constants";
+import postsJson from "@/utils/data/blogPosts.json";
+import { FormEvent, useState } from "react";
 
 export default function BlogPage() {
-  const posts = [...postsJson, ...comingSoonPosts];
+  const [actifFilter, setActifFilter] = useState("tous");
+  const [visibleCount, setVisibleCount] = useState(3);
+
+  const handleClickFilterBtn = (e: FormEvent<HTMLButtonElement>) => {
+    setActifFilter(e.currentTarget.dataset.tag || "tous");
+  };
+
+  const posts =
+    actifFilter === "tous"
+      ? [...postsJson.slice(1), ...comingSoonPosts]
+      : postsJson.slice(1).filter((post) => {
+          const tagsMatch = Array.isArray(post.tags)
+            ? post.tags.includes(actifFilter)
+            : post.tags === actifFilter;
+          const subTagsMatch = Array.isArray(post.sub_tags)
+            ? post.sub_tags.includes(actifFilter)
+            : post.sub_tags === actifFilter;
+          return tagsMatch || subTagsMatch;
+        });
 
   return (
     <>
@@ -26,35 +45,31 @@ export default function BlogPage() {
         </p>
       </section>
 
-      <article className={BlogStyle.featuredPost}>
-        <Link
-          href={`${ROUTES.BLOG}/${posts[0].slug}`}
-          className={BlogStyle.featuredLink}
-        >
-          <div className={BlogStyle.featuredImageWrapper}>
-            <Image
-              src={posts[0].featured_image_url}
-              alt={posts[0].title}
-              className={BlogStyle.featuredImage}
-              width={800}
-              height={600}
-              priority
-            />
-            <div className={BlogStyle.featuredContent}>
-              <p className={BlogStyle.meta}>
-                {formattedDate(posts[0].created_at)} • {posts[0].tags}
-              </p>
-              <h3 className={BlogStyle.postTitle}>{posts[0].title}</h3>
-              <p className={BlogStyle.excerpt}>{posts[0].excerpt}</p>
-            </div>
-          </div>
-        </Link>
-      </article>
+      <FeaturedPost />
+
+      <FilterBar
+        actifFilter={actifFilter}
+        handleClickFilterBtn={handleClickFilterBtn}
+      />
 
       <div className={BlogStyle.posts}>
-        {posts.slice(1).map((post) => (
+        {posts.slice(0, visibleCount).map((post) => (
           <ArticleCard key={post.id} {...post}></ArticleCard>
         ))}
+
+        <button
+          onClick={() =>
+            visibleCount < posts.length
+              ? setVisibleCount(visibleCount + 3)
+              : (setVisibleCount(3),
+                window.scrollTo({ top: 0, behavior: "smooth" }))
+          }
+          className={BlogStyle.loadMore}
+        >
+          {visibleCount < posts.length
+            ? "Voir plus d'articles"
+            : "Voir moins d'articles"}
+        </button>
       </div>
     </>
   );

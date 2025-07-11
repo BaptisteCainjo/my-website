@@ -1,0 +1,65 @@
+@import "../../scss/colors";
+@import "../../scss/mixins";
+
+.post {
+  margin-bottom: $spaceBetweenMainArticleAndOthersForMainPageBlog;
+  transition: transform 0.3s ease-in-out;
+
+  &:hover {
+    transform: translateY(-4px);
+  }
+}
+
+.imageWrapper {
+  position: relative;
+  overflow: hidden;
+  border-radius: 1rem;
+
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      to top,
+      rgba(28, 28, 28, 0.5) 37%,
+      rgba(28, 28, 28, 0.1) 53%
+    );
+    pointer-events: none;
+  }
+}
+
+@include mainImageBlog();
+
+.content {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 0.75rem;
+  z-index: 1;
+  color: #fdfdfd;
+
+  @include mixinBreakpoints(md) {
+    padding: 1.5rem;
+  }
+}
+
+.meta {
+  font-size: 0.875rem;
+}
+
+.postTitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  line-height: 1;
+
+  @include mixinBreakpoints(md) {
+    font-size: 3rem;
+  }
+}
+
+.excerpt {
+  font-size: 0.875rem;
+}

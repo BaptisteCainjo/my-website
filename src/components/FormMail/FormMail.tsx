@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { FormEvent, useEffect, useState } from "react";
 import FormMailStyle from "./FormMail.module.scss";
 import Popup from "@/components/Popup/Popup";
 
@@ -11,7 +11,7 @@ export default function FormMail() {
   const [responseMessage, setResponseMessage] = useState("");
   const [isError, setIsError] = useState(false);
 
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     try {

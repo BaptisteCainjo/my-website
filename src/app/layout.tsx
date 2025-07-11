@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
 import { Outfit } from "next/font/google";
 
-import "../scss/globals.scss";
+import BtnUp from "@/components/BtnUp/BtnUp";
 import Cursor from "@/components/Cursor/Cursor";
 import Footer from "@/components/Footer/Footer";
-import BtnUp from "@/components/BtnUp/BtnUp";
+import "../scss/globals.scss";
 
 export const metadata: Metadata = {
   title: "Baptiste Cainjo • Développeur Full-stack",
@@ -16,9 +16,9 @@ export const metadata: Metadata = {
 };
 
 const outfit = Outfit({
-  weight: ["300", "400", "500", "600", "700"],
   subsets: ["latin"],
   display: "swap",
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
 });
 
 export default function RootLayout({
@@ -31,7 +31,6 @@ export default function RootLayout({
       <body>
         <Cursor />
         <main>{children}</main>
-
         <BtnUp />
         <Footer />
       </body>

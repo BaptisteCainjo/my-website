@@ -1,0 +1,19 @@
+@import "../../scss/colors";
+@import "../../scss/mixins";
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
+
+.container {
+  display: flex;
+  margin-bottom: calc($spaceBetweenMainArticleAndOthersForMainPageBlog / 2);
+  gap: 5px;
+}
+
+.btn {
+  @include btnBlog;
+}
+
+.actif {
+  font-style: italic;
+  background-color: $globalPrimaryColor;
+  color: $w;
+}

@@ -15,5 +15,5 @@ export const comingSoonPosts = Array(Math.max(0, 3 - postsJson.length + 1))
       2,
       "0"
     )}-${currentYear}`,
-    tags: "à venir",
+    tags: "",
   }));

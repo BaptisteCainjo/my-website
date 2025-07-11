@@ -7,6 +7,7 @@
     "reading_time": 110,
     "category_id": 3,
     "tags": "développement",
+    "sub_tags": ["documentation", "réflexion", "développement"],
     "featured_image_url": "/images/documentation.webp",
     "created_at": "13-06-2025",
     "updated_at": "13-06-2025"

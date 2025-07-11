@@ -41,7 +41,7 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
             alt={post.title}
             width={800}
             height={600}
-            className={BlogPostStyle.featuredImage}
+            className={BlogPostStyle.image}
           />
           <div className={BlogPostStyle.headerContent}>
             <Link href={`${ROUTES.BLOG}`} className={BlogPostStyle.backLink}>
