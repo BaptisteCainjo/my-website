@@ -2,21 +2,35 @@ import { NextResponse } from "next/server";
 import fs from "fs";
 import path from "path";
 
-const filePath = path.join(process.cwd(), "embeds.json");
+const filePath = path.join(process.cwd(), "src", "utils", "embeds.json");
 
 export async function GET() {
-  const data = fs.readFileSync(filePath, "utf-8");
-  const embeds = JSON.parse(data);
-  return NextResponse.json(embeds);
+  try {
+    const data = fs.readFileSync(filePath, "utf-8");
+    const embeds = JSON.parse(data);
+    return NextResponse.json(embeds);
+  } catch (error) {
+    return NextResponse.json(
+      { error: "Erreur lecture fichier" },
+      { status: 500 }
+    );
+  }
 }
 
 export async function POST(req: Request) {
-  const body = await req.json();
-  const data = fs.readFileSync(filePath, "utf-8");
-  const embeds = JSON.parse(data);
+  try {
+    const body = await req.json();
+    const data = fs.readFileSync(filePath, "utf-8");
+    const embeds = JSON.parse(data);
 
-  embeds.push({ id: Date.now(), code: body.code });
+    embeds.push({ id: Date.now(), code: body.code });
 
-  fs.writeFileSync(filePath, JSON.stringify(embeds, null, 2));
-  return NextResponse.json({ success: true });
+    fs.writeFileSync(filePath, JSON.stringify(embeds, null, 2));
+    return NextResponse.json({ success: true });
+  } catch (error) {
+    return NextResponse.json(
+      { error: "Erreur écriture fichier" },
+      { status: 500 }
+    );
+  }
 }
