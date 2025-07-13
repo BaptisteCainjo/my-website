@@ -1,14 +1,24 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { supabase } from "@/utils/supabaseClient";
 
 export default function ViewPage() {
-  const [embeds, setEmbeds] = useState<{ id: number; code: string }[]>([]);
+  const [embeds, setEmbeds] = useState<{ id: string; code: string }[]>([]);
+  console.log(embeds);
 
   useEffect(() => {
-    fetch("/api/embeds")
-      .then((res) => res.json())
-      .then((data) => setEmbeds(data));
+    const fetchEmbeds = async () => {
+      const { data, error } = await supabase
+        .from("linkedin")
+        .select("id, code")
+        .order("created_at", { ascending: false });
+
+      if (data) setEmbeds(data);
+      if (error) console.error("Erreur chargement:", error.message);
+    };
+
+    fetchEmbeds();
   }, []);
 
   return (

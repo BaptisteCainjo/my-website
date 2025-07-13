@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { supabase } from "@/utils/supabaseClient";
 
 export default function Home() {
   const [code, setCode] = useState("");
@@ -8,14 +9,14 @@ export default function Home() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    const res = await fetch("/api/embeds", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ code }),
-    });
-    if (res.ok) {
+    if (!code.trim()) return;
+
+    const { error } = await supabase.from("linkedin").insert({ code });
+    if (!error) {
       setSuccess(true);
       setCode("");
+    } else {
+      console.error("Erreur Supabase:", error.message);
     }
   };
 

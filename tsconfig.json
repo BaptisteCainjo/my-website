@@ -28,7 +28,7 @@
     ".next/types/**/*.ts",
     "src/utils/functions/formattedDate.js",
     "src/app/api/linkedin-post/route.js",
-    "src/app/embed"
+    "src/app/linkedin"
   ],
   "exclude": ["node_modules"]
 }
