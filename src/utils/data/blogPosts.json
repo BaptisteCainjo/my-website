@@ -1,5 +1,23 @@
 [
   {
+    "id": 2,
+    "title": "3 mois de build in public : mon retour d'expérience complet de développeur sur LinkedIn",
+    "slug": "3-mois-build-in-public-retour-experience-developeur-linkedin",
+    "excerpt": "Découvrez mon retour d'expérience après 3 mois de build in public sur LinkedIn : méthode, résultats, erreurs et conseils pour développeurs.",
+    "reading_time": 7,
+    "category_id": 3,
+    "tags": "carrière",
+    "sub_tags": [
+      "LinkedIn",
+      "personal branding",
+      "build in public",
+      "networking"
+    ],
+    "featured_image_url": "/images/build-in-public-linkedin.webp",
+    "created_at": "27-07-2025",
+    "updated_at": "27-07-2025"
+  },
+  {
     "id": 1,
     "title": "Comment concevoir une documentation web équilibrée entre technique et clarté ?",
     "slug": "documentation-web-equilibre-dev-ux",
