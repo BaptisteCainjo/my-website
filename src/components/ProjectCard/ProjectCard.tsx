@@ -4,7 +4,7 @@ import ProjectCardStyle from "./ProjectCard.module.scss";
 import Tooltip from "../Tooltip/Tooltip";
 import languageLinks from "@/utils/data/languageLinks.json";
 
-import Match from "@/assets/images/match.svg";
+import Match from "@/assets/images/match.png";
 import ApplicationMeteo from "@/assets/images/application_meteo.png";
 import Dataviz from "@/assets/images/dataviz.png";
 import Flow from "@/assets/images/flow.png";
