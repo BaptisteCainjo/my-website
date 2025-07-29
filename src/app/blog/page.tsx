@@ -69,7 +69,7 @@ export default function BlogPage() {
   return (
     <>
       <NavBar />
-      <header className={BlogStyle.header}>
+      <section className={BlogStyle.header}>
         <h1 className={BlogStyle.label}>Blog</h1>
         <h2 className={BlogStyle.title}>
           J&apos;écris pour mieux penser,
@@ -79,7 +79,7 @@ export default function BlogPage() {
           Articles sur le développement, l&apos;UX/UI, le développement
           personnel, le voyage et bien d&apos;autres encore.
         </p>
-      </header>
+      </section>
 
       <FeaturedPost />
 
