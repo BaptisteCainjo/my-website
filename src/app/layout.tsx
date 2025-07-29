@@ -27,8 +27,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="fr" className={outfit.className}>
-      <body>
+    <html lang="fr">
+      <body className={outfit.className}>
         <Cursor />
         <main>{children}</main>
         <BtnUp />
