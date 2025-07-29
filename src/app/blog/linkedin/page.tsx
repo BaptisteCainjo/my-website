@@ -78,7 +78,7 @@ export default function LinkedinPage() {
 
   useEffect(() => {
     loadData(true);
-  });
+  }, []);
 
   useEffect(() => {
     if (inView && hasMore && !isLoading) {

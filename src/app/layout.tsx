@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { Outfit } from "next/font/google";
 
 import BtnUp from "@/components/BtnUp/BtnUp";
 import Cursor from "@/components/Cursor/Cursor";
@@ -15,12 +14,6 @@ export const metadata: Metadata = {
   },
 };
 
-const outfit = Outfit({
-  subsets: ["latin"],
-  display: "swap",
-  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
-});
-
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -28,7 +21,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="fr">
-      <body className={outfit.className}>
+      <body>
         <Cursor />
         <main>{children}</main>
         <BtnUp />
