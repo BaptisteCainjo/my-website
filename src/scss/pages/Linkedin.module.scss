@@ -1,0 +1,26 @@
+@import "../colors";
+@import "../mixins";
+
+.content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem 1.5rem;
+  margin-top: 5rem;
+
+  @include mixinBreakpoints(md) {
+    margin-top: 6rem;
+  }
+
+  iframe {
+    width: 100%;
+    border: none;
+    border-radius: 8px;
+  }
+}
+
+.test {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  height: 200px;
+  background-color: black;
+}

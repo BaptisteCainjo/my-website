@@ -24,6 +24,42 @@
   font-weight: 400;
 }
 
+.linkedin-link {
+  @include btnBlog;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(
+      270deg,
+      #ff008028,
+      #7928ca28,
+      #2afadf28,
+      #ff008028
+    );
+    background-size: 600% 600%;
+    border-radius: inherit;
+    animation: move-border 8s ease infinite;
+  }
+}
+
+@keyframes move-border {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
 .posts {
   @include posts;
 }

@@ -28,7 +28,7 @@
     ".next/types/**/*.ts",
     "src/utils/functions/formattedDate.js",
     "src/app/api/linkedin-post/route.js",
-    "src/app/linkedin"
+    "src/app/05375118-a59c-4811-80f1-5c0365f8ff7c"
   ],
   "exclude": ["node_modules"]
 }

@@ -4,7 +4,7 @@
 
 .container {
   display: flex;
-  margin-bottom: calc($spaceBetweenMainArticleAndOthersForMainPageBlog / 2);
+  margin: calc($spaceBetweenMainArticleAndOthersForMainPageBlog / 2) 0;
   gap: 5px;
 }
 

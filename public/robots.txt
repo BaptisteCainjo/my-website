@@ -1,0 +1,2 @@
+User-agent: *
+Disallow: /05375118-a59c-4811-80f1-5c0365f8ff7c
