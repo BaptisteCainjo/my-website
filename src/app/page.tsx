@@ -80,7 +80,7 @@ export default function Home() {
           </div>
           <nav>
             <SquareSmall text="Blog" link={ROUTES.BLOG} />
-            <SquareSmall text="Read.cv" link="https://read.cv/baptistecainjo" />
+            {/* <SquareSmall text="Read.cv" link="https://read.cv/baptistecainjo" /> */}
             <SquareSmall text="CV" link="./ress/cv_website.pdf" />
           </nav>
         </div>

@@ -3,11 +3,18 @@
 
 .card {
   display: flex;
+  flex-direction: column;
   border-radius: 0.75rem;
   overflow: hidden;
   transition: transform 0.3s ease-in-out;
   text-decoration: none;
   color: inherit;
+  gap: 1rem;
+
+  @include mixinBreakpoints(xss) {
+    flex-direction: row;
+    gap: 0;
+  }
 
   &:hover {
     transform: translateY(-4px);
@@ -22,11 +29,21 @@
 
 .imageWrapper {
   position: relative;
-  height: auto;
-  width: 50%;
+  width: 100%;
+  aspect-ratio: 16/9;
 
   @include mixinBreakpoints(xss) {
-    height: 300px;
+    width: 50%;
+    height: auto;
+    min-height: 200px;
+  }
+
+  @include mixinBreakpoints(md) {
+    min-height: 250px;
+  }
+
+  @include mixinBreakpoints(lg) {
+    min-height: 300px;
   }
 }
 
@@ -39,14 +56,14 @@
 }
 
 .content {
-  padding-left: 0.75rem;
-  width: 50%;
   display: flex;
+  width: 100%;
   flex-direction: column;
   justify-content: flex-end;
 
-  @include mixinBreakpoints(md) {
-    padding-left: 1rem;
+  @include mixinBreakpoints(xss) {
+    width: 50%;
+    padding-left: 0.75rem;
   }
 }
 

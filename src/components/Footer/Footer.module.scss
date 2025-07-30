@@ -2,8 +2,9 @@
 @import "@/scss/mixins";
 
 .container {
-  height: 50px;
+  min-height: 50px;
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   align-items: center;
   @include transition(0.25s ease-in-out);
@@ -11,6 +12,12 @@
   background: rgb(241, 245, 249, 0.25);
   z-index: 2;
   position: relative;
+  gap: 1rem;
+
+  @include mixinBreakpoints(xss) {
+    flex-direction: row;
+    gap: 0;
+  }
 
   &:hover {
     background: rgb(241, 245, 249, 1);
@@ -19,10 +26,17 @@
 
   div {
     display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    gap: 10px;
-    margin-right: 5%;
+    flex-direction: column;
+    gap: 5px;
+    margin: 0;
+    align-items: center;
+
+    @include mixinBreakpoints(xss) {
+      flex-direction: row;
+      margin-right: 5%;
+      align-items: flex-start;
+      gap: 10px;
+    }
 
     p,
     a {

@@ -3,8 +3,13 @@
 
 .container {
   display: flex;
+  flex-direction: column;
   margin: calc($spaceBetweenMainArticleAndOthersForMainPageBlog / 2) 0;
   gap: 5px;
+
+  @include mixinBreakpoints(xs) {
+    flex-direction: row;
+  }
 }
 
 .btn {

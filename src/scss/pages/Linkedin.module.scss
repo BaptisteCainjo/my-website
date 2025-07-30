@@ -3,12 +3,16 @@
 
 .content {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: 1fr;
   gap: 2rem 1.5rem;
-  margin-top: 5rem;
+  margin-top: 6rem;
 
   @include mixinBreakpoints(md) {
-    margin-top: 6rem;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include mixinBreakpoints(lgx) {
+    grid-template-columns: repeat(3, 1fr);
   }
 
   iframe {
@@ -16,11 +20,4 @@
     border: none;
     border-radius: 8px;
   }
-}
-
-.test {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  height: 200px;
-  background-color: black;
 }
