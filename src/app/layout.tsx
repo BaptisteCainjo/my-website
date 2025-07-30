@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 import BtnUp from "@/components/BtnUp/BtnUp";
 import Cursor from "@/components/Cursor/Cursor";
@@ -26,6 +27,7 @@ export default function RootLayout({
         <main>{children}</main>
         <BtnUp />
         <Footer />
+        <SpeedInsights />
       </body>
     </html>
   );
