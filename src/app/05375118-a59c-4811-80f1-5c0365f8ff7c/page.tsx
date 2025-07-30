@@ -4,6 +4,11 @@ import { supabase } from "@/utils/supabaseClient";
 import Head from "next/head";
 import { useState } from "react";
 
+interface AuthRes {
+  success: boolean;
+  error?: string;
+}
+
 export default function Home() {
   const [code, setCode] = useState("");
   const [success, setSuccess] = useState(false);
@@ -13,11 +18,24 @@ export default function Home() {
 
   const handlePasswordSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (password === "@") {
-      setAuthenticated(true);
-    } else {
-      setAuthenticated(false);
-      setPasswordError("Mot de passe incorrect");
+
+    try {
+      const response = await fetch("/api/auth", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ password }),
+      });
+
+      const data: AuthRes = await response.json();
+
+      if (data.success) {
+        setAuthenticated(true);
+        setPasswordError("");
+      } else {
+        setPasswordError("Mot de passe incorrect");
+      }
+    } catch (error) {
+      setPasswordError("Erreur de connexion");
     }
   };
 
