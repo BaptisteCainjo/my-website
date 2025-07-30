@@ -13,7 +13,7 @@ export default function Home() {
 
   const handlePasswordSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (password === process.env.NEXT_PUBLIC_PASSWORD_LINKEDIN_ROUTE) {
+    if (password === "@") {
       setAuthenticated(true);
     } else {
       setAuthenticated(false);
