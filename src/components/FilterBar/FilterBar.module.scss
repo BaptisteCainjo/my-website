@@ -6,6 +6,7 @@
   flex-direction: column;
   margin: calc($spaceBetweenMainArticleAndOthersForMainPageBlog / 2) 0;
   gap: 5px;
+  flex-wrap: wrap;
 
   @include mixinBreakpoints(xs) {
     flex-direction: row;
