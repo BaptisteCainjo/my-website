@@ -50,7 +50,7 @@
     "skill": "Front-end",
     "date": 2024,
     "type": "Professionnel",
-    "language": ["Next.js", "TypeScript", "Tailwind", "Sass"],
+    "language": ["Next.js", "TypeScript", "Tailwind"],
     "link": {}
   },
   {
@@ -66,9 +66,18 @@
   },
   {
     "title": "Formatage automatique du code",
-    "description": "Développement d'un script pour formater automatiquement toutes les pages HTML de la documentation en HTML sémantique.",
+    "description": "Développement d'un outil permettant de formater automatiquement toutes les pages HTML de la documentation en HTML sémantique.",
     "skill": "Back-end",
     "date": 2024,
+    "type": "Professionnel",
+    "language": ["Node.js", "TypeScript"],
+    "link": {}
+  },
+  {
+    "title": "Automatisation de la gestion de projet",
+    "description": "Développement d'une automatisation complète d'un système de pilotage de projet via Excel avec mise à jour et suivi automatiques des données.",
+    "skill": "Back-end",
+    "date": 2025,
     "type": "Professionnel",
     "language": ["Node.js", "TypeScript"],
     "link": {}
@@ -87,7 +96,7 @@
   },
   {
     "title": "Portfolio",
-    "description": "Portfolio conçu spécifiquement pour présenter mes projets, les technologies maitrisées, etc.",
+    "description": "Portfolio professionnel de développeur web présentant mes projets, compétences techniques et réalisations. Comprend un blog détaillant mes réflexions sur divers sujets, ainsi qu'une section dédiée à mes publications LinkedIn sur mes projets de développement web.",
     "skill": "Front-end",
     "date": 2023,
     "type": "Personnel",
@@ -103,7 +112,7 @@
     "skill": "Front-end",
     "date": 2023,
     "type": "Professionnel",
-    "language": ["SMTP.js", "JavaScript", "Sass", "HTML"],
+    "language": ["SMTP.js", "JavaScript", "UIkit", "Sass", "HTML"],
     "link": {}
   },
   {
@@ -155,6 +164,15 @@
   {
     "title": "Environnements graphiques",
     "description": "Conception et déploiement de chartes graphiques personnalisées.",
+    "skill": "Front-end",
+    "date": 2023,
+    "type": "Professionnel",
+    "language": ["HTML", "Sass", "JavaScript"],
+    "link": {}
+  },
+  {
+    "title": "Documentation métier",
+    "description": "Ajout de features sur la Documentation métier dédiée aux agents et aux collaborateurs MMA.",
     "skill": "Front-end",
     "date": 2023,
     "type": "Professionnel",

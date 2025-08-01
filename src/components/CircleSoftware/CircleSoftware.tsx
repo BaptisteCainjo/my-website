@@ -46,6 +46,7 @@ import Vite from "@/assets/svg/logos/vite.svg";
 import Vercel from "@/assets/svg/logos/vercel.svg";
 import Resend from "@/assets/svg/logos/resend.svg";
 import ReactEmail from "@/assets/svg/logos/react_email.svg";
+import UIkit from "@/assets/svg/logos/uikit.svg";
 
 interface LangImage {
   [key: string]: {
@@ -70,6 +71,7 @@ const langImage: LangImage = {
     jQuery,
     Bootstrap,
     "SMTP.js": SMTPjs,
+    UIkit,
   },
   "Back-end": {
     "Node.js": Nodejs,

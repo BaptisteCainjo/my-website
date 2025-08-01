@@ -114,7 +114,10 @@ export default function ProjectCard({ portfolio }: PortfolioProps) {
                   <div className={ProjectCardStyle["card-language"]}>
                     {element.language.map((lang, index) => (
                       <React.Fragment key={index}>
-                        <a href={(languageLinks as LanguageLinks)[lang]}>
+                        <a
+                          href={(languageLinks as LanguageLinks)[lang]}
+                          target="_blank"
+                        >
                           {lang}
                         </a>
                         {index < element.language.length - 1 ? " " : ""}
