@@ -11,7 +11,7 @@ export const comingSoonPosts = Array(Math.max(0, 3 - postsJson.length + 1))
     slug: "#",
     excerpt: "Article en cours d'écriture...",
     featured_image_url: "/images/coming_soon.webp",
-    created_at: `${String(currentDate.getMonth() + (index + 1)).padStart(
+    created_at: `${String(currentDate.getMonth() + (index + 2)).padStart(
       2,
       "0"
     )}-${currentYear}`,

@@ -1,4 +1,4 @@
-Bonjour à toutes et à tous,
+Bonjour à toutes et à tous, Baptiste, développeur Full-stack.
 
 Je suis ravi de vous accueillir pour le tout premier article de ce blog ! Pour inaugurer ce nouvel espace d’échanges, je vous propose de découvrir le fruit de mon travail de fin d’études, fruit de plusieurs mois de travail et de recherche.
 

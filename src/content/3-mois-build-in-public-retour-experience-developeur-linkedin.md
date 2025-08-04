@@ -1,4 +1,4 @@
-Bonjour à toutes et à tous, c'est Baptiste, développeur Full-stack.
+Bonjour à toutes et à tous, Baptiste, développeur Full-stack.
 
 Après le dernier article sur ["Comment concevoir une documentation web équilibrée entre technique et clarté ?"](https://baptistecainjo.fr/blog/documentation-web-equilibre-dev-ux), je vous propose aujourd'hui le deuxième article de ce blog.
 

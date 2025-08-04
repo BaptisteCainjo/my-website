@@ -97,7 +97,7 @@ export default function BlogPage() {
 
       <section className={BlogStyle.posts}>
         {posts.slice(0, visibleCount).map((post) => (
-          <ArticleCard key={post.id} {...post}></ArticleCard>
+          <ArticleCard key={post.id} {...post} />
         ))}
 
         {posts.length > 3 && (
