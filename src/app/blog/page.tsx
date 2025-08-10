@@ -9,6 +9,7 @@ import BlogStyle from "@/scss/pages/Blog.module.scss";
 import { comingSoonPosts } from "@/utils/constants";
 import postsJson from "@/utils/data/blogPosts.json";
 import { supabase } from "@/utils/supabaseClient";
+import Head from "next/head.js";
 import Link from "next/link.js";
 import { FormEvent, useEffect, useState } from "react";
 
@@ -68,6 +69,13 @@ export default function BlogPage() {
 
   return (
     <>
+      <Head>
+        <title>Blog • Baptiste Cainjo</title>
+        <meta
+          name="description"
+          content="Articles sur le développement, l'UX/UI, le développement personnel, le voyage et bien plus encore."
+        />
+      </Head>
       <NavBar />
       <section className={BlogStyle.header}>
         <h1 className={BlogStyle.label}>Blog</h1>

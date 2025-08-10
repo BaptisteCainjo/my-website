@@ -6,6 +6,7 @@ import path from "path";
 import ReactMarkdown from "react-markdown";
 import ArticleCard from "@/components/ArticleCard/ArticleCard";
 import BlogHeader from "@/components/BlogHeader/BlogHeader";
+import Head from "next/head.js";
 
 export function generateStaticParams() {
   return postsJson.map((post) => ({
@@ -35,6 +36,10 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
 
   return (
     <>
+      <Head>
+        <title>Blog {post.title} • Baptiste Cainjo</title>
+        <meta name="description" content={post.excerpt} />
+      </Head>
       <NavBar />
       <section className={BlogPostStyle.blogPost}>
         <BlogHeader type="post" post={post} />
