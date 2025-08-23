@@ -17,3 +17,16 @@ export const comingSoonPosts = Array(Math.max(0, 3 - postsJson.length + 1))
     )}-${currentYear}`,
     tags: "",
   }));
+
+export const allPosts = [...postsJson, ...comingSoonPosts].sort(
+  (a, b) => new Date(b.created_at).getTime() - new Date(a.created_at).getTime()
+);
+
+export const allPostsWithComingSoon = allPosts.map((post) => ({
+  ...post,
+  created_at: new Date(post.created_at).toLocaleDateString("fr-FR", {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  }),
+}));

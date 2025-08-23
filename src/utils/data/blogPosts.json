@@ -1,11 +1,34 @@
 [
   {
+    "id": 4,
+    "title": "Prise de Masse Propre : Guide Complet + Ma Transformation",
+    "slug": "prise-masse-propre-guide-transformation",
+    "excerpt": "De mince à musclé : mon guide complet pour réussir sa prise de masse propre. Programme nutrition et entraînement débutant avec résultats concrets.",
+    "reading_time": 15,
+    "tags": "musculation",
+    "sub_tags": ["prise de masse", "nutrition", "transformation"],
+    "featured_image_url": "/images/prise-masse-propre-transformation.webp",
+    "created_at": "10-08-2025",
+    "updated_at": "10-08-2025"
+  },
+  {
+    "id": 3,
+    "title": "Procrastination productive : quand être occupé devient ma façon d'éviter l'essentiel",
+    "slug": "procrastination-productive-eviter-essentiel",
+    "excerpt": "Je procrastine en étant super actif. Mon expérience authentique pour transformer cette fuite productive en vraie efficacité.",
+    "reading_time": 15,
+    "tags": "développement personnel",
+    "sub_tags": ["procrastination", "productivité"],
+    "featured_image_url": "/images/procrastination-productive.webp",
+    "created_at": "23-08-2025",
+    "updated_at": "23-08-2025"
+  },
+  {
     "id": 2,
     "title": "3 mois de build in public : mon retour d'expérience complet de développeur sur LinkedIn",
     "slug": "3-mois-build-in-public-retour-experience-developeur-linkedin",
     "excerpt": "Découvrez mon retour d'expérience après 3 mois de build in public sur LinkedIn : méthode, résultats, erreurs et conseils pour développeurs.",
-    "reading_time": 7,
-    "category_id": 3,
+    "reading_time": 9,
     "tags": "carrière",
     "sub_tags": [
       "LinkedIn",
@@ -15,7 +38,7 @@
     ],
     "featured_image_url": "/images/build-in-public-linkedin.webp",
     "created_at": "27-07-2025",
-    "updated_at": "27-07-2025"
+    "updated_at": "04-08-2025"
   },
   {
     "id": 1,
@@ -23,11 +46,10 @@
     "slug": "documentation-web-equilibre-dev-ux",
     "excerpt": "Réflexion autour des principes clés pour concevoir une documentation web alliant qualité de développement et accessibilité.",
     "reading_time": 110,
-    "category_id": 3,
     "tags": "développement",
     "sub_tags": ["documentation", "réflexion", "développement"],
     "featured_image_url": "/images/documentation.webp",
     "created_at": "13-06-2025",
-    "updated_at": "13-06-2025"
+    "updated_at": "04-08-2025"
   }
 ]
