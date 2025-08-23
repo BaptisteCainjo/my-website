@@ -1,17 +1,5 @@
 [
   {
-    "id": 4,
-    "title": "Prise de Masse Propre : Guide Complet + Ma Transformation",
-    "slug": "prise-masse-propre-guide-transformation",
-    "excerpt": "De mince à musclé : mon guide complet pour réussir sa prise de masse propre. Programme nutrition et entraînement débutant avec résultats concrets.",
-    "reading_time": 15,
-    "tags": "musculation",
-    "sub_tags": ["prise de masse", "nutrition", "transformation"],
-    "featured_image_url": "/images/prise-masse-propre-transformation.webp",
-    "created_at": "10-08-2025",
-    "updated_at": "10-08-2025"
-  },
-  {
     "id": 3,
     "title": "Procrastination productive : quand être occupé devient ma façon d'éviter l'essentiel",
     "slug": "procrastination-productive-eviter-essentiel",
