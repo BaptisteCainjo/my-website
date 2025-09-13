@@ -35,19 +35,22 @@ export default function FilterBar({
   return (
     <nav>
       <ul className={FilterBarStyle.container}>
-        {allTags.map((tag, index) => (
-          <li key={index}>
-            <button
-              className={`${FilterBarStyle.btn}${
-                tag === actifFilter ? ` ${FilterBarStyle.actif}` : ""
-              }`}
-              data-tag={tag}
-              onClick={handleClickFilterBtn}
-            >
-              {tag}
-            </button>
-          </li>
-        ))}
+        {allTags.map(
+          (tag, index) =>
+            index < 8 && (
+              <li key={index}>
+                <button
+                  className={`${FilterBarStyle.btn}${
+                    tag === actifFilter ? ` ${FilterBarStyle.actif}` : ""
+                  }`}
+                  data-tag={tag}
+                  onClick={handleClickFilterBtn}
+                >
+                  {tag}
+                </button>
+              </li>
+            )
+        )}
       </ul>
     </nav>
   );
