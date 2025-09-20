@@ -1,5 +1,17 @@
 [
   {
+    "id": 4,
+    "title": "Prise de Masse Propre : Guide Complet + Ma Transformation",
+    "slug": "prise-masse-propre-guide-transformation",
+    "excerpt": "De mince à musclé : mon guide complet pour réussir sa prise de masse propre. Programme nutrition et entraînement débutant avec résultats concrets.",
+    "reading_time": 15,
+    "tags": "musculation",
+    "sub_tags": ["prise de masse", "nutrition", "transformation"],
+    "featured_image_url": "/images/prise-masse-propre-transformation.webp",
+    "created_at": "20-09-2025",
+    "updated_at": "20-09-2025"
+  },
+  {
     "id": 3,
     "title": "Procrastination productive : quand être occupé devient ma façon d'éviter l'essentiel",
     "slug": "procrastination-productive-eviter-essentiel",
@@ -35,7 +47,7 @@
     "excerpt": "Réflexion autour des principes clés pour concevoir une documentation web alliant qualité de développement et accessibilité.",
     "reading_time": 110,
     "tags": "développement",
-    "sub_tags": ["documentation", "réflexion", "développement"],
+    "sub_tags": ["documentation", "réflexion", "web"],
     "featured_image_url": "/images/documentation.webp",
     "created_at": "13-06-2025",
     "updated_at": "04-08-2025"
