@@ -1,5 +1,17 @@
 [
   {
+    "id": 5,
+    "title": "Comment créer et lancer une application web en 2025 : Mon guide complet - Partie 1",
+    "slug": "creer-lancer-application-web-2025-guide-partie-1",
+    "excerpt": "Découvrez les étapes essentielles pour concevoir, développer et publier une application web moderne en 2025. Dans cette première partie du guide, je partage mes conseils pratiques pour bien démarrer.",
+    "reading_time": 30,
+    "tags": "développement",
+    "sub_tags": ["web", "guide", "application"],
+    "featured_image_url": "/images/creer-lancer-application-web-2025-guide-partie-1.webp",
+    "created_at": "18-10-2025",
+    "updated_at": "18-10-2025"
+  },
+  {
     "id": 4,
     "title": "Prise de Masse Propre : Guide Complet + Ma Transformation",
     "slug": "prise-masse-propre-guide-transformation",
