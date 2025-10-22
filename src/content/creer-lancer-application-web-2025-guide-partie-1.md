@@ -84,14 +84,17 @@ Après cette structuration, j'avais enfin quelque chose de tangible :
 
 #### Document de définition projet (v2)
 
-```
-PROJET : Match
-OBJECTIF : Recommandations d'artistes émergents par similarité musicale
-PUBLIC : Mélomanes découvreurs (25-40 ans, >3h écoute/jour)
-DIFFÉRENCIATION : Focus émergents + simplicité + précision algorithmique
-MVP : Input unique → Output équivalent émergent
-VISION : Évolution vers SaaS de recommandations musicales
-```
+**PROJET :** Match
+
+**OBJECTIF :** Recommandations d'artistes émergents par similarité musicale
+
+**PUBLIC :** Mélomanes découvreurs (25-40 ans, >3h écoute/jour)
+
+**DIFFÉRENCIATION :** Focus émergents + simplicité + précision algorithmique
+
+**MVP :** Input unique → Output équivalent émergent
+
+**VISION :** Évolution vers SaaS de recommandations musicales
 
 #### Cahier des charges fonctionnel (version réaliste)
 
@@ -245,17 +248,18 @@ Cette analyse m'a permis de cristalliser ma stratégie :
 
 #### Étude concurrentielle structurée
 
-```
-CONCURRENTS DIRECTS :
+**CONCURRENTS DIRECTS :**
+
 - Last.fm : Algorithme fort, UX faible, opportunité énorme
 
-CONCURRENTS INDIRECTS :
+**CONCURRENTS INDIRECTS :**
+
 - Spotify/Apple Music/Deezer : UX forte, mais recommandation secondaire
 - SoundCloud : Contenu émergent, mais pas d'algo de découverte
 
-GAPS IDENTIFIÉS :
+**GAPS IDENTIFIÉS :**
+
 - Simplicité + Focus émergents + UX moderne = Océan bleu
-```
 
 #### Positionnement marché validé
 
@@ -408,15 +412,19 @@ Le choix de l'API musicale devait être **rapide et sûr** :
 
 #### Mon schéma d'architecture MVP équilibré
 
-```
-Frontend (Next.js + Tailwind) ← MAÎTRISÉ
-    ↓ API calls
-Backend (Nest.js + TypeScript) ← NOUVEAU À APPRENDRE
-    ↓ Database queries
-Database (PostgreSQL + Supabase) ← MAÎTRISÉ
-    ↓ External API calls
-Last.fm API ← MAÎTRISÉ
-```
+**Frontend (Next.js + Tailwind)** ← MAÎTRISÉ
+
+↓ API calls
+
+**Backend (Nest.js + TypeScript)** ← NOUVEAU À APPRENDRE
+
+↓ Database queries
+
+**Database (PostgreSQL + Supabase)** ← MAÎTRISÉ
+
+↓ External API calls
+
+**Last.fm API** ← MAÎTRISÉ
 
 #### Déploiement (mix sécurisé/nouveau)
 
