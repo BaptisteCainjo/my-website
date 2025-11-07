@@ -1,4 +1,4 @@
-@import "../colors";
+@import "../variables";
 @import "../mixins";
 
 .heroImage {
@@ -7,15 +7,27 @@
   overflow: hidden;
 }
 
+.contentWrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 3rem;
+  margin-top: 5rem;
+}
+
+.tocWrapper {
+  display: none;
+  @include mixinBreakpoints(lg) {
+    width: 280px;
+    display: block;
+  }
+}
+
 .content {
   font-size: 1.125rem;
   line-height: 1.7;
   margin-bottom: 4rem;
-  margin-top: 5rem;
-
-  @include mixinBreakpoints(md) {
-    margin-top: 6rem;
-  }
+  flex: 1;
+  min-width: 0;
 
   p,
   li {
@@ -28,7 +40,17 @@
   }
 
   h2 {
-    margin: 2rem 0 0.5rem;
+    margin: 5rem 0 0.5rem;
+    scroll-margin-top: $margin-nav-bar;
+  }
+
+  h3 {
+    margin: 2.5rem 0 0.5rem;
+    scroll-margin-top: $margin-nav-bar;
+  }
+
+  h4 {
+    scroll-margin-top: $margin-nav-bar;
   }
 
   ul,

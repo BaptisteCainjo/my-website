@@ -1,34 +1,34 @@
-@import '@/scss/colors';
-@import '@/scss/mixins';
+@import "@/scss/variables";
+@import "@/scss/mixins";
 
 .navigation {
-    display: flex;
-    flex-direction: column;
-    gap: 25px;
-    position: fixed;
-    top: 37%;
-    right: 3%;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  position: fixed;
+  top: 37%;
+  right: 3%;
 
-    a {
-        height: 14px;
-        width: 14px;
-        border-radius: 50%;
-        border: 1px solid #B9B9B9;
-        cursor: pointer;
-        @include transition(.5s ease-in-out);
+  a {
+    height: 14px;
+    width: 14px;
+    border-radius: 50%;
+    border: 1px solid #b9b9b9;
+    cursor: pointer;
+    @include transition(0.5s ease-in-out);
 
-        &:hover {
-            border: 1px solid $globalPrimaryColor;
-            @include transition(.5s ease-in-out);
-        }
-
-        &.active {
-            background-color: $globalPrimaryColorLighten;
-            border: 1px solid $globalPrimaryColor;
-
-            &:hover {
-                background-color: $globalPrimaryColor;
-            }
-        }
+    &:hover {
+      border: 1px solid $globalPrimaryColor;
+      @include transition(0.5s ease-in-out);
     }
+
+    &.active {
+      background-color: $globalPrimaryColorLighten;
+      border: 1px solid $globalPrimaryColor;
+
+      &:hover {
+        background-color: $globalPrimaryColor;
+      }
+    }
+  }
 }

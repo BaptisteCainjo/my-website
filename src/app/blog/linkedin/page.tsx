@@ -8,7 +8,6 @@ import LinkedinStyle from "@/scss/pages/Linkedin.module.scss";
 import { useInView } from "react-intersection-observer";
 import "react-loading-skeleton/dist/skeleton.css";
 import Skeleton from "react-loading-skeleton";
-import Head from "next/head.js";
 
 const ITEMS_PER_PAGE = 6;
 
@@ -89,13 +88,6 @@ export default function LinkedinPage() {
 
   return (
     <>
-      <Head>
-        <title>Blog Linkedin • Baptiste Cainjo</title>
-        <meta
-          name="description"
-          content="Tous mes posts linkedIn en un seul endroit. Découvrez mes réflexions, conseils et partages d'expérience sur le développement web, la technologie et plus encore."
-        />
-      </Head>
       <NavBar />
       <section>
         <BlogHeader

@@ -6,12 +6,28 @@ import path from "path";
 import ReactMarkdown from "react-markdown";
 import ArticleCard from "@/components/ArticleCard/ArticleCard";
 import BlogHeader from "@/components/BlogHeader/BlogHeader";
-import Head from "next/head.js";
+import TableOfContents from "@/components/TableOfContents/TableOfContents";
+import { Metadata } from "next";
 
 export function generateStaticParams() {
   return postsJson.map((post) => ({
     slug: post.slug,
   }));
+}
+
+export async function generateMetadata({params}: { params: { slug: string } }): Promise<Metadata> {
+  const post = postsJson.find((p) => p.slug === params.slug);
+
+  if (!post) {
+    return {
+      title: "Article introuvable • Baptiste Cainjo",
+    };
+  }
+
+  return {
+    title: `${post.title} • Baptiste Cainjo`,
+    description: post.excerpt,
+  };
 }
 
 export default function BlogPostPage({ params }: { params: { slug: string } }) {
@@ -36,17 +52,18 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
 
   return (
     <>
-      <Head>
-        <title>Blog {post.title} • Baptiste Cainjo</title>
-        <meta name="description" content={post.excerpt} />
-      </Head>
       <NavBar />
       <section className={BlogPostStyle.blogPost}>
         <BlogHeader type="post" post={post} />
+        <div className={BlogPostStyle.contentWrapper}>
+          <article className={BlogPostStyle.content}>
+            <ReactMarkdown>{fileContent}</ReactMarkdown>
+          </article>
 
-        <article className={BlogPostStyle.content}>
-          <ReactMarkdown>{fileContent}</ReactMarkdown>
-        </article>
+          <aside className={BlogPostStyle.tocWrapper}>
+            <TableOfContents content={fileContent} />
+          </aside>
+        </div>
 
         {postsJson.filter((p) => p.slug !== params.slug).length > 0 && (
           <aside className={BlogPostStyle.related}>

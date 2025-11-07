@@ -1,18 +1,10 @@
 import NavBar from "@/components/NavBar/NavBar";
 import LegalesStyle from "@/scss/pages/Legales.module.scss";
 import { EMAIL } from "@/utils/constants";
-import Head from "next/head.js";
 
 export default function MentionsLegales() {
   return (
     <>
-      <Head>
-        <title>Mentions légales • Baptiste Cainjo</title>
-        <meta
-          name="description"
-          content="Mentions légales du site web personnel de Baptiste Cainjo, développeur Full-Stack chez MMA. Retrouvez les informations sur l'éditeur, l'hébergement, la propriété intellectuelle et la gestion des données personnelles."
-        />
-      </Head>
       <NavBar />
       <section className={LegalesStyle.container}>
         <h1>Mentions Légales</h1>

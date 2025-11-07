@@ -1,0 +1,75 @@
+@import "../../scss/variables";
+@import "../../scss/mixins";
+
+.tableOfContents {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 3rem;
+  backdrop-filter: blur(10px);
+  position: sticky;
+  top: 100px;
+  max-height: 65vh;
+  overflow-y: auto;
+  transition: 0.25s ease-in-out;
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.25);
+  }
+
+  &::-webkit-scrollbar {
+    width: 4px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: $globalPrimaryColor;
+    border-radius: 3px;
+
+    &:hover {
+      background: darken($globalPrimaryColor, 10%);
+    }
+  }
+}
+
+.title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 0 0 1rem 0;
+}
+
+.item {
+  margin: 0;
+
+  &.level2 {
+    padding-left: 0;
+  }
+
+  &.level3 {
+    padding-left: 1rem;
+  }
+
+  &.level4 {
+    padding-left: 2rem;
+  }
+
+  &.active {
+    .link {
+      color: $globalPrimaryColor;
+      font-weight: 600;
+      border-left-color: $globalPrimaryColor;
+    }
+  }
+}
+
+.link {
+  display: block;
+  padding: 0.33rem 0 0.33rem 1rem;
+  font-size: 0.875rem;
+  border-left: 2px solid transparent;
+  transition: 0.25s ease-in-out;
+
+  &:hover {
+    border-left: 1px solid $globalPrimaryColor;
+  }
+}
