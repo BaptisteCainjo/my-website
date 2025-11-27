@@ -1,3 +1,9 @@
 {
-  "markdown.validate.enabled": true
+  "markdown.validate.enabled": true,
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": "never",
+    "source.fixAll": "never"
+  },
+  "typescript.format.enable": true,
+  "javascript.format.enable": true
 }

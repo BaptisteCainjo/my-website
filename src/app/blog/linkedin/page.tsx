@@ -8,6 +8,7 @@ import LinkedinStyle from "@/scss/pages/Linkedin.module.scss";
 import { useInView } from "react-intersection-observer";
 import "react-loading-skeleton/dist/skeleton.css";
 import Skeleton from "react-loading-skeleton";
+import linkedinPostsBackup from "@/utils/data/linkedinPosts.json";
 
 const ITEMS_PER_PAGE = 6;
 
@@ -35,6 +36,7 @@ export default function LinkedinPage() {
   const [isLoading, setIsLoading] = useState(true);
   const [hasMore, setHasMore] = useState(true);
   const [count, setCount] = useState(0);
+  const [isFallbackMode, setIsFallbackMode] = useState(false);
 
   const { ref, inView } = useInView({ threshold: 0, rootMargin: "100px" });
 
@@ -69,8 +71,35 @@ export default function LinkedinPage() {
         setIntegrationCodes((prev) => [...prev, ...(data || [])]);
         setHasMore(data && data.length === ITEMS_PER_PAGE);
       }
+      setIsFallbackMode(false);
     } catch (error) {
-      console.error("Erreur de chargement:", error);
+      console.error("Erreur de chargement depuis Supabase:", error);
+      console.log("🔄 Basculement vers le backup JSON local...");
+
+      if (isInitial) {
+        const startRange = 0;
+        const endRange = ITEMS_PER_PAGE - 1;
+        const paginatedData = linkedinPostsBackup.slice(
+          startRange,
+          endRange + 1
+        );
+
+        setIntegrationCodes(paginatedData);
+        setCount(linkedinPostsBackup.length);
+        setHasMore(linkedinPostsBackup.length > ITEMS_PER_PAGE);
+        setIsFallbackMode(true);
+      } else {
+        const currentLength = integrationCodes.length;
+        const paginatedData = (linkedinPostsBackup as IntegrationCode[]).slice(
+          currentLength,
+          currentLength + ITEMS_PER_PAGE
+        );
+
+        setIntegrationCodes((prev) => [...prev, ...paginatedData]);
+        setHasMore(
+          currentLength + paginatedData.length < linkedinPostsBackup.length
+        );
+      }
     } finally {
       setIsLoading(false);
     }

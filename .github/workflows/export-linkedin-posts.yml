@@ -1,0 +1,73 @@
+name: Export LinkedIn Posts to JSON
+
+# Déclenchement du workflow
+on:
+  # Exécution automatique tous les jours à 2h du matin (heure UTC)
+  schedule:
+    - cron: '0 2 * * *'  # Tous les jours à 2h UTC (3h en heure française)
+
+  # Permet de lancer manuellement le workflow depuis l'interface GitHub
+  workflow_dispatch:
+
+# Permissions nécessaires pour commit et push
+permissions:
+  contents: write
+
+jobs:
+  export-posts:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1. Checkout du code
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      # 2. Configuration de Node.js
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      # 3. Installation des dépendances
+      - name: Install dependencies
+        run: npm ci
+
+      # 4. Exécution du script d'export
+      - name: Export LinkedIn posts from Supabase to JSON
+        env:
+          NEXT_PUBLIC_SUPABASE_URL: ${{ secrets.NEXT_PUBLIC_SUPABASE_URL }}
+          NEXT_PUBLIC_SUPABASE_ANON_KEY: ${{ secrets.NEXT_PUBLIC_SUPABASE_ANON_KEY }}
+        run: npm run export:linkedin
+
+      # 5. Vérifier s'il y a des changements
+      - name: Check for changes
+        id: check_changes
+        run: |
+          if git diff --quiet src/utils/data/linkedinPosts.json; then
+            echo "changed=false" >> $GITHUB_OUTPUT
+          else
+            echo "changed=true" >> $GITHUB_OUTPUT
+          fi
+
+      # 6. Commit et push des changements
+      - name: Commit and push changes
+        if: steps.check_changes.outputs.changed == 'true'
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add src/utils/data/linkedinPosts.json
+          git commit -m "chore: auto-update LinkedIn posts backup [skip ci]"
+          git push
+
+      # 7. Message si aucun changement
+      - name: No changes detected
+        if: steps.check_changes.outputs.changed == 'false'
+        run: echo "✅ Aucun nouveau post LinkedIn détecté. Fichier JSON déjà à jour."
+
+      # 8. Message de succès
+      - name: Export completed
+        if: steps.check_changes.outputs.changed == 'true'
+        run: echo "✅ Export terminé avec succès ! Le fichier linkedinPosts.json a été mis à jour et pushé."
