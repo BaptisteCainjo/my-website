@@ -1,9 +1,6 @@
 import { NextResponse } from "next/server";
 import { supabase } from "@/utils/supabaseClient";
 
-export const dynamic = "force-dynamic";
-export const revalidate = 0;
-
 export async function GET() {
   try {
     const { error, count } = await supabase
@@ -18,12 +15,7 @@ export async function GET() {
           details: error.message,
           timestamp: new Date().toISOString(),
         },
-        {
-          status: 500,
-          headers: {
-            "Cache-Control": "no-store, max-age=0",
-          }
-        }
+        { status: 500 }
       );
     }
 
@@ -34,12 +26,7 @@ export async function GET() {
         postsCount: count,
         timestamp: new Date().toISOString(),
       },
-      {
-        status: 200,
-        headers: {
-          "Cache-Control": "public, s-maxage=3600, stale-while-revalidate=86400",
-        }
-      }
+      { status: 200 }
     );
   } catch (error) {
     return NextResponse.json(
@@ -48,12 +35,7 @@ export async function GET() {
         error: "Erreur inattendue",
         timestamp: new Date().toISOString(),
       },
-      {
-        status: 500,
-        headers: {
-          "Cache-Control": "no-store, max-age=0",
-        }
-      }
+      { status: 500 }
     );
   }
 }

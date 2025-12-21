@@ -1,15 +1,27 @@
 [
   {
+    "id": 7,
+    "title": "Mon Bilan 2025 : Évolution d'un Développeur Full-Stack à l'Ère de l'IA",
+    "slug": "bilan-2025-evolution-developpeur-full-stack-ia",
+    "excerpt": "Retour sur une année marquée par des bouleversements technologiques majeurs et une évolution personnelle significative. Entre innovation, apprentissage continu et création de contenu, découvrez mon bilan complet de développeur full-stack en 2025.",
+    "reading_time": 6,
+    "tags": "bilan",
+    "sub_tags": ["développement", "carrière", "linkedIn", "build in public"],
+    "featured_image_url": "/images/bilan-2025-developpeur-web-baptiste-cainjo.webp",
+    "created_at": "20-12-2025",
+    "updated_at": "20-12-2025"
+  },
+  {
     "id": 6,
     "title": "Comment créer et lancer une application web en 2025 : Mon guide complet - Partie 2",
     "slug": "creer-lancer-application-web-2025-guide-partie-2",
-    "excerpt": "Découvrez les étapes essentielles pour concevoir, développer et publier une application web moderne en 2025. Dans cette première partie du guide, je partage mes conseils pratiques pour bien démarrer.",
+    "excerpt": "Découvrez dans cette deuxième partie du guide les étapes essentielles pour concevoir, développer et publier une application web moderne en 2025. Je partage mes conseils pratiques pour aller plus loin dans le processus de lancement.",
     "reading_time": 20,
     "tags": "développement",
     "sub_tags": ["web", "guide", "application"],
     "featured_image_url": "/images/creer-lancer-application-web-2025-guide-partie-2.webp",
-    "created_at": "22-10-2025",
-    "updated_at": "22-10-2025"
+    "created_at": "22-11-2025",
+    "updated_at": "22-11-2025"
   },
   {
     "id": 5,
@@ -55,7 +67,7 @@
     "reading_time": 9,
     "tags": "carrière",
     "sub_tags": [
-      "LinkedIn",
+      "linkedIn",
       "personal branding",
       "build in public",
       "networking"
