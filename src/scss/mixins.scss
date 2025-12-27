@@ -179,13 +179,13 @@ $mixin-breakpoints: (
     background: $globalBlackColor;
     border-radius: 4px;
     transform-origin: right;
-    transform: scaleX(0);
     @include transition(transform 0.3s ease-in-out);
+    width: 10%;
   }
 
   &:hover::after {
     transform-origin: left;
-    transform: scaleX(1);
+    width: 100%;
   }
 }
 
