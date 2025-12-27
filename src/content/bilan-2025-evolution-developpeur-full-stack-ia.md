@@ -77,7 +77,7 @@ Mon approche sur LinkedIn s'est structurée autour de plusieurs axes :
 
 - **Running** : 500km parcourus
 - **Cyclisme** : 500km roulés
-- **Musculation** : +200 séance
+- **Musculation** : +200 séances
 - **Lecture** : 2 livres terminés
 
 ## Conclusion : Gratitude et Perspectives
