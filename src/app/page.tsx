@@ -49,9 +49,7 @@ export default function Home() {
     if (filter === "Tous") {
       setPortfolio(portfolioData);
     } else {
-      const filteredPortfolio = portfolioData.filter(
-        (item) => item.type === filter
-      );
+      const filteredPortfolio = portfolioData.filter((item) => item.type === filter);
       setPortfolio(filteredPortfolio);
     }
   };
@@ -75,7 +73,7 @@ export default function Home() {
             <Image src={Code} alt="icon" width={50} height={50} />
             <div>
               <strong>Développeur Full-stack </strong>
-              <p>chez MMA depuis septembre 2022.</p>
+              <p>depuis 2022.</p>
             </div>
           </div>
           <nav>
