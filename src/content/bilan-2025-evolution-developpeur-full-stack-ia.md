@@ -35,7 +35,7 @@ Cette année, j'ai particulièrement approfondi mes compétences dans :
 
 ## Ma Présence LinkedIn : Créateur de Contenu Tech
 
-### Stratégie de Contenu 2024
+### Stratégie de Contenu 2025
 
 Mon approche sur LinkedIn s'est structurée autour de plusieurs axes :
 
