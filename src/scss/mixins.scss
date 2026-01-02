@@ -179,7 +179,7 @@ $mixin-breakpoints: (
     background: $globalBlackColor;
     border-radius: 4px;
     transform-origin: right;
-    @include transition(width 0.3s ease-in-out);
+    @include transition(transform 0.3s ease-in-out);
     width: 10%;
   }
 
