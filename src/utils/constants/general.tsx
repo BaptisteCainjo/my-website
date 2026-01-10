@@ -1,2 +1,2 @@
 export const EMAIL = "cainjo.baptiste@orange.fr";
-export const HOST_ADDRESS = "340 S Ldemon Ave, Walnut, CA 91789, USA"
+export const HOST_ADDRESS = "340 S Lemon Ave, Walnut, CA 91789, USA"
