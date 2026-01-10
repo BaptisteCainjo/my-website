@@ -1,3 +1,4 @@
+import { HOST_ADDRESS } from "@/utils/constants";
 import {
   Body,
   Container,
@@ -60,8 +61,7 @@ export default function EmailTemplate({
           <Hr />
           <Section style={footer}>
             <Text style={footerParagraph}>
-              © 2022 - {currentYear} | Baptiste Cainjo | 25 Eugène Marziano, 1227 Les
-              Acacias - Genève - Suisse
+              © 2022 - {currentYear} | Baptiste Cainjo | {HOST_ADDRESS}
             </Text>
           </Section>
         </Container>

@@ -1,6 +1,7 @@
 import NavBar from "@/components/NavBar/NavBar";
 import LegalesStyle from "@/scss/pages/Legales.module.scss";
 import { EMAIL } from "@/utils/constants";
+import {HOST_ADDRESS} from "@/utils/constants";
 
 export default function MentionsLegales() {
   return (
@@ -34,7 +35,7 @@ export default function MentionsLegales() {
             <strong>Hébergeur : </strong>Vercel Inc.
           </p>
           <p>
-            <strong>Adresse : </strong>340 S Lemon Ave, Walnut, CA 91789, USA
+            <strong>Adresse : </strong>{HOST_ADDRESS}
           </p>
           <p>
             <strong>Téléphone : </strong>(559) 288-7060
